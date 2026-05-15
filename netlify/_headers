@@ -1,0 +1,6 @@
+/* Cache control for JSON and PDF assets */
+/data/*
+  Cache-Control: public, max-age=86400
+
+/assets/pdfs/*
+  Cache-Control: public, max-age=31536000
