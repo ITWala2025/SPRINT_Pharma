@@ -68,7 +68,7 @@ The site should establish trust with all stakeholder groups from day one of oper
 
 | Component | Recommendation |
 |---|---|
-| CMS | WordPress 6.x + Elementor Pro |
+
 | Alternative CMS | Webflow |
 | Backend (Future) | Laravel or Node.js |
 | Database | MySQL 8.0+ |
