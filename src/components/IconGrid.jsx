@@ -1,2 +1,2 @@
 import React from "react";
-export const IconGrid = () => <section>IconGrid</section>;
+export const IconGrid = () => <section>IconGrid </section>;

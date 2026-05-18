@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
 /**
- * Accordion component with smooth height transition and ARIA attributes.
+ * Accordion component with smooth height transition and ARIA attributes .
  * @param {Object[]} items - Array of { title, content }
  */
 export const Accordion = ({ items }) => {

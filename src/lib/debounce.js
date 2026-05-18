@@ -4,4 +4,4 @@ export function debounce(fn, delay) {
     clearTimeout(timeout);
     timeout = setTimeout(() => fn(...args), delay);
   };
-}
+}.

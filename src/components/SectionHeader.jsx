@@ -1,2 +1,2 @@
 import React from "react";
-export const SectionHeader = () => <header>SectionHeader</header>;
+export const SectionHeader = () => <header>SectionHeader </header>;

@@ -19,7 +19,7 @@ const tabsData = [
 
 const accordionItems = [
   { title: "Regulatory Compliance", content: <p>Details about compliance.</p> },
-  { title: "Sustainability", content: <p>Our sustainability initiatives.</p> },
+  { title: "Sustainability", content: <p>Our sustainability initiatives</p> },
 ];
 
 const logos = [

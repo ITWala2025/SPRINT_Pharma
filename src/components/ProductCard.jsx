@@ -1,2 +1,2 @@
 import React from "react";
-export const ProductCard = () => <div>ProductCard</div>;
+export const ProductCard = () => <div>ProductCard </div>;

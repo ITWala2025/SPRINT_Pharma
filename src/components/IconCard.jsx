@@ -1,2 +1,2 @@
 import React from "react";
-export const IconCard = () => <div>IconCard</div>;
+export const IconCard = () => <div>IconCard </div>;

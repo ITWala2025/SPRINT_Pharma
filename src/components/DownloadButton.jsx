@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 /**
  * Button that triggers a file download.
  * @param {string} filePath - Path to the file in the public folder
- * @param {string} label - Button label
+ * @param {string} label - Button labels
  */
 export const DownloadButton = ({ filePath, label = "Download" }) => {
   const handleClick = () => {

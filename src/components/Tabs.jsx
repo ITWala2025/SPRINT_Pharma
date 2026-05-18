@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 /**
  * Tabs component
  * @param {Object[]} tabs - Array of tab objects { label, content }
- * @param {number} defaultActive - Index of the default active tab
+ * @param {number} defaultActive - Index of the default active tabs
  */
 export const Tabs = ({ tabs, defaultActive = 0 }) => {
   const [activeTab, setActiveTab] = useState(defaultActive);

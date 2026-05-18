@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 /**
- * Simple carousel that shows a set number of logos based on viewport width.
+ * Simple carousel that shows a set number of logos based on viewport width .
  * @param {string[]} logos - Array of image URLs
  */
 export const CertificationCarousel = ({ logos }) => {

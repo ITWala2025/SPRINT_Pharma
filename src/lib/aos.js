@@ -3,5 +3,5 @@ import 'aos/dist/aos.css';
 
 AOS.init({
   once: true,
-  duration: 600,
+  duration: 550,
 });

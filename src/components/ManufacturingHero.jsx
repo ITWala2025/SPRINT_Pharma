@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 /**
  * Hero section for the Manufacturing page.
- * @param {string} bgImage - URL of background image
+ * @param {string} bgImage - URL of background images
  * @param {string} title - Main heading text
  * @param {string} subtitle - Sub‑heading text
  */
