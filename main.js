@@ -231,6 +231,115 @@ function initSmoothScroll() {
   });
 }
 
+/* ─────────────────────────────────────────────────────────
+   8. MANUFACTURING PAGE – Tabs, Accordion, Carousel, Download
+   ───────────────────────────────────────────────────────── */
+function initManufacturingPage() {
+  // Tabs with keyboard accessibility (arrow navigation)
+  const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
+  const tabContents = document.querySelectorAll('.tab-content');
+  
+  if (tabButtons.length > 0) {
+    function selectTab(index) {
+      tabButtons.forEach((btn, idx) => {
+        const isActive = idx === index;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        btn.setAttribute('tabindex', isActive ? '0' : '-1');
+        if (isActive && document.activeElement && document.activeElement !== document.body) {
+          btn.focus();
+        }
+      });
+      
+      tabContents.forEach((content, idx) => {
+        content.classList.toggle('active', idx === index);
+      });
+    }
+
+    tabButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => selectTab(index));
+      btn.addEventListener('keydown', (e) => {
+        let nextIndex = index;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          nextIndex = (index + 1) % tabButtons.length;
+          e.preventDefault();
+          selectTab(nextIndex);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+          e.preventDefault();
+          selectTab(nextIndex);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          selectTab(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          selectTab(tabButtons.length - 1);
+        }
+      });
+    });
+  }
+
+  // Accordion Expand/Collapse
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const expanded = header.getAttribute('aria-expanded') === 'true';
+      header.setAttribute('aria-expanded', !expanded);
+      const body = header.nextElementSibling;
+      if (body) {
+        if (!expanded) body.classList.add('open'); else body.classList.remove('open');
+      }
+    });
+  });
+
+  // Carousel pause on hover / focus
+  const carousel = document.querySelector('.cert-carousel');
+  if (carousel) {
+    const track = carousel.querySelector('.carousel-track');
+    if (track) {
+      carousel.addEventListener('mouseenter', () => { track.style.animationPlayState = 'paused'; });
+      carousel.addEventListener('mouseleave', () => { track.style.animationPlayState = 'running'; });
+      carousel.addEventListener('focusin', () => { track.style.animationPlayState = 'paused'; });
+      carousel.addEventListener('focusout', () => { track.style.animationPlayState = 'running'; });
+    }
+  }
+
+  // Download button with animated loading/success state
+  const downloadBtn = document.querySelector('.download-btn');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', () => {
+      if (downloadBtn.classList.contains('loading') || downloadBtn.classList.contains('success')) return;
+      
+      const file = downloadBtn.getAttribute('data-file');
+      
+      // Enter loading state
+      downloadBtn.classList.add('loading');
+      
+      setTimeout(() => {
+        // Switch to success checkmark state
+        downloadBtn.classList.remove('loading');
+        downloadBtn.classList.add('success');
+        
+        // Trigger simulated/actual file download
+        if (file) {
+          const a = document.createElement('a');
+          a.href = file;
+          a.download = file.split('/').pop() || 'brochure.pdf';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }
+        
+        // Reset button state after success message duration
+        setTimeout(() => {
+          downloadBtn.classList.remove('success');
+        }, 1500);
+        
+      }, 1500);
+    });
+  }
+}
+
 
 /* ─────────────────────────────────────────────────────────
    INITIALISE ALL MODULES
@@ -243,4 +352,6 @@ ready(() => {
   initCounters();
   initHeaderShadow();
   initSmoothScroll();
+  // Initialise manufacturing page components if present
+  if (typeof initManufacturingPage === 'function') initManufacturingPage();
 });

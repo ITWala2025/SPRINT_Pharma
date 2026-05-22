@@ -18,7 +18,7 @@
   />
 
   <!-- ── Stylesheet ── -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -551,6 +551,225 @@
   </section>
 
   <!-- ════════════════════════════════════════
+       MANUFACTURING & CERTIFICATIONS PAGE
+  ════════════════════════════════════════ -->
+  <section class="manufacturing" id="manufacturing">
+    <div class="container">
+      <div class="manufacturing-inner">
+        <!-- Manufacturing Hero Component -->
+        <div class="manufacturing-hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="hero-tagline"><i class="fas fa-industry"></i> Next-Gen Production</span>
+            <h2>State of the Art Manufacturing</h2>
+            <p>
+              Operating at the intersection of technological innovation and regulatory excellence. 
+              Our WHO-GMP certified facilities are engineered for maximum safety, precision, and scalability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tabs Component -->
+        <div class="tabs">
+          <div class="tab-buttons" role="tablist" aria-label="Manufacturing Capabilities">
+            <button class="tab-btn active" id="tab-btn-sterile" data-tab="tab-sterile" role="tab" aria-selected="true" aria-controls="tab-sterile" tabindex="0">
+              <i class="fas fa-syringe"></i> Sterile Injectables
+            </button>
+            <button class="tab-btn" id="tab-btn-solids" data-tab="tab-solids" role="tab" aria-selected="false" aria-controls="tab-solids" tabindex="-1">
+              <i class="fas fa-pills"></i> Oral Solid Dosage
+            </button>
+            <button class="tab-btn" id="tab-btn-rd" data-tab="tab-rd" role="tab" aria-selected="false" aria-controls="tab-rd" tabindex="-1">
+              <i class="fas fa-microscope"></i> Advanced R&D
+            </button>
+          </div>
+          <div class="tab-contents">
+            <!-- Tab 1: Sterile Injectables -->
+            <div class="tab-content active" id="tab-sterile" role="tabpanel" aria-labelledby="tab-btn-sterile">
+              <div class="capability-grid">
+                <div class="capability-info">
+                  <h3>Sterile Injectables Production</h3>
+                  <p>Our advanced aseptic processing line features zero-human-touch operations, utilizing barrier technologies and isolation systems to maintain absolute sterility.</p>
+                  <ul class="capability-features">
+                    <li><i class="fas fa-check-circle"></i> ISO Class 5 / Grade A cleanrooms</li>
+                    <li><i class="fas fa-check-circle"></i> Lyophilization &amp; liquid filling lines</li>
+                    <li><i class="fas fa-check-circle"></i> Capacity of 50M+ vials/ampoules annually</li>
+                  </ul>
+                </div>
+                <div class="capability-visual">
+                  <img src="sterile_injectables.png" alt="Aseptic syringe manufacturing" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Oral Solid Dosage -->
+            <div class="tab-content" id="tab-solids" role="tabpanel" aria-labelledby="tab-btn-solids">
+              <div class="capability-grid">
+                <div class="capability-info">
+                  <h3>Oral Solid Dosage Forms</h3>
+                  <p>High-speed compression and encapsulation technologies designed for high capacity, uniformity, and controlled-release formulations.</p>
+                  <ul class="capability-features">
+                    <li><i class="fas fa-check-circle"></i> Coated, uncoated, and bilayer tablets</li>
+                    <li><i class="fas fa-check-circle"></i> Dry powder &amp; capsule filling lines</li>
+                    <li><i class="fas fa-check-circle"></i> Integrated automated blister packaging</li>
+                  </ul>
+                </div>
+                <div class="capability-visual">
+                  <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80&auto=format&fit=crop" alt="Pill manufacturing line" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: Advanced R&D -->
+            <div class="tab-content" id="tab-rd" role="tabpanel" aria-labelledby="tab-btn-rd">
+              <div class="capability-grid">
+                <div class="capability-info">
+                  <h3>Advanced R&D &amp; Formulation</h3>
+                  <p>Dedicated formulation development and analytical testing laboratories helping bring safe, effective molecules from bench to commercial scale.</p>
+                  <ul class="capability-features">
+                    <li><i class="fas fa-check-circle"></i> ICH stability testing chambers</li>
+                    <li><i class="fas fa-check-circle"></i> HPLC &amp; analytical instrumentation suite</li>
+                    <li><i class="fas fa-check-circle"></i> Technology transfer &amp; scale-up support</li>
+                  </ul>
+                </div>
+                <div class="capability-visual">
+                  <img src="advanced_rd.png" alt="Advanced research laboratory" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Section Header -->
+        <div class="section-subheader">
+          <span class="label">Audits &amp; Standards</span>
+          <h3>Frequently Asked Questions</h3>
+        </div>
+
+        <!-- Accordion Component -->
+        <div class="accordion">
+          <div class="accordion-item" data-id="acc-q1">
+            <button class="accordion-header" id="acc-header-q1" aria-expanded="false" aria-controls="acc-body-q1">
+              <span>What regulatory certifications does your manufacturing facility hold?</span>
+              <span class="acc-icon"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-body" id="acc-body-q1" role="region" aria-labelledby="acc-header-q1">
+              <div class="accordion-content">
+                <p>Our primary facility is WHO-GMP certified, ISO 9001:2015 accredited, FSSAI approved, and operates under strict CDSCO regulations. We follow Schedule M &amp; M+ guidelines for all pharmaceutical manufacturing operations.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item" data-id="acc-q2">
+            <button class="accordion-header" id="acc-header-q2" aria-expanded="false" aria-controls="acc-body-q2">
+              <span>Do you offer contract / third-party manufacturing services?</span>
+              <span class="acc-icon"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-body" id="acc-body-q2" role="region" aria-labelledby="acc-header-q2">
+              <div class="accordion-content">
+                <p>Yes, we provide end-to-end contract manufacturing services. This includes formulation customization, regulatory dossier support, raw material sourcing, packaging design, and batch release certification.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-id="acc-q3">
+            <button class="accordion-header" id="acc-header-q3" aria-expanded="false" aria-controls="acc-body-q3">
+              <span>What is the typical lead time for a production batch?</span>
+              <span class="acc-icon"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="accordion-body" id="acc-body-q3" role="region" aria-labelledby="acc-header-q3">
+              <div class="accordion-content">
+                <p>Typical lead times range between 30 to 45 days after formulation approval and artwork finalization. Urgent production slots can sometimes be accommodated depending on the capacity schedule.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certification Carousel Section Header -->
+        <div class="section-subheader">
+          <span class="label">Accreditation</span>
+          <h3>Verified Partner Certifications</h3>
+        </div>
+
+        <!-- Certification Carousel -->
+        <div class="cert-carousel">
+          <div class="carousel-track">
+            <!-- Set 1 -->
+            <div class="cert-logo-card">
+              <div class="logo-icon"><i class="fas fa-award"></i></div>
+              <div class="logo-title">WHO-GMP</div>
+              <div class="logo-desc">Good Manufacturing Practice</div>
+            </div>
+            <div class="cert-logo-card">
+              <div class="logo-icon"><i class="fas fa-certificate"></i></div>
+              <div class="logo-title">ISO 9001:2015</div>
+              <div class="logo-desc">Quality Management System</div>
+            </div>
+            <div class="cert-logo-card">
+              <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
+              <div class="logo-title">CDSCO</div>
+              <div class="logo-desc">Drug Controller Approved</div>
+            </div>
+            <div class="cert-logo-card">
+              <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="logo-title">Schedule M+</div>
+              <div class="logo-desc">D&amp;C Act Compliance</div>
+            </div>
+            <div class="cert-logo-card">
+              <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
+              <div class="logo-title">FSSAI</div>
+              <div class="logo-desc">Food Safety Standards Authority</div>
+            </div>
+            <!-- Set 2 (for seamless loop) -->
+            <div class="cert-logo-card" aria-hidden="true">
+              <div class="logo-icon"><i class="fas fa-award"></i></div>
+              <div class="logo-title">WHO-GMP</div>
+              <div class="logo-desc">Good Manufacturing Practice</div>
+            </div>
+            <div class="cert-logo-card" aria-hidden="true">
+              <div class="logo-icon"><i class="fas fa-certificate"></i></div>
+              <div class="logo-title">ISO 9001:2015</div>
+              <div class="logo-desc">Quality Management System</div>
+            </div>
+            <div class="cert-logo-card" aria-hidden="true">
+              <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
+              <div class="logo-title">CDSCO</div>
+              <div class="logo-desc">Drug Controller Approved</div>
+            </div>
+            <div class="cert-logo-card" aria-hidden="true">
+              <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="logo-title">Schedule M+</div>
+              <div class="logo-desc">D&amp;C Act Compliance</div>
+            </div>
+            <div class="cert-logo-card" aria-hidden="true">
+              <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
+              <div class="logo-title">FSSAI</div>
+              <div class="logo-desc">Food Safety Standards Authority</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+          <div class="download-card">
+            <div class="download-info">
+              <div class="download-icon-big"><i class="far fa-file-pdf"></i></div>
+              <div class="download-text">
+                <h4>Manufacturing Capability Brochure</h4>
+                <p>Get detailed plant specifications, machinery details, sterile line capacities, and full compliance information (PDF, 4.2 MB).</p>
+              </div>
+            </div>
+            <button class="download-btn" data-file="brochure.pdf">
+              <span class="btn-text">Download Brochure</span>
+              <span class="btn-spinner"><i class="fas fa-circle-notch fa-spin"></i></span>
+              <span class="btn-success-icon"><i class="fas fa-check"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
        TESTIMONIALS
   ════════════════════════════════════════ -->
   <section class="testi">
@@ -700,7 +919,8 @@
   </footer>
 
   <!-- ── JavaScript ── -->
-  <script type="module" src="./main.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>
+Displaying index.html.
