@@ -1,12 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zupharm Website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zupharm Laboratories — Healing Smarter. Reaching Further.</title>
+
+  <!-- ── Google Fonts ── -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ── Font Awesome Icons ── -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════
+       WHATSAPP STICKY BUTTON
+  ════════════════════════════════════════ -->
+  <a href="https://wa.me/911234567890" class="wa-btn" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ════════════════════════════════════════
+       HEADER  —  PILL LAYER DESIGN
+       Layer 1 (top): Announcement bar
+       Layer 2 (mid): Brand + contacts strip
+       Layer 3 (bot): Navigation pill
+  ════════════════════════════════════════ -->
+  <header id="site-header">
+
+    <!-- Layer 1 · Announcement Bar -->
+    <div class="header-layer header-announce">
+      <div class="announce-inner">
+        <span class="announce-dot"></span>
+        <p>
+          Now accepting PCD Franchise applications for <strong>Bihar, UP &amp; Jharkhand</strong> —
+          <a href="#franchise">Apply Today &rarr;</a>
+        </p>
+        <button class="announce-close" aria-label="Close announcement" id="announceClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Layer 2 · Brand + Utility Strip -->
+    <div class="header-layer header-brand-strip">
+      <div class="brand-strip-inner">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <div class="logo-mark">Zu</div>
+          <div class="logo-text">
+            <span class="logo-wordmark">Zu<span>pharm</span></span>
+            <span class="logo-tagline">Laboratories Pvt. Ltd.</span>
+          </div>
+        </a>
+
+        <!-- Contact chips -->
+        <div class="brand-contacts">
+          <a href="tel:+911234567890" class="contact-chip">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 12345 67890</span>
+          </a>
+          <a href="mailto:info@zupharm.com" class="contact-chip">
+            <i class="fas fa-envelope"></i>
+            <span>info@zupharm.com</span>
+          </a>
+          <a href="#certifications" class="cert-chip">
+            <i class="fas fa-shield-alt"></i>
+            <span>WHO-GMP Certified</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 3 · Navigation Pill -->
+    <div class="header-layer header-nav-layer">
+      <nav class="nav-pill" id="navPill">
+        <ul class="nav-links">
+          <li><a href="#about"          class="nav-link">About</a></li>
+          <li><a href="#products"       class="nav-link">Products</a></li>
+          <li><a href="#franchise"      class="nav-link">Franchise</a></li>
+          <li><a href="#why"            class="nav-link">Why Us</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact"        class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#franchise" class="nav-cta">
+          <i class="fas fa-handshake"></i> Apply for Franchise
+        </a>
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul>
+        <li><a href="#about"          class="mob-link">About</a></li>
+        <li><a href="#products"       class="mob-link">Products</a></li>
+        <li><a href="#franchise"      class="mob-link">Franchise</a></li>
+        <li><a href="#why"            class="mob-link">Why Us</a></li>
+        <li><a href="#certifications" class="mob-link">Certifications</a></li>
+        <li><a href="#contact"        class="mob-link">Contact</a></li>
+      </ul>
+      <a href="#franchise" class="mob-cta">Apply for Franchise</a>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+
+      <!-- Left: Text Content -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          WHO-GMP Certified Manufacturer
+        </div>
+
+        <h1 class="hero-title">
+          Healing Smarter.<br>
+          <em>Reaching Further.</em>
+        </h1>
+
+        <p class="hero-sub">
+          India's next-generation pharmaceutical partner — built on science,
+          scaled with trust, and powered by innovation.
+        </p>
+
+        <div class="hero-pills">
+          <span class="hero-pill"><i class="fas fa-pills"></i> 500+ Products</span>
+          <span class="hero-pill"><i class="fas fa-map-marker-alt"></i> 20+ States</span>
+          <span class="hero-pill"><i class="fas fa-users"></i> 100+ Partners</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn-main">
+            <i class="fas fa-th-large"></i> Explore Products
+          </a>
+          <a href="#franchise" class="btn-ghost">
+            Apply for Franchise
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Image Panel -->
+      <div class="hero-visual">
+        <!-- Floating stat card -->
+        <div class="hero-stat-float">
+          <div class="num">500<span>+</span></div>
+          <div class="txt">Certified Products</div>
+        </div>
+
+        <!-- Main image -->
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&q=85&auto=format&fit=crop"
+            alt="Pharmaceutical research laboratory"
+          />
+          <div class="hero-img-caption">
+            <strong>State-of-the-Art Facility</strong>
+            <p>WHO-GMP certified manufacturing plant — built for precision, designed for scale.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       STATS BAR
+  ════════════════════════════════════════ -->
+  <div class="stats-bar">
+    <div class="stats-bar-inner">
+      <div class="stat-cell">
+        <div class="stat-num"><span data-count="500">0</span>+</div>
+        <div class="stat-txt">Products Available</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num"><span data-count="20">0</span>+</div>
+        <div class="stat-txt">States Covered</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num"><span data-count="100">0</span>+</div>
+        <div class="stat-txt">Franchise Partners</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num who">WHO<span>-GMP</span></div>
+        <div class="stat-txt">International Certified</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+
+        <div class="about-left">
+          <span class="label">About Zupharm</span>
+          <h2>India's Trusted Name in Pharmaceutical Excellence</h2>
+          <p>
+            Zupharm Laboratories Pvt. Ltd. is a WHO-GMP certified pharmaceutical company
+            committed to delivering high-quality, affordable medicines. Our state-of-the-art
+            manufacturing facility operates under the strictest global quality standards.
+          </p>
+          <p>
+            From research to distribution, every step is guided by scientific rigour,
+            regulatory compliance, and a genuine passion for improving lives.
+          </p>
+          <ul class="about-checks">
+            <li><div class="check-dot"></div>WHO-GMP, ISO 9001:2015, FSSAI &amp; CDSCO certified</li>
+            <li><div class="check-dot"></div>500+ formulations across 12 therapeutic segments</li>
+            <li><div class="check-dot"></div>Exclusive territory model with pan-India coverage</li>
+            <li><div class="check-dot"></div>Dedicated R&amp;D with 15+ years of domain expertise</li>
+            <li><div class="check-dot"></div>AI-powered tools — ZuAI, ZuDoc, ZuSupply, ZuAnalytics</li>
+          </ul>
+          <a href="#franchise" class="btn-main">
+            <i class="fas fa-handshake"></i> Become a Partner
+          </a>
+        </div>
+
+        <div class="about-right">
+          <div class="about-main-img">
+            <img
+              src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=700&q=80&auto=format&fit=crop"
+              alt="Zupharm manufacturing facility"
+            />
+          </div>
+          <div class="about-accent">
+            <div class="big">15+</div>
+            <div class="small">Years of<br>Excellence</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PRODUCT CATEGORIES
+  ════════════════════════════════════════ -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="products-header">
+        <div>
+          <span class="label">Our Portfolio</span>
+          <h2>Therapeutic Categories</h2>
+        </div>
+        <a href="#">View all products &rarr;</a>
+      </div>
+      <div class="products-grid">
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=400&q=70&auto=format&fit=crop" alt="Cardiac Care">
+          </div>
+          <div class="prod-count">65+ Products</div>
+          <div class="prod-name">Cardiac Care</div>
+          <div class="prod-desc">Antihypertensives, statins, anticoagulants, and cardioprotective formulations.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=70&auto=format&fit=crop" alt="Neurology">
+          </div>
+          <div class="prod-count">48+ Products</div>
+          <div class="prod-name">Neurology</div>
+          <div class="prod-desc">Antiepileptics, neuropathic pain relief, and CNS support formulations.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&q=70&auto=format&fit=crop" alt="Respiratory">
+          </div>
+          <div class="prod-count">40+ Products</div>
+          <div class="prod-name">Respiratory</div>
+          <div class="prod-desc">Bronchodilators, corticosteroids, and mucolytic agents for respiratory care.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=400&q=70&auto=format&fit=crop" alt="Paediatrics">
+          </div>
+          <div class="prod-count">52+ Products</div>
+          <div class="prod-name">Paediatrics</div>
+          <div class="prod-desc">Safe, age-appropriate formulations for infants, children, and adolescents.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=70&auto=format&fit=crop" alt="Diabetology">
+          </div>
+          <div class="prod-count">44+ Products</div>
+          <div class="prod-name">Diabetology</div>
+          <div class="prod-desc">Oral hypoglycemics, insulin sensitisers, and diabetes management solutions.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?w=400&q=70&auto=format&fit=crop" alt="Anti-infectives">
+          </div>
+          <div class="prod-count">58+ Products</div>
+          <div class="prod-name">Anti-infectives</div>
+          <div class="prod-desc">Broad-spectrum antibiotics, antivirals, antifungals, and antimalarials.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=400&q=70&auto=format&fit=crop" alt="Orthopaedics">
+          </div>
+          <div class="prod-count">38+ Products</div>
+          <div class="prod-name">Orthopaedics</div>
+          <div class="prod-desc">NSAIDs, muscle relaxants, bone health supplements, and joint care formulations.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=400&q=70&auto=format&fit=crop" alt="Ophthalmology">
+          </div>
+          <div class="prod-count">32+ Products</div>
+          <div class="prod-name">Ophthalmology</div>
+          <div class="prod-desc">Eye drops, lubricants, anti-glaucoma agents, and ocular anti-infectives.</div>
+          <div class="prod-link">View Range <i class="fas fa-arrow-right"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FRANCHISE SECTION
+  ════════════════════════════════════════ -->
+  <section class="franchise" id="franchise">
+    <div class="container">
+      <div class="franchise-inner">
+
+        <div class="franchise-left">
+          <span class="label">PCD Franchise</span>
+          <h2>Build Your Pharma Business With Zupharm</h2>
+          <p>
+            Join 100+ successful partners across India. We provide the product,
+            the support, and the systems — you bring the ambition.
+          </p>
+          <div class="franchise-usps">
+            <div class="usp-row">
+              <div class="usp-num">01</div>
+              <div class="usp-content">
+                <strong>Exclusive Territory Rights</strong>
+                <p>Protected zones across all major cities and districts. No intra-company competition.</p>
+              </div>
+            </div>
+            <div class="usp-row">
+              <div class="usp-num">02</div>
+              <div class="usp-content">
+                <strong>Complete Promotional Kit</strong>
+                <p>Visual aids, MR bags, product samples, and full marketing material — delivered to you.</p>
+              </div>
+            </div>
+            <div class="usp-row">
+              <div class="usp-num">03</div>
+              <div class="usp-content">
+                <strong>Dedicated Support Manager</strong>
+                <p>A personal account manager available 6 days a week, from onboarding to growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="franchise-form-wrap">
+          <h3>Apply for Franchise</h3>
+          <p>We'll respond within 24 hours with a personalised proposal.</p>
+          <div class="f-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your full name" />
+          </div>
+          <div class="f-grid">
+            <div class="f-group">
+              <label>Mobile</label>
+              <input type="tel" placeholder="+91 XXXXX XXXXX" />
+            </div>
+            <div class="f-group">
+              <label>City</label>
+              <input type="text" placeholder="City / District" />
+            </div>
+          </div>
+          <div class="f-group">
+            <label>State</label>
+            <select>
+              <option value="" disabled selected>Select your state</option>
+              <option>Bihar</option>
+              <option>Uttar Pradesh</option>
+              <option>Jharkhand</option>
+              <option>West Bengal</option>
+              <option>Delhi</option>
+              <option>Maharashtra</option>
+              <option>Rajasthan</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button class="f-submit">Submit Application &rarr;</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WHY ZUPHARM
+  ════════════════════════════════════════ -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why-header">
+        <span class="label">Why Choose Us</span>
+        <h2>The Zupharm Advantage</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-item-num">01</div>
+          <h3>WHO-GMP Certified Manufacturing</h3>
+          <p>Every batch tested, every product verified before dispatch — no exceptions.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-item-num">02</div>
+          <h3>Pan-India Distribution</h3>
+          <p>20+ states covered with uninterrupted cold-chain logistics and on-time delivery.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-item-num">03</div>
+          <h3>500+ Product Portfolio</h3>
+          <p>Tablets, capsules, syrups, injectables, topicals — across 12 therapeutic segments.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-item-num">04</div>
+          <h3>Fully Regulatory Compliant</h3>
+          <p>FSSAI, CDSCO, Schedule M &amp; M+ compliant — documentation always audit-ready.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-item-num">05</div>
+          <h3>AI-Powered Business Tools</h3>
+          <p>ZuAI, ZuDoc, ZuSupply, ZuAnalytics — giving our partners a real competitive edge.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-item-num">06</div>
+          <h3>Transparent Partner Model</h3>
+          <p>Clear margins, honest pricing, and a partner-first culture behind 100+ relationships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       AI TOOLS SECTION
+  ════════════════════════════════════════ -->
+  <section class="ai-section">
+    <div class="container">
+      <div class="ai-header">
+        <span class="label label-light">Technology Suite</span>
+        <h2>Powered by <em>Intelligence</em></h2>
+      </div>
+      <div class="ai-tools">
+        <div class="ai-tool">
+          <div class="ai-tool-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=70&auto=format&fit=crop" alt="ZuAI">
+          </div>
+          <div class="ai-badge">AI Tool</div>
+          <h3>ZuAI</h3>
+          <p>Demand forecasting, product recommendations, and territory market intelligence.</p>
+        </div>
+        <div class="ai-tool">
+          <div class="ai-tool-img">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=70&auto=format&fit=crop" alt="ZuDoc">
+          </div>
+          <div class="ai-badge">Doctor Connect</div>
+          <h3>ZuDoc</h3>
+          <p>Digital detailing, e-prescription tracking, and doctor relationship management.</p>
+        </div>
+        <div class="ai-tool">
+          <div class="ai-tool-img">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=70&auto=format&fit=crop" alt="ZuSupply">
+          </div>
+          <div class="ai-badge">Supply Chain</div>
+          <h3>ZuSupply</h3>
+          <p>Real-time inventory, automated reorder alerts, and seamless mobile ordering.</p>
+        </div>
+        <div class="ai-tool">
+          <div class="ai-tool-img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=70&auto=format&fit=crop" alt="ZuAnalytics">
+          </div>
+          <div class="ai-badge">Analytics</div>
+          <h3>ZuAnalytics</h3>
+          <p>Sales dashboards, territory performance reports, and growth insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CERTIFICATIONS
+  ════════════════════════════════════════ -->
+  <section class="certs" id="certifications">
+    <div class="container">
+      <div class="certs-inner">
+        <div class="certs-left">
+          <span class="label">Credentials</span>
+          <h2>Quality You Can Verify</h2>
+          <p>
+            Every certification we hold is a contractual promise — to patients, doctors,
+            and partners — that quality is never a compromise.
+          </p>
+          <div class="cert-list">
+            <div class="cert-row"><div class="cert-dot"></div><strong>WHO-GMP</strong><span>International manufacturing standard</span></div>
+            <div class="cert-row"><div class="cert-dot"></div><strong>ISO 9001:2015</strong><span>Quality management systems</span></div>
+            <div class="cert-row"><div class="cert-dot"></div><strong>FSSAI</strong><span>Food safety authority certified</span></div>
+            <div class="cert-row"><div class="cert-dot"></div><strong>CDSCO</strong><span>Central drug controller approved</span></div>
+            <div class="cert-row"><div class="cert-dot"></div><strong>Schedule M+</strong><span>D&amp;C Act compliance verified</span></div>
+          </div>
+        </div>
+        <div class="certs-right">
+          <div class="certs-img">
+            <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?w=700&q=80&auto=format&fit=crop" alt="Certified pharmaceutical manufacturing">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       TESTIMONIALS
+  ════════════════════════════════════════ -->
+  <section class="testi">
+    <div class="container">
+      <div class="testi-header">
+        <div>
+          <span class="label">Partner Voices</span>
+          <h2>What Our Partners Say</h2>
+        </div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-text">Zupharm has been an outstanding partner. Their product quality is top-notch and the support helped us grow 3x in just 18 months.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RK</div>
+            <div>
+              <div class="testi-name">Rajesh Kumar</div>
+              <div class="testi-role">PCD Partner — Patna, Bihar</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-text">The exclusive territory model ensures no internal competition. We've never faced a stock-out since partnering with Zupharm.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SA</div>
+            <div>
+              <div class="testi-name">Sunita Agarwal</div>
+              <div class="testi-role">Franchise Partner — Lucknow, UP</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-quote">&ldquo;</div>
+          <p class="testi-text">ZuAI and ZuAnalytics have transformed how I run my territory. Real-time data means better decisions and better margins.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">PM</div>
+            <div>
+              <div class="testi-name">Prakash Mehta</div>
+              <div class="testi-role">PCD Partner — Ranchi, Jharkhand</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CTA STRIP
+  ════════════════════════════════════════ -->
+  <section class="cta-strip" id="contact">
+    <div class="container">
+      <div class="cta-strip-inner">
+        <div>
+          <h2>Have a Query?<br>Let's Talk.</h2>
+          <p>Our team is ready to help — products, franchise, or anything else.</p>
+        </div>
+        <div class="cta-strip-btns">
+          <a href="https://wa.me/911234567890" class="btn-white" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="mailto:info@zupharm.com" class="btn-outline-white">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="f-brand">
+          <div class="f-logo-row">
+            <div class="f-logo-mark">Zu</div>
+            <span class="f-logo-name">Zupharm Laboratories</span>
+          </div>
+          <p>Healing Smarter. Reaching Further. WHO-GMP certified pharmaceutical manufacturer and PCD franchise company with pan-India presence.</p>
+          <div class="f-socials">
+            <a href="#" class="f-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="f-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="f-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="f-social" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="f-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#franchise">PCD Franchise</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="#">Cardiac Care</a></li>
+            <li><a href="#">Neurology</a></li>
+            <li><a href="#">Respiratory</a></li>
+            <li><a href="#">Paediatrics</a></li>
+            <li><a href="#">Anti-infectives</a></li>
+            <li><a href="#">Diabetology</a></li>
+            <li><a href="#">Ophthalmology</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h5>Contact</h5>
+          <div class="f-contact-item">
+            <div class="dot"></div>
+            <span>Pharmaceutical Industrial Zone,<br>Patna, Bihar — 800001</span>
+          </div>
+          <div class="f-contact-item">
+            <div class="dot"></div>
+            <span>+91 12345 67890</span>
+          </div>
+          <div class="f-contact-item">
+            <div class="dot"></div>
+            <span>info@zupharm.com</span>
+          </div>
+          <div class="f-contact-item">
+            <div class="dot"></div>
+            <span>www.zupharm.com</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Zupharm Laboratories Pvt. Ltd. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── JavaScript ── -->
+  <script type="module" src="./main.js"></script>
+
+</body>
 </html>
