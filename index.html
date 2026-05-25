@@ -73,9 +73,9 @@
             <i class="fas fa-envelope"></i>
             <span>info@zupharm.com</span>
           </a>
-          <a href="#certifications" class="cert-chip">
+          <a href="#manufacturing" class="cert-chip">
             <i class="fas fa-shield-alt"></i>
-            <span>WHO-GMP Certified</span>
+            <span>Manufacturing & Certifications</span>
           </a>
         </div>
       </div>
@@ -89,7 +89,7 @@
           <li><a href="#products"       class="nav-link">Products</a></li>
           <li><a href="#franchise"      class="nav-link">Franchise</a></li>
           <li><a href="#why"            class="nav-link">Why Us</a></li>
-          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#manufacturing" class="nav-link">Manufacturing & Certifications</a></li>
           <li><a href="#contact"        class="nav-link">Contact</a></li>
         </ul>
         <a href="#franchise" class="nav-cta">
@@ -109,7 +109,7 @@
         <li><a href="#products"       class="mob-link">Products</a></li>
         <li><a href="#franchise"      class="mob-link">Franchise</a></li>
         <li><a href="#why"            class="mob-link">Why Us</a></li>
-        <li><a href="#certifications" class="mob-link">Certifications</a></li>
+        <li><a href="#manufacturing" class="mob-link">Manufacturing & Certifications</a></li>
         <li><a href="#contact"        class="mob-link">Contact</a></li>
       </ul>
       <a href="#franchise" class="mob-cta">Apply for Franchise</a>
@@ -520,35 +520,6 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════
-       CERTIFICATIONS
-  ════════════════════════════════════════ -->
-  <section class="certs" id="certifications">
-    <div class="container">
-      <div class="certs-inner">
-        <div class="certs-left">
-          <span class="label">Credentials</span>
-          <h2>Quality You Can Verify</h2>
-          <p>
-            Every certification we hold is a contractual promise — to patients, doctors,
-            and partners — that quality is never a compromise.
-          </p>
-          <div class="cert-list">
-            <div class="cert-row"><div class="cert-dot"></div><strong>WHO-GMP</strong><span>International manufacturing standard</span></div>
-            <div class="cert-row"><div class="cert-dot"></div><strong>ISO 9001:2015</strong><span>Quality management systems</span></div>
-            <div class="cert-row"><div class="cert-dot"></div><strong>FSSAI</strong><span>Food safety authority certified</span></div>
-            <div class="cert-row"><div class="cert-dot"></div><strong>CDSCO</strong><span>Central drug controller approved</span></div>
-            <div class="cert-row"><div class="cert-dot"></div><strong>Schedule M+</strong><span>D&amp;C Act compliance verified</span></div>
-          </div>
-        </div>
-        <div class="certs-right">
-          <div class="certs-img">
-            <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?w=700&q=80&auto=format&fit=crop" alt="Certified pharmaceutical manufacturing">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ════════════════════════════════════════
        MANUFACTURING & CERTIFICATIONS PAGE
@@ -596,7 +567,7 @@
                   </ul>
                 </div>
                 <div class="capability-visual">
-                  <img src="sterile_injectables.png" alt="Aseptic syringe manufacturing" />
+                  <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=500&q=80&auto=format&fit=crop" alt="Aseptic syringe manufacturing" />
                 </div>
               </div>
             </div>
@@ -614,7 +585,9 @@
                   </ul>
                 </div>
                 <div class="capability-visual">
+                <a href="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&q=80&auto=format&fit=crop" target="_blank" class="image-link">
                   <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80&auto=format&fit=crop" alt="Pill manufacturing line" />
+                </a>
                 </div>
               </div>
             </div>
@@ -632,7 +605,9 @@
                   </ul>
                 </div>
                 <div class="capability-visual">
-                  <img src="advanced_rd.png" alt="Advanced research laboratory" />
+                <a href="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80&auto=format&fit=crop" target="_blank" class="image-link">
+                  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&q=80&auto=format&fit=crop" alt="Advanced research laboratory" />
+                </a>
                 </div>
               </div>
             </div>
@@ -694,56 +669,114 @@
         <div class="cert-carousel">
           <div class="carousel-track">
             <!-- Set 1 -->
-            <div class="cert-logo-card">
+            <button class="cert-logo-card" data-cert="who-gmp">
               <div class="logo-icon"><i class="fas fa-award"></i></div>
               <div class="logo-title">WHO-GMP</div>
               <div class="logo-desc">Good Manufacturing Practice</div>
-            </div>
-            <div class="cert-logo-card">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="iso-9001">
               <div class="logo-icon"><i class="fas fa-certificate"></i></div>
               <div class="logo-title">ISO 9001:2015</div>
               <div class="logo-desc">Quality Management System</div>
-            </div>
-            <div class="cert-logo-card">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="cdsco">
               <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
               <div class="logo-title">CDSCO</div>
               <div class="logo-desc">Drug Controller Approved</div>
-            </div>
-            <div class="cert-logo-card">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="schedule-m">
               <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
               <div class="logo-title">Schedule M+</div>
               <div class="logo-desc">D&amp;C Act Compliance</div>
-            </div>
-            <div class="cert-logo-card">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="fssai">
               <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
               <div class="logo-title">FSSAI</div>
               <div class="logo-desc">Food Safety Standards Authority</div>
-            </div>
+              <div class="cert-click-hint">Click for details</div>
+            </button>
             <!-- Set 2 (for seamless loop) -->
-            <div class="cert-logo-card" aria-hidden="true">
+            <button class="cert-logo-card" data-cert="who-gmp" aria-hidden="true" tabindex="-1">
               <div class="logo-icon"><i class="fas fa-award"></i></div>
               <div class="logo-title">WHO-GMP</div>
               <div class="logo-desc">Good Manufacturing Practice</div>
-            </div>
-            <div class="cert-logo-card" aria-hidden="true">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="iso-9001" aria-hidden="true" tabindex="-1">
               <div class="logo-icon"><i class="fas fa-certificate"></i></div>
               <div class="logo-title">ISO 9001:2015</div>
               <div class="logo-desc">Quality Management System</div>
-            </div>
-            <div class="cert-logo-card" aria-hidden="true">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="cdsco" aria-hidden="true" tabindex="-1">
               <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
               <div class="logo-title">CDSCO</div>
               <div class="logo-desc">Drug Controller Approved</div>
-            </div>
-            <div class="cert-logo-card" aria-hidden="true">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="schedule-m" aria-hidden="true" tabindex="-1">
               <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
               <div class="logo-title">Schedule M+</div>
               <div class="logo-desc">D&amp;C Act Compliance</div>
-            </div>
-            <div class="cert-logo-card" aria-hidden="true">
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+            <button class="cert-logo-card" data-cert="fssai" aria-hidden="true" tabindex="-1">
               <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
               <div class="logo-title">FSSAI</div>
               <div class="logo-desc">Food Safety Standards Authority</div>
+              <div class="cert-click-hint">Click for details</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Certification Modal -->
+        <div class="cert-modal-overlay" id="certModalOverlay">
+          <div class="cert-modal" id="certModal" role="dialog" aria-labelledby="certModalTitle" aria-modal="true">
+            <!-- Close Button -->
+            <button class="cert-modal-close" id="certModalClose" aria-label="Close certification details">
+              <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Content -->
+            <div class="cert-modal-content">
+              <div class="cert-modal-header">
+                <div class="cert-modal-icon" id="certModalIcon"></div>
+                <div class="cert-modal-title-group">
+                  <h2 id="certModalTitle" class="cert-modal-title"></h2>
+                  <p class="cert-modal-subtitle" id="certModalSubtitle"></p>
+                </div>
+              </div>
+
+              <div class="cert-modal-body">
+                <div class="cert-section">
+                  <h3 class="cert-section-title">About</h3>
+                  <p class="cert-section-text" id="certAbout"></p>
+                </div>
+
+                <div class="cert-section">
+                  <h3 class="cert-section-title">Purpose &amp; Importance</h3>
+                  <p class="cert-section-text" id="certPurpose"></p>
+                </div>
+
+                <div class="cert-section">
+                  <h3 class="cert-section-title">Key Compliance Requirements</h3>
+                  <ul class="cert-requirements-list" id="certRequirements"></ul>
+                </div>
+
+                <div class="cert-section">
+                  <h3 class="cert-section-title">Benefits for Customers &amp; Manufacturers</h3>
+                  <ul class="cert-benefits-list" id="certBenefits"></ul>
+                </div>
+
+                <div class="cert-section">
+                  <h3 class="cert-section-title">Issuing Authority</h3>
+                  <p class="cert-section-text" id="certAuthority"></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -868,7 +901,7 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#franchise">PCD Franchise</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#manufacturing">Manufacturing & Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -920,7 +953,14 @@
 
   <!-- ── JavaScript ── -->
   <script src="main.js"></script>
-
+  <!-- Lightbox Modal for clickable images -->
+  <div id="lightboxOverlay" class="lightbox-overlay" style="display:none;">
+    <div class="lightbox-content">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close image preview">&times;</button>
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+  
 </body>
 </html>
 Displaying index.html.
