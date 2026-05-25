@@ -643,4 +643,3 @@ function initImageLightbox() {
     if (e.target === overlay) close();
   });
 }
-

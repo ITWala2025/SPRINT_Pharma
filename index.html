@@ -75,7 +75,7 @@
           </a>
           <a href="#manufacturing" class="cert-chip">
             <i class="fas fa-shield-alt"></i>
-            <span>Manufacturing & Certifications</span>
+            <span>Manufacturing</span>
           </a>
         </div>
       </div>
@@ -89,7 +89,7 @@
           <li><a href="#products"       class="nav-link">Products</a></li>
           <li><a href="#franchise"      class="nav-link">Franchise</a></li>
           <li><a href="#why"            class="nav-link">Why Us</a></li>
-          <li><a href="#manufacturing" class="nav-link">Manufacturing & Certifications</a></li>
+          <li><a href="#manufacturing" class="nav-link">Manufacturing</a></li>
           <li><a href="#contact"        class="nav-link">Contact</a></li>
         </ul>
         <a href="#franchise" class="nav-cta">
@@ -109,7 +109,7 @@
         <li><a href="#products"       class="mob-link">Products</a></li>
         <li><a href="#franchise"      class="mob-link">Franchise</a></li>
         <li><a href="#why"            class="mob-link">Why Us</a></li>
-        <li><a href="#manufacturing" class="mob-link">Manufacturing & Certifications</a></li>
+        <li><a href="#manufacturing" class="mob-link">Manufacturing</a></li>
         <li><a href="#contact"        class="mob-link">Contact</a></li>
       </ul>
       <a href="#franchise" class="mob-cta">Apply for Franchise</a>
@@ -252,6 +252,129 @@
         </div>
 
       </div>
+
+      <!-- Certification Carousel Section Header -->
+      <div class="section-subheader" style="margin-top: 0;">
+        <span class="label">Accreditation</span>
+        <h3>Verified Partner Certifications</h3>
+      </div>
+
+      <!-- Certification Carousel -->
+      <div class="cert-carousel">
+        <div class="carousel-track">
+          <!-- Set 1 -->
+          <button class="cert-logo-card" data-cert="who-gmp">
+            <div class="logo-icon"><i class="fas fa-award"></i></div>
+            <div class="logo-title">WHO-GMP</div>
+            <div class="logo-desc">Good Manufacturing Practice</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="iso-9001">
+            <div class="logo-icon"><i class="fas fa-certificate"></i></div>
+            <div class="logo-title">ISO 9001:2015</div>
+            <div class="logo-desc">Quality Management System</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="cdsco">
+            <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
+            <div class="logo-title">CDSCO</div>
+            <div class="logo-desc">Drug Controller Approved</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="schedule-m">
+            <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="logo-title">Schedule M+</div>
+            <div class="logo-desc">D&amp;C Act Compliance</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="fssai">
+            <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
+            <div class="logo-title">FSSAI</div>
+            <div class="logo-desc">Food Safety Standards Authority</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <!-- Set 2 (for seamless loop) -->
+          <button class="cert-logo-card" data-cert="who-gmp" aria-hidden="true" tabindex="-1">
+            <div class="logo-icon"><i class="fas fa-award"></i></div>
+            <div class="logo-title">WHO-GMP</div>
+            <div class="logo-desc">Good Manufacturing Practice</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="iso-9001" aria-hidden="true" tabindex="-1">
+            <div class="logo-icon"><i class="fas fa-certificate"></i></div>
+            <div class="logo-title">ISO 9001:2015</div>
+            <div class="logo-desc">Quality Management System</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="cdsco" aria-hidden="true" tabindex="-1">
+            <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
+            <div class="logo-title">CDSCO</div>
+            <div class="logo-desc">Drug Controller Approved</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="schedule-m" aria-hidden="true" tabindex="-1">
+            <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="logo-title">Schedule M+</div>
+            <div class="logo-desc">D&amp;C Act Compliance</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+          <button class="cert-logo-card" data-cert="fssai" aria-hidden="true" tabindex="-1">
+            <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
+            <div class="logo-title">FSSAI</div>
+            <div class="logo-desc">Food Safety Standards Authority</div>
+            <div class="cert-click-hint">Click for details</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Certification Modal -->
+      <div class="cert-modal-overlay" id="certModalOverlay">
+        <div class="cert-modal" id="certModal" role="dialog" aria-labelledby="certModalTitle" aria-modal="true">
+          <!-- Close Button -->
+          <button class="cert-modal-close" id="certModalClose" aria-label="Close certification details">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <!-- Modal Content -->
+          <div class="cert-modal-content">
+            <div class="cert-modal-header">
+              <div class="cert-modal-icon" id="certModalIcon"></div>
+              <div class="cert-modal-title-group">
+                <h2 id="certModalTitle" class="cert-modal-title"></h2>
+                <p class="cert-modal-subtitle" id="certModalSubtitle"></p>
+              </div>
+            </div>
+
+            <div class="cert-modal-body">
+              <div class="cert-section">
+                <h3 class="cert-section-title">About</h3>
+                <p class="cert-section-text" id="certAbout"></p>
+              </div>
+
+              <div class="cert-section">
+                <h3 class="cert-section-title">Purpose &amp; Importance</h3>
+                <p class="cert-section-text" id="certPurpose"></p>
+              </div>
+
+              <div class="cert-section">
+                <h3 class="cert-section-title">Key Compliance Requirements</h3>
+                <ul class="cert-requirements-list" id="certRequirements"></ul>
+              </div>
+
+              <div class="cert-section">
+                <h3 class="cert-section-title">Benefits for Customers &amp; Manufacturers</h3>
+                <ul class="cert-benefits-list" id="certBenefits"></ul>
+              </div>
+
+              <div class="cert-section">
+                <h3 class="cert-section-title">Issuing Authority</h3>
+                <p class="cert-section-text" id="certAuthority"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -659,127 +782,7 @@
           </div>
         </div>
 
-        <!-- Certification Carousel Section Header -->
-        <div class="section-subheader">
-          <span class="label">Accreditation</span>
-          <h3>Verified Partner Certifications</h3>
-        </div>
 
-        <!-- Certification Carousel -->
-        <div class="cert-carousel">
-          <div class="carousel-track">
-            <!-- Set 1 -->
-            <button class="cert-logo-card" data-cert="who-gmp">
-              <div class="logo-icon"><i class="fas fa-award"></i></div>
-              <div class="logo-title">WHO-GMP</div>
-              <div class="logo-desc">Good Manufacturing Practice</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="iso-9001">
-              <div class="logo-icon"><i class="fas fa-certificate"></i></div>
-              <div class="logo-title">ISO 9001:2015</div>
-              <div class="logo-desc">Quality Management System</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="cdsco">
-              <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
-              <div class="logo-title">CDSCO</div>
-              <div class="logo-desc">Drug Controller Approved</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="schedule-m">
-              <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
-              <div class="logo-title">Schedule M+</div>
-              <div class="logo-desc">D&amp;C Act Compliance</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="fssai">
-              <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
-              <div class="logo-title">FSSAI</div>
-              <div class="logo-desc">Food Safety Standards Authority</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <!-- Set 2 (for seamless loop) -->
-            <button class="cert-logo-card" data-cert="who-gmp" aria-hidden="true" tabindex="-1">
-              <div class="logo-icon"><i class="fas fa-award"></i></div>
-              <div class="logo-title">WHO-GMP</div>
-              <div class="logo-desc">Good Manufacturing Practice</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="iso-9001" aria-hidden="true" tabindex="-1">
-              <div class="logo-icon"><i class="fas fa-certificate"></i></div>
-              <div class="logo-title">ISO 9001:2015</div>
-              <div class="logo-desc">Quality Management System</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="cdsco" aria-hidden="true" tabindex="-1">
-              <div class="logo-icon"><i class="fas fa-file-contract"></i></div>
-              <div class="logo-title">CDSCO</div>
-              <div class="logo-desc">Drug Controller Approved</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="schedule-m" aria-hidden="true" tabindex="-1">
-              <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
-              <div class="logo-title">Schedule M+</div>
-              <div class="logo-desc">D&amp;C Act Compliance</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-            <button class="cert-logo-card" data-cert="fssai" aria-hidden="true" tabindex="-1">
-              <div class="logo-icon"><i class="fas fa-apple-alt"></i></div>
-              <div class="logo-title">FSSAI</div>
-              <div class="logo-desc">Food Safety Standards Authority</div>
-              <div class="cert-click-hint">Click for details</div>
-            </button>
-          </div>
-        </div>
-
-        <!-- Certification Modal -->
-        <div class="cert-modal-overlay" id="certModalOverlay">
-          <div class="cert-modal" id="certModal" role="dialog" aria-labelledby="certModalTitle" aria-modal="true">
-            <!-- Close Button -->
-            <button class="cert-modal-close" id="certModalClose" aria-label="Close certification details">
-              <i class="fas fa-times"></i>
-            </button>
-
-            <!-- Modal Content -->
-            <div class="cert-modal-content">
-              <div class="cert-modal-header">
-                <div class="cert-modal-icon" id="certModalIcon"></div>
-                <div class="cert-modal-title-group">
-                  <h2 id="certModalTitle" class="cert-modal-title"></h2>
-                  <p class="cert-modal-subtitle" id="certModalSubtitle"></p>
-                </div>
-              </div>
-
-              <div class="cert-modal-body">
-                <div class="cert-section">
-                  <h3 class="cert-section-title">About</h3>
-                  <p class="cert-section-text" id="certAbout"></p>
-                </div>
-
-                <div class="cert-section">
-                  <h3 class="cert-section-title">Purpose &amp; Importance</h3>
-                  <p class="cert-section-text" id="certPurpose"></p>
-                </div>
-
-                <div class="cert-section">
-                  <h3 class="cert-section-title">Key Compliance Requirements</h3>
-                  <ul class="cert-requirements-list" id="certRequirements"></ul>
-                </div>
-
-                <div class="cert-section">
-                  <h3 class="cert-section-title">Benefits for Customers &amp; Manufacturers</h3>
-                  <ul class="cert-benefits-list" id="certBenefits"></ul>
-                </div>
-
-                <div class="cert-section">
-                  <h3 class="cert-section-title">Issuing Authority</h3>
-                  <p class="cert-section-text" id="certAuthority"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- Download Section -->
         <div class="download-section">
