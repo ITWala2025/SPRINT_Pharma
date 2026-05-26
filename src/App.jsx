@@ -1,19 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from '@/components/layout/MainLayout';
 import Home from '@/pages/Home.jsx';
-import Vision from '@/pages/Vision.jsx';
+import About from '@/pages/About.jsx';
 import Products from '@/pages/Products.jsx';
+import Franchise from '@/pages/Franchise.jsx';
+import WhyUs from '@/pages/WhyUs.jsx';
 import Manufacturing from '@/pages/Manufacturing.jsx';
+import Contact from '@/pages/Contact.jsx';
 
 const App = () => (
   <Router>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/vision" element={<Vision />} />
-      <Route path="/products" element={<Products />} />
-      <Route path="/manufacturing" element={<Manufacturing />} />
-    </Routes>
+    <MainLayout>
+      <Routes>
+        <Route path="/"              element={<Home />} />
+        <Route path="/about"         element={<About />} />
+        <Route path="/products"      element={<Products />} />
+        <Route path="/franchise"     element={<Franchise />} />
+        <Route path="/why-us"        element={<WhyUs />} />
+        <Route path="/manufacturing" element={<Manufacturing />} />
+        <Route path="/contact"       element={<Contact />} />
+      </Routes>
+    </MainLayout>
   </Router>
 );
 
-export default App;.
+export default App;
