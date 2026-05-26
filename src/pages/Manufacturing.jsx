@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '@/styles/manu.css';
 
 const TABS = [
   {
