@@ -51,9 +51,9 @@
       </div>
     </div>
 
-    <!-- Layer 2 · Brand + Utility Strip -->
+    <!-- Unified Header: Brand + Navigation (pill style) -->
     <div class="header-layer header-brand-strip">
-      <div class="brand-strip-inner">
+      <div class="brand-strip-inner" style="display:flex; align-items:center; justify-content:space-between;">
         <!-- Logo -->
         <a href="#" class="nav-logo">
           <div class="logo-mark">Zu</div>
@@ -62,58 +62,28 @@
             <span class="logo-tagline">Laboratories Pvt. Ltd.</span>
           </div>
         </a>
-
-        <!-- Contact chips -->
-        <div class="brand-contacts">
-          <a href="tel:+911234567890" class="contact-chip">
-            <i class="fas fa-phone-alt"></i>
-            <span>+91 12345 67890</span>
-          </a>
-          <a href="mailto:info@zupharm.com" class="contact-chip">
-            <i class="fas fa-envelope"></i>
-            <span>info@zupharm.com</span>
-          </a>
-          <a href="#manufacturing" class="cert-chip">
-            <i class="fas fa-shield-alt"></i>
-            <span>Manufacturing</span>
-          </a>
-        </div>
+         <!-- Navigation pill -->
+         <nav class="nav-pill" id="navPill" style="display:flex; align-items:center;">
+           <ul class="nav-links" style="display:flex; margin:0; padding:0; list-style:none;">
+             <li><a href="#about" class="nav-link">About</a></li>
+             <li><a href="#products" class="nav-link">Products</a></li>
+             <li><a href="#franchise" class="nav-link">Franchise</a></li>
+             <li><a href="#why" class="nav-link">Why Us</a></li>
+             <li><a href="#manufacturing" class="nav-link">Manufacturing</a></li>
+             <li><a href="#contact" class="nav-link">Contact</a></li>
+           </ul>
+           <a href="#franchise" class="nav-cta" style="margin-left:1rem;">
+             <i class="fas fa-handshake"></i> Apply for Franchise
+           </a>
+           <!-- Mobile hamburger -->
+           <button class="hamburger" id="hamburger" aria-label="Toggle menu" style="margin-left:1rem;">
+             <span></span><span></span><span></span>
+           </button>
+         </nav>
       </div>
     </div>
 
-    <!-- Layer 3 · Navigation Pill -->
-    <div class="header-layer header-nav-layer">
-      <nav class="nav-pill" id="navPill">
-        <ul class="nav-links">
-          <li><a href="#about"          class="nav-link">About</a></li>
-          <li><a href="#products"       class="nav-link">Products</a></li>
-          <li><a href="#franchise"      class="nav-link">Franchise</a></li>
-          <li><a href="#why"            class="nav-link">Why Us</a></li>
-          <li><a href="#manufacturing" class="nav-link">Manufacturing</a></li>
-          <li><a href="#contact"        class="nav-link">Contact</a></li>
-        </ul>
-        <a href="#franchise" class="nav-cta">
-          <i class="fas fa-handshake"></i> Apply for Franchise
-        </a>
-        <!-- Mobile hamburger -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div class="mobile-drawer" id="mobileDrawer">
-      <ul>
-        <li><a href="#about"          class="mob-link">About</a></li>
-        <li><a href="#products"       class="mob-link">Products</a></li>
-        <li><a href="#franchise"      class="mob-link">Franchise</a></li>
-        <li><a href="#why"            class="mob-link">Why Us</a></li>
-        <li><a href="#manufacturing" class="mob-link">Manufacturing</a></li>
-        <li><a href="#contact"        class="mob-link">Contact</a></li>
-      </ul>
-      <a href="#franchise" class="mob-cta">Apply for Franchise</a>
-    </div>
+    <!-- Navigation Pill removed; integrated into unified header above -->
   </header>
 
   <!-- ════════════════════════════════════════
@@ -956,6 +926,25 @@
 
   <!-- ── JavaScript ── -->
   <script src="main.js"></script>
+  <!-- Header dropdown script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggle = document.getElementById('contactToggle');
+      var menu = toggle && toggle.nextElementSibling;
+      if (toggle && menu) {
+        toggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !expanded);
+          menu.style.display = expanded ? 'none' : 'block';
+        });
+        document.addEventListener('click', function () {
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.style.display = 'none';
+        });
+      }
+    });
+  </script>
   <!-- Lightbox Modal for clickable images -->
   <div id="lightboxOverlay" class="lightbox-overlay" style="display:none;">
     <div class="lightbox-content">
