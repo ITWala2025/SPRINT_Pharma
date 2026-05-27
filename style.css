@@ -1590,7 +1590,7 @@ a {
   .manufacturing-hero {
     position: relative;
     border-radius: 0;
-    background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&q=80&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     padding: 96px 40px;
@@ -1816,7 +1816,6 @@ a {
   }
   .accordion-content {
     min-height: 0;
-    overflow: hidden;
     padding: 0 24px 16px;
     font-size: 15px;
     color: var(--charcoal);
@@ -2098,8 +2097,8 @@ a {
 
   /* Download Section */
   .download-section {
-    margin-top: 60px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
   }
   .download-card {
     background: linear-gradient(135deg, var(--white) 0%, var(--sky) 100%);
@@ -2192,6 +2191,230 @@ a {
     font-size: 18px;
   }
 
+  /* Research & Quality Section */
+  .research-quality {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .research-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-top: 48px;
+  }
+
+  /* Accordion Column */
+  .research-accordion-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .research-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .research-accordion-item {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+  }
+
+  .research-accordion-item:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: var(--teal-lt);
+  }
+
+  .research-accordion-header {
+    width: 100%;
+    padding: 24px 28px;
+    background: var(--white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    transition: all 0.3s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .research-accordion-header:hover {
+    background: rgba(13, 115, 119, 0.03);
+  }
+
+  .accordion-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    text-align: left;
+  }
+
+  .accordion-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, rgba(13, 115, 119, 0.1) 0%, rgba(13, 115, 119, 0.05) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--teal);
+    flex-shrink: 0;
+  }
+
+  .accordion-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+
+  .chevron-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: var(--teal);
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .research-accordion-item[aria-expanded="true"] .chevron-icon {
+    transform: rotate(180deg);
+  }
+
+  .research-accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: rgba(13, 115, 119, 0.02);
+  }
+
+  .research-accordion-body.open {
+    max-height: 500px;
+    padding: 0 28px 24px 28px;
+  }
+
+  .accordion-content {
+    padding-top: 0;
+  }
+
+  .accordion-content p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--charcoal);
+    font-weight: 400;
+  }
+
+  /* Download Cards Column */
+  .research-download-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .download-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .research-download-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .research-download-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border-color: var(--teal-lt);
+  }
+
+  .card-header {
+    margin-bottom: 20px;
+  }
+
+  .pdf-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.15) 0%, rgba(220, 53, 69, 0.08) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #dc3545;
+  }
+
+  .card-body {
+    flex: 1;
+    margin-bottom: 24px;
+  }
+
+  .card-body h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .card-body p {
+    font-size: 14px;
+    color: var(--charcoal);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .download-btn-secondary {
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .download-btn-secondary:hover {
+    background: #0a5f63;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 115, 119, 0.2);
+  }
+
+  .download-btn-secondary i {
+    font-size: 13px;
+  }
+
   /* Responsive styling for tablet/mobile */
   @media (max-width: 1024px) {
     .manufacturing-hero {
@@ -2281,6 +2504,51 @@ a {
       width: 100%;
     }
 
+    /* Research & Quality Responsive */
+    .research-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .research-accordion-item {
+      margin-bottom: 0;
+    }
+    .research-accordion-header {
+      padding: 20px 20px;
+    }
+    .accordion-header-left {
+      gap: 12px;
+    }
+    .accordion-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+    .accordion-title {
+      font-size: 15px;
+    }
+    .research-accordion-body.open {
+      padding: 0 20px 20px 20px;
+    }
+    .accordion-content p {
+      font-size: 14px;
+    }
+    .research-download-card {
+      padding: 24px;
+    }
+    .card-body h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .card-body p {
+      font-size: 13.5px;
+    }
+    .download-btn-secondary {
+      width: 100%;
+      justify-content: center;
+      padding: 12px 20px;
+      font-size: 13px;
+    }
+
     /* Modal Responsive */
     .cert-modal {
       max-height: 90vh;
@@ -2343,6 +2611,48 @@ a {
     }
     .cert-modal-title {
       font-size: 20px;
+    }
+
+    /* Research & Quality Extra Small */
+    .research-quality {
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+    .research-accordion-header {
+      padding: 16px 16px;
+    }
+    .accordion-header-left {
+      gap: 10px;
+    }
+    .accordion-icon {
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+    }
+    .accordion-title {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .research-accordion-body.open {
+      padding: 0 16px 16px 16px;
+    }
+    .research-download-card {
+      padding: 20px 16px;
+    }
+    .pdf-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+    }
+    .card-body h4 {
+      font-size: 15px;
+    }
+    .card-body p {
+      font-size: 13px;
+    }
+    .download-btn-secondary {
+      padding: 10px 16px;
+      font-size: 12px;
     }
   }
 

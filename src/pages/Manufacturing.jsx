@@ -60,29 +60,60 @@ const FAQ = [
   },
 ];
 
+const RESEARCH_QUALITY = [
+  {
+    id: 'clinical',
+    title: 'Clinical Research & Bioequivalence',
+    description: 'Our dedicated bioequivalence testing laboratories conduct rigorous clinical studies following ICH Q2(R2) guidelines. We perform BE studies for generic formulations with AESI monitoring, pharmacokinetic profiling, and full statistical analysis to support regulatory submissions across global markets.',
+    icon: 'fa-flask-vial',
+  },
+  {
+    id: 'qa',
+    title: 'Quality Assurance & Validation',
+    description: 'Comprehensive QA protocols ensure every batch meets international standards. Our validation includes process validation, analytical method validation, stability testing, and environmental monitoring. We maintain ISO 9001:2015 certification with zero-defect manufacturing principles.',
+    icon: 'fa-certificate',
+  },
+  {
+    id: 'innovation',
+    title: 'Innovation & Product Development',
+    description: 'Our R&D team specializes in novel drug delivery systems, formulation optimization, and process innovation. We collaborate with pharmaceutical companies for technology transfer, conduct feasibility studies, and develop next-generation products with advanced release mechanisms and bioavailability enhancement.',
+    icon: 'fa-lightbulb',
+  },
+];
+
+const QUALITY_PDFS = [
+  {
+    id: 'manufacturing-brochure',
+    title: 'Manufacturing Capability Brochure',
+    description: 'Get detailed plant specifications, machinery details, sterile line capacities, and full compliance information (PDF, 4.2 MB).',
+    filename: 'brochure.pdf',
+  },
+];
+
 const Manufacturing = () => {
   const [activeTab, setActiveTab] = useState('sterile');
   const [openFaq, setOpenFaq] = useState(null);
+  const [openResearch, setOpenResearch] = useState(null);
 
   const currentTab = TABS.find(t => t.id === activeTab);
 
   return (
     <>
-    {/* Hero full width, outside container */}
-      <div className="manufacturing-hero">
-      <div className="hero-overlay" />
-      <div className="hero-content">
-        <span className="hero-tagline">
-          <i className="fas fa-industry" /> Next-Gen Production
-        </span>
-        <h2>State of the Art Manufacturing</h2>
-        <p>
-          Operating at the intersection of technological innovation and regulatory
-          excellence. Our WHO-GMP certified facilities are engineered for maximum
-          safety, precision, and scalability.
-        </p>
+      {/* Hero full width, outside container */}
+        <div className="manufacturing-hero">
+        <div className="hero-overlay" />
+        <div className="hero-content flex flex-col items-center text-center">
+          <span className="hero-tagline">
+            <i className="fas fa-industry" /> Next-Gen Production
+          </span>
+          <h2>State of the Art Manufacturing</h2>
+          <p>
+            Operating at the intersection of technological innovation and regulatory
+            excellence. Our WHO-GMP certified facilities are engineered for maximum
+            safety, precision, and scalability.
+          </p>
+        </div>
       </div>
-    </div>
 
     <section className="manufacturing" id="manufacturing">
       <div className="container">
@@ -133,7 +164,7 @@ const Manufacturing = () => {
             {FAQ.map((item, i) => {
               const isOpen = openFaq === i;
               return (
-                <div className="accordion-item" key={i}>
+           <div className="accordion-item mb-4" key={i}>
                   <button
                     className="accordion-header"
                     aria-expanded={isOpen}
@@ -143,30 +174,71 @@ const Manufacturing = () => {
                     <span>{item.q}</span>
                     <span className="acc-icon"><i className="fas fa-chevron-down" /></span>
                   </button>
-                  {isOpen && (
-                    <div className="accordion-body" id={`acc-body-${i}`} role="region">
-                      <div className="accordion-content"><p>{item.a}</p></div>
-                    </div>
-                  )}
+                  <div className={`accordion-body${isOpen ? ' open' : ''}`} id={`acc-body-${i}`} role="region">
+                    <div className="accordion-content"><p>{item.a}</p></div>
+                  </div>
                 </div>
               );
             })}
           </div>
 
-          {/* Download */}
+          {/* Research & Quality Section */}
+          <div className="research-quality">
+            <div className="section-subheader">
+              <span className="label">Research & Quality</span>
+              <h3>Innovation Backed by Quality Assurance</h3>
+            </div>
+
+            <div className="research-grid">
+              {/* Left: Accordion */}
+              <div className="research-accordion-column">
+                <div className="accordion research-accordion">
+                  {RESEARCH_QUALITY.map((item, i) => {
+                    const isOpen = openResearch === i;
+                    return (
+                      <div className="accordion-item research-accordion-item" key={i}>
+                        <button
+                          className="accordion-header research-accordion-header"
+                          aria-expanded={isOpen}
+                          aria-controls={`research-acc-body-${i}`}
+                          onClick={() => setOpenResearch(isOpen ? null : i)}
+                        >
+                          <div className="accordion-header-left">
+                            <div className="accordion-icon">
+                              <i className={`fas ${item.icon}`} />
+                            </div>
+                            <span className="accordion-title">{item.title}</span>
+                          </div>
+                          <span className="acc-icon chevron-icon"><i className="fas fa-chevron-down" /></span>
+                        </button>
+                        <div
+                          className={`accordion-body research-accordion-body${isOpen ? ' open' : ''}`}
+                          id={`research-acc-body-${i}`}
+                          role="region"
+                        >
+                          <div className="accordion-content">
+                            <p>{item.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Download Section */}
           <div className="download-section">
             <div className="download-card">
               <div className="download-info">
                 <div className="download-icon-big"><i className="far fa-file-pdf" /></div>
                 <div className="download-text">
-                  <h4>Manufacturing Capability Brochure</h4>
-                  <p>
-                    Get detailed plant specifications, machinery details, sterile line
-                    capacities, and full compliance information (PDF, 4.2 MB).
-                  </p>
+                  <h4>{QUALITY_PDFS[0].title}</h4>
+                  <p>{QUALITY_PDFS[0].description}</p>
                 </div>
               </div>
-              <a href="/assets/pdfs/brochure.pdf" download className="download-btn">
+              <a href={`/assets/pdfs/${QUALITY_PDFS[0].filename}`} download className="download-btn">
                 <span className="btn-text">Download Brochure</span>
               </a>
             </div>
