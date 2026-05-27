@@ -92,7 +92,7 @@ const Home = () => (
           </h1>
 
           <p className="hero-sub">
-            India's next-generation pharmaceutical partner — built on science,
+            India's next-generation pharmaceutical partner, built on science,
             scaled with trust, and powered by innovation across 20+ states.
           </p>
 
@@ -136,7 +136,7 @@ const Home = () => (
             />
             <div className="hero-img-caption">
               <strong>State-of-the-Art Facility</strong>
-              <p>WHO-GMP certified manufacturing plant — built for precision, designed for scale.</p>
+               <p>WHO-GMP certified manufacturing plant, built for precision, designed for scale.</p>
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@ const Home = () => (
               <div className="bento-num">01</div>
               <h3>Precision Manufacturing at Global Standards</h3>
               <p>
-                Every formulation is developed under ISO 9001:2015 and WHO-GMP protocols —
+                 Every formulation is developed under ISO 9001:2015 and WHO-GMP protocols,
                 no shortcuts, no compromises. Our 50M+ unit annual capacity runs 24/7 with
                 zero-defect tolerance.
               </p>
@@ -198,7 +198,7 @@ const Home = () => (
         <div className="bento-card bento-card--wide">
           <div className="bento-icon"><i className="fas fa-robot" /></div>
           <h3>AI-Powered Tools</h3>
-          <p>ZuAI forecasting, ZuDoc doctor connect, ZuSupply chain management, and ZuAnalytics — your competitive edge.</p>
+            <p>ZuAI forecasting, ZuDoc doctor connect, ZuSupply chain management, and ZuAnalytics, your competitive edge.</p>
           <div className="bento-link">Explore suite <i className="fas fa-arrow-right" /></div>
         </div>
 

@@ -32,8 +32,8 @@ const Contact = () => {
           <div className="page-hero-eyebrow">Get In Touch</div>
           <h1>Let's Talk.</h1>
           <p>
-            Whether you're exploring a franchise opportunity, need product information,
-            or simply have a question — we respond within 24 hours.
+             Whether you're exploring a franchise opportunity, need product information,
+             or simply have a question, we respond within 24 hours.
           </p>
         </div>
       </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                 <div className="contact-detail-icon"><i className="fas fa-map-marker-alt" /></div>
                 <div className="contact-detail-text">
                   <strong>Address</strong>
-                  <span>Pharmaceutical Industrial Zone,<br />Patna, Bihar — 800001</span>
+                  <span>Pharmaceutical Industrial Zone,<br />Patna, Bihar, 800001</span>
                 </div>
               </div>
               <div className="contact-detail">

@@ -15,7 +15,7 @@ const USPS = [
   {
     num: '02',
     title: 'Complete Promotional Kit',
-    desc: 'Visual aids, MR bags, product samples, and full marketing material — delivered to you.',
+      desc: 'Visual aids, MR bags, product samples, and full marketing material, delivered to you.',
   },
   {
     num: '03',
@@ -61,7 +61,7 @@ const Franchise = () => {
             <h2>Build Your Pharma Business With Zupharm</h2>
             <p>
               Join 100+ successful partners across India. We provide the product,
-              the support, and the systems — you bring the ambition.
+               the support, and the systems, you bring the ambition.
             </p>
             <div className="franchise-usps">
               {USPS.map(({ num, title, desc }) => (

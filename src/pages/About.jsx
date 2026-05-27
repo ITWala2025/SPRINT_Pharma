@@ -13,7 +13,7 @@ const VALUES = [
   { icon: 'fa-leaf',       title: 'Integrity',      desc: 'We uphold the highest standards of honesty and transparency in every decision we make.' },
   { icon: 'fa-lightbulb',  title: 'Innovation',     desc: 'Continuous improvement and breakthrough research drive us forward every single day.' },
   { icon: 'fa-users',      title: 'Collaboration',  desc: 'We work together with partners, patients, and communities to achieve better outcomes.' },
-  { icon: 'fa-heart',      title: 'Compassion',     desc: "People's health and well-being are at the heart of everything we do — without exception." },
+   { icon: 'fa-heart',      title: 'Compassion',     desc: "People's health and well-being are at the heart of everything we do, without exception." },
   { icon: 'fa-shield-alt', title: 'Quality',        desc: 'Rigorous standards ensure the safety, efficacy, and consistency of every product we deliver.' },
   { icon: 'fa-globe',      title: 'Sustainability', desc: 'We commit to environmentally responsible practices for the planet and future generations.' },
 ];
@@ -65,7 +65,7 @@ const About = () => (
               <li><div className="check-dot" />500+ formulations across 12 therapeutic segments</li>
               <li><div className="check-dot" />Exclusive territory model with pan-India coverage</li>
               <li><div className="check-dot" />Dedicated R&amp;D with 15+ years of domain expertise</li>
-              <li><div className="check-dot" />AI-powered tools — ZuAI, ZuDoc, ZuSupply, ZuAnalytics</li>
+               <li><div className="check-dot" />AI-powered tools, ZuAI, ZuDoc, ZuSupply, ZuAnalytics</li>
             </ul>
             <Link to="/franchise" className="btn-main">
               <i className="fas fa-handshake" /> Become a Partner
@@ -120,14 +120,14 @@ const About = () => (
             <h2>To Lead the Way in Pharmaceutical Innovation</h2>
             <p>
               To be the leading catalyst for innovative pharmaceutical solutions that
-              improve health outcomes worldwide — making quality medicines accessible
+               improve health outcomes worldwide, making quality medicines accessible
               to every corner of India and beyond.
             </p>
           </div>
           <div className="vm-visual">
             <img
               src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=80&auto=format&fit=crop"
-              alt="Zupharm vision — pharmaceutical innovation"
+               alt="Zupharm vision, pharmaceutical innovation"
             />
             <div className="vm-visual-overlay" />
           </div>
@@ -140,7 +140,7 @@ const About = () => (
             <h2>Delivering Quality Medicines. Building Healthy Lives.</h2>
             <p>
               Deliver high-quality, affordable medicines through cutting-edge research,
-              sustainable manufacturing, and a commitment to ethical practices — ensuring
+               sustainable manufacturing, and a commitment to ethical practices, ensuring
               every patient receives the standard of care they deserve.
             </p>
           </div>

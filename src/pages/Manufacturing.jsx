@@ -68,7 +68,7 @@ const Manufacturing = () => {
 
   return (
     <>
-    {/* Hero — full width, outside container */}
+    {/* Hero full width, outside container */}
       <div className="manufacturing-hero">
       <div className="hero-overlay" />
       <div className="hero-content">

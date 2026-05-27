@@ -3,7 +3,7 @@ import React from 'react';
 const REASONS = [
   {
     num: '01', title: 'WHO-GMP Certified Manufacturing',
-    desc: 'Every batch tested, every product verified before dispatch — no exceptions.',
+    desc: 'Every batch tested, every product verified before dispatch, no exceptions.',
   },
   {
     num: '02', title: 'Pan-India Distribution',
@@ -11,15 +11,15 @@ const REASONS = [
   },
   {
     num: '03', title: '500+ Product Portfolio',
-    desc: 'Tablets, capsules, syrups, injectables, topicals — across 12 therapeutic segments.',
+    desc: 'Tablets, capsules, syrups, injectables, topicals, across 12 therapeutic segments.',
   },
   {
     num: '04', title: 'Fully Regulatory Compliant',
-    desc: 'FSSAI, CDSCO, Schedule M & M+ compliant — documentation always audit-ready.',
+    desc: 'FSSAI, CDSCO, Schedule M & M+ compliant, documentation always audit-ready.',
   },
   {
     num: '05', title: 'AI-Powered Business Tools',
-    desc: 'ZuAI, ZuDoc, ZuSupply, ZuAnalytics — giving our partners a real competitive edge.',
+    desc: 'ZuAI, ZuDoc, ZuSupply, ZuAnalytics, giving our partners a real competitive edge.',
   },
   {
     num: '06', title: 'Transparent Partner Model',

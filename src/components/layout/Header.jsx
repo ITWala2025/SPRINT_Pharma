@@ -24,13 +24,13 @@ const Header = () => {
   return (
     <header id="site-header">
 
-      {/* Layer 1 — Announcement Bar */}
+       {/* Layer 1 Announcement Bar */}
       <div className={`header-layer header-announce${showAnnouncement ? '' : ' hidden'}`}>
         <div className="announce-inner">
           <span className="announce-dot" />
           <p>
             Now accepting PCD Franchise applications for{' '}
-            <strong>Bihar, UP &amp; Jharkhand</strong> —{' '}
+             <strong>Bihar, UP &amp; Jharkhand</strong>,{' '}
             <Link to="/franchise">Apply Today &rarr;</Link>
           </p>
           <button
@@ -43,7 +43,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Layer 2 — Brand + Navigation */}
+       {/* Layer 2 Brand + Navigation */}
       <div className="header-layer header-brand-strip">
         <div className="brand-strip-inner">
           <Link to="/" className="nav-logo">
@@ -92,7 +92,7 @@ const Header = () => {
         aria-modal="true"
         aria-label="Navigation menu"
       >
-        {/* Backdrop — click to close */}
+       {/* Backdrop click to close */}
         <div className="mob-backdrop" onClick={() => setMenuOpen(false)} />
 
         {/* Sliding panel */}

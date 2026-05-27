@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
-  <footer>
+  <footer style={{
+    background: 'linear-gradient(135deg, #0D7377 0%, #0A4F55 45%, #062A34 100%)',
+    // subtle depth via a very light overlay to emulate soft shadow
+    // using a semi‑transparent layer ensures no impact on inner content
+    backgroundBlendMode: 'overlay',
+  } }>
     <div className="container">
       <div className="footer-top">
 
@@ -67,7 +72,7 @@ const Footer = () => (
             <div className="dot" />
             <span>
               Pharmaceutical Industrial Zone,<br />
-              Patna, Bihar — 800001
+              Patna, Bihar, 800001
             </span>
           </div>
           <div className="f-contact-item">

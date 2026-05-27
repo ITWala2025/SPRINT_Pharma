@@ -52,10 +52,10 @@ const Products = () => (
       <div className="page-hero-inner">
         <div className="page-hero-eyebrow">Our Portfolio</div>
         <h1>500+ Products Across<br />12 Therapeutic Segments</h1>
-        <p>
-          From cardiac care to ophthalmology — every formulation developed under
-          WHO-GMP standards with full regulatory compliance.
-        </p>
+           <p>
+           From cardiac care to ophthalmology, every formulation developed under
+           WHO-GMP standards with full regulatory compliance.
+           </p>
         <Link to="/franchise" className="page-hero-cta">
           <i className="fas fa-handshake" /> Become a Franchise Partner
         </Link>
