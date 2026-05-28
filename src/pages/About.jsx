@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CERTS = [
@@ -18,7 +18,12 @@ const VALUES = [
   { icon: 'fa-globe',      title: 'Sustainability', desc: 'We commit to environmentally responsible practices for the planet and future generations.' },
 ];
 
-const About = () => (
+  const About = () => {
+    // Track which certificate card is expanded. Only one can be active at a time.
+    const [activeCertKey, setActiveCertKey] = useState(null);
+    // Track which value card is expanded. Only one active at a time.
+    const [activeValueKey, setActiveValueKey] = useState(null);
+    return (
   <>
     {/* ── PAGE HERO ── */}
       <div className="page-hero" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=1600&q=80&auto=format&fit=crop')" }}>
@@ -90,9 +95,72 @@ const About = () => (
           <span className="label">Accreditation</span>
           <h3>Verified Partner Certifications</h3>
         </div>
-        <div className="cert-carousel">
-          <div className="carousel-track">
-            {[...CERTS, ...CERTS].map((c, i) => (
+         <div className="cert-carousel">
+           <div className="carousel-track">
+             {/* Render each certificate as an interactive card */}
+          {CERTS.map((c) => {
+                const isActive = activeCertKey === c.key;
+                return (
+                  <div
+                    key={c.key}
+                    className={`cert-logo-card${isActive ? ' active' : ''}`}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => setActiveCertKey(isActive ? null : c.key)}
+                    onKeyDown={(e) => e.key === 'Enter' && setActiveCertKey(isActive ? null : c.key)}
+                  >
+                    <div className="logo-icon"><i className={`fas ${c.icon}`} /></div>
+                    <div className="logo-title">{c.title}</div>
+                    <div className="logo-desc">{c.desc}</div>
+                  </div>
+                );
+              })}
+          {/* Modal overlay for expanded certificate details */}
+          <div className={`cert-modal-overlay${activeCertKey ? ' open' : ''}`} onClick={() => setActiveCertKey(null)}>
+            {activeCertKey && (
+              <div className="cert-modal" onClick={e => e.stopPropagation()}>
+                <button className="cert-modal-close" onClick={() => setActiveCertKey(null)} aria-label="Close">
+                  <i className="fas fa-times" />
+                </button>
+                <div className="cert-modal-content">
+                  {(() => {
+                    const c = CERTS.find(item => item.key === activeCertKey);
+                    if (!c) return null;
+                    return (
+                      <>
+                        <div className="cert-modal-header">
+                          <div className="cert-modal-icon"><i className={`fas ${c.icon}`} /></div>
+                          <div className="cert-modal-title-group">
+                            <h2 className="cert-modal-title">{c.title}</h2>
+                            <p className="cert-modal-desc">{c.desc}</p>
+                          </div>
+                        </div>
+                        <div className="cert-modal-body">
+                          {c.key === 'who-gmp' && (
+                            <p>WHO‑GMP certification ensures our facility meets <strong>World Health Organization's Good Manufacturing Practice</strong> standards — mandatory for pharmaceutical exports.</p>
+                          )}
+                          {c.key === 'iso-9001' && (
+                            <p><strong>ISO 9001:2015</strong> is an international quality management standard ensuring consistent, high‑quality processes across all operations.</p>
+                          )}
+                          {c.key === 'cdsco' && (
+                            <p><strong>CDSCO (Central Drugs Standard Control Organisation)</strong> approval confirms our products comply with India's drug regulatory authority requirements.</p>
+                          )}
+                          {c.key === 'schedule-m' && (
+                            <p><strong>Schedule M+</strong> under the Drugs & Cosmetics Act defines updated GMP requirements for Indian pharmaceutical manufacturers.</p>
+                          )}
+                          {c.key === 'fssai' && (
+                            <p><strong>FSSAI (Food Safety and Standards Authority of India)</strong> certification covers food‑grade and nutraceutical product manufacturing compliance.</p>
+                          )}
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
+              </div>
+            )}
+          </div>
+
+            {/* {[...CERTS, ...CERTS].map((c, i) => (
               <div
                 key={i}
                 className="cert-logo-card"
@@ -103,7 +171,7 @@ const About = () => (
                 <div className="logo-title">{c.title}</div>
                 <div className="logo-desc">{c.desc}</div>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
@@ -134,22 +202,25 @@ const About = () => (
         </div>
 
         {/* Mission */}
-        <div className="vm-block vm-block--reverse" id="mission">
-          <div className="vm-block-text">
-            <div className="vm-eyebrow">Our Mission</div>
-            <h2>Delivering Quality Medicines. Building Healthy Lives.</h2>
-            <p>
-              Deliver high-quality, affordable medicines through cutting-edge research,
-               sustainable manufacturing, and a commitment to ethical practices, ensuring
-              every patient receives the standard of care they deserve.
-            </p>
-          </div>
-          <div className="vm-icon-block">
-            <div className="vm-icon-circle">
-              <i className="fas fa-bullseye" />
+          <div className="vm-block vm-block--reverse" id="mission">
+            <div className="vm-block-text">
+              <div className="vm-eyebrow">Our Mission</div>
+              <h2>Delivering Quality Medicines. Building Healthy Lives.</h2>
+              <p>
+                Deliver high-quality, affordable medicines through cutting‑edge research,
+                sustainable manufacturing, and a commitment to ethical practices, ensuring
+                every patient receives the standard of care they deserve.
+              </p>
+            </div>
+            {/* Replace placeholder icon with a realistic pharma image matching Vision style */}
+            <div className="vm-visual">
+              <img
+                src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=700&q=80&auto=format&fit=crop"
+                alt="Zupharm mission, pharmaceutical manufacturing"
+              />
+              <div className="vm-visual-overlay" />
             </div>
           </div>
-        </div>
 
       </div>
     </section>
@@ -162,17 +233,36 @@ const About = () => (
           <h2>Our Core Values</h2>
         </div>
         <div className="values-grid-zu">
-          {VALUES.map(({ icon, title, desc }) => (
-            <div className="value-card-zu" key={title}>
-              <div className="value-icon"><i className={`fas ${icon}`} /></div>
-              <h3>{title}</h3>
-              <p>{desc}</p>
-            </div>
-          ))}
+          {VALUES.map(({ icon, title, desc }) => {
+            const isActive = activeValueKey === title;
+            return (
+              <div
+                className={`value-card-zu${isActive ? ' active' : ''}`}
+                key={title}
+                role="button"
+                tabIndex={0}
+                onClick={() => setActiveValueKey(isActive ? null : title)}
+                onKeyDown={e => e.key === 'Enter' && setActiveValueKey(isActive ? null : title)}
+              >
+                <div className="value-icon"><i className={`fas ${icon}`} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                {/* Expanded extra content */}
+                {isActive && (
+                  <div className="value-extra">
+                    <p>More details about {title} can be placed here, highlighting examples and commitments.</p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
+      {/* Expanded certificate details are now rendered inline within each card */}
   </>
 );
+}
+
 
 export default About;
