@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CERTS = [
-  { key: 'who-gmp',    icon: 'fa-award',        title: 'WHO-GMP',       desc: 'Good Manufacturing Practice' },
-  { key: 'iso-9001',   icon: 'fa-certificate',   title: 'ISO 9001:2015', desc: 'Quality Management System' },
-  { key: 'cdsco',      icon: 'fa-file-contract', title: 'CDSCO',         desc: 'Drug Controller Approved' },
-  { key: 'schedule-m', icon: 'fa-heartbeat',     title: 'Schedule M+',   desc: 'D&C Act Compliance' },
-  { key: 'fssai',      icon: 'fa-apple-alt',     title: 'FSSAI',         desc: 'Food Safety Standards Authority' },
+  { key: 'who-gmp',    icon: 'fa-award',        title: 'WHO-GMP',       desc: 'Good Manufacturing Practice', details: 'Our facility meets WHO-GMP standards ensuring the highest levels of quality and safety in pharmaceutical manufacturing. This certification validates our commitment to excellence in production processes.' },
+  { key: 'iso-9001',   icon: 'fa-certificate',   title: 'ISO 9001:2015', desc: 'Quality Management System', details: 'ISO 9001:2015 certification demonstrates our comprehensive quality management system covering all aspects of our operations from product development to customer service.' },
+  { key: 'cdsco',      icon: 'fa-file-contract', title: 'CDSCO',         desc: 'Drug Controller Approved', details: 'We are approved by the Central Drugs Standard Control Organization (CDSCO), ensuring all our drugs meet stringent regulatory requirements for safety and efficacy.' },
+  { key: 'schedule-m', icon: 'fa-heartbeat',     title: 'Schedule M+',   desc: 'D&C Act Compliance', details: 'Schedule M+ compliance demonstrates our adherence to the most stringent manufacturing regulations under the Drugs and Cosmetics Act for production of pharmaceutical products.' },
+  { key: 'fssai',      icon: 'fa-apple-alt',     title: 'FSSAI',         desc: 'Food Safety Standards Authority', details: 'FSSAI certification ensures our products meet the highest standards for food and pharmaceutical safety established by the Food Safety and Standards Authority of India.' },
 ];
 
 const VALUES = [
@@ -18,8 +18,28 @@ const VALUES = [
   { icon: 'fa-globe',      title: 'Sustainability', desc: 'We commit to environmentally responsible practices for the planet and future generations.' },
 ];
 
-const About = () => (
+const About = () => {
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  return (
   <>
+    {/* ── CERTIFICATION MODAL ── */}
+    {selectedCert && (
+      <div className="cert-modal-overlay" onClick={() => setSelectedCert(null)}>
+        <div className="cert-modal" onClick={(e) => e.stopPropagation()}>
+          <button className="cert-modal-close" onClick={() => setSelectedCert(null)}>
+            <i className="fas fa-times" />
+          </button>
+          <div className="cert-modal-icon">
+            <i className={`fas ${selectedCert.icon}`} />
+          </div>
+          <h3 className="cert-modal-title">{selectedCert.title}</h3>
+          <p className="cert-modal-subtitle">{selectedCert.desc}</p>
+          <p className="cert-modal-details">{selectedCert.details}</p>
+        </div>
+      </div>
+    )}
+
     {/* ── PAGE HERO ── */}
       <div className="page-hero" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=1600&q=80&auto=format&fit=crop')" }}>
         {/* Dotted background removed */}
@@ -96,12 +116,15 @@ const About = () => (
               <div
                 key={i}
                 className="cert-logo-card"
+                onClick={() => setSelectedCert(c)}
                 aria-hidden={i >= CERTS.length ? 'true' : undefined}
                 tabIndex={i >= CERTS.length ? -1 : 0}
+                role="button"
               >
                 <div className="logo-icon"><i className={`fas ${c.icon}`} /></div>
                 <div className="logo-title">{c.title}</div>
                 <div className="logo-desc">{c.desc}</div>
+                <div className="cert-click-hint">Click for details</div>
               </div>
             ))}
           </div>
@@ -173,6 +196,7 @@ const About = () => (
       </div>
     </section>
   </>
-);
+  );
+};
 
 export default About;
