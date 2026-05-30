@@ -167,10 +167,12 @@ const About = () => {
               every patient receives the standard of care they deserve.
             </p>
           </div>
-          <div className="vm-icon-block">
-            <div className="vm-icon-circle">
-              <i className="fas fa-bullseye" />
-            </div>
+          <div className="vm-visual">
+            <img
+              src="public/images/sterile_injectables.png"
+               alt="Zupharm vision, pharmaceutical innovation"
+            />
+            <div className="vm-visual-overlay" />
           </div>
         </div>
 

@@ -40,7 +40,7 @@ const TABS = [
       'HPLC & analytical instrumentation suite',
       'Technology transfer & scale-up support',
     ],
-    img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&q=80&auto=format&fit=crop',
+    img: 'public/images/sterile_injectables.png',
     imgAlt: 'Advanced research laboratory',
   },
 ];
