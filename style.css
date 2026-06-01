@@ -1898,7 +1898,7 @@ a {
   /* Subheaders inside section */
   .section-subheader {
     margin-top: 56px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
   .section-subheader h3 {
     font-size: 26px;
@@ -1911,7 +1911,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-bottom: 56px;
+    margin-bottom: 40px;
   }
   .accordion-item {
     border: 1px solid var(--border);
@@ -1954,14 +1954,21 @@ a {
   .accordion-header[aria-expanded="true"] .acc-icon {
     transform: rotate(180deg);
   }
+  .question-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-word;
+    flex: 1;
+  }
   .accordion-body {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
   }
   .accordion-body.open {
-    grid-template-rows: 1fr;
+    display: block;
   }
   .accordion-content {
     min-height: 0;
@@ -2579,14 +2586,14 @@ a {
   }
 
   .research-accordion-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    display: none;
+    transition: all 0.4s ease;
     background: rgba(13, 115, 119, 0.02);
+    overflow: hidden;
   }
 
   .research-accordion-body.open {
-    max-height: 500px;
+    display: block;
     padding: 0 28px 24px 28px;
   }
 

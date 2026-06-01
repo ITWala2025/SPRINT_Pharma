@@ -164,19 +164,23 @@ const Manufacturing = () => {
             {FAQ.map((item, i) => {
               const isOpen = openFaq === i;
               return (
-           <div className="accordion-item mb-4" key={i}>
+                <div className="accordion-item mb-4" key={i}>
                   <button
                     className="accordion-header"
                     aria-expanded={isOpen}
                     aria-controls={`acc-body-${i}`}
                     onClick={() => setOpenFaq(isOpen ? null : i)}
                   >
-                    <span>{item.q}</span>
+                    <span className="question-text">{item.q}</span>
                     <span className="acc-icon"><i className="fas fa-chevron-down" /></span>
                   </button>
-                  <div className={`accordion-body${isOpen ? ' open' : ''}`} id={`acc-body-${i}`} role="region">
-                    <div className="accordion-content"><p>{item.a}</p></div>
-                  </div>
+                  {isOpen && (
+                    <div className="accordion-body open" id={`acc-body-${i}`} role="region">
+                      <div className="accordion-content">
+                        <p>{item.a}</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -211,15 +215,17 @@ const Manufacturing = () => {
                           </div>
                           <span className="acc-icon chevron-icon"><i className="fas fa-chevron-down" /></span>
                         </button>
-                        <div
-                          className={`accordion-body research-accordion-body${isOpen ? ' open' : ''}`}
-                          id={`research-acc-body-${i}`}
-                          role="region"
-                        >
-                          <div className="accordion-content">
-                            <p>{item.description}</p>
+                        {isOpen && (
+                          <div
+                            className="accordion-body research-accordion-body open"
+                            id={`research-acc-body-${i}`}
+                            role="region"
+                          >
+                            <div className="accordion-content">
+                              <p>{item.description}</p>
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                     );
                   })}
