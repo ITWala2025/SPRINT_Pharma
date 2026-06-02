@@ -9,6 +9,68 @@ const INQUIRY_TYPES = [
   'Other',
 ];
 
+// Whatsapp Button
+
+const WhatsAppHoverButton = () => {
+  return (
+    <a
+      href="https://wa.me/911234567890"
+      target="_blank"
+      rel="noreferrer"
+      className="whatsapp-float-btn"
+      style={{
+        position: 'fixed',
+        bottom: '30px',
+        right: '30px',
+        backgroundColor: '#25D366',
+        color: '#fff',
+        borderRadius: '50px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textDecoration: 'none',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+        transition: 'all 0.3s ease-in-out',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        width: '50px',
+        height: '50px',
+        zIndex: 9999,
+        cursor: 'pointer',
+        // This force-loads the icon as a background
+        backgroundImage: 'url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg")',
+        backgroundSize: '25px 25px',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <span className="wa-text" style={{ 
+        marginLeft: '45px', // Adjusted to account for the background icon
+        opacity: 0, 
+        transition: 'opacity 0.2s ease-in-out',
+        fontSize: '15px',
+        fontWeight: '500',
+        color: '#fff'
+      }}>
+        Chat with us
+      </span>
+
+      <style>{`
+        .whatsapp-float-btn:hover {
+          width: 155px !important;
+          padding-left: 10px !important;
+          background-position: 15px center !important;
+        }
+        .whatsapp-float-btn:hover .wa-text {
+          opacity: 1 !important;
+        }
+      `}</style>
+    </a>
+  );
+};
+
+// Contact Function
+
 const Contact = () => {
   const [form, setForm] = useState({
     name: '', email: '', phone: '', inquiry: '', message: '',
@@ -153,7 +215,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="contact-info-block">
+            {/* <div className="contact-info-block"> 
               <h3>Quick Connect</h3>
               <div className="contact-quick-btns">
                 <a
@@ -168,7 +230,7 @@ const Contact = () => {
                   <i className="fas fa-envelope" /> Send an Email
                 </a>
               </div>
-            </div>
+            </div> */}
 
             <div className="contact-info-block">
               <h3>Franchise Enquiries</h3>
@@ -188,6 +250,11 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Add Whatsapp Button */}
+
+      <WhatsAppHoverButton />
+
     </>
   );
 };
