@@ -25,7 +25,7 @@ const USPS = [
 ];
 
 const Franchise = () => {
-  const [form, setForm] = useState({ name: '', mobile: '', city: '', state: '' });
+  const [form, setForm] = useState({ name: '', mobile: '', email: '', city: '',product:'',businessType:'',message:'', state: '' });
 
   const handleChange = e => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
@@ -98,14 +98,33 @@ const Franchise = () => {
                   />
                 </div>
                 <div className="f-group">
+                  <label htmlFor="fr-city">Email</label>
+                  <input
+                    id="fr-city" name="email" type="email"
+                    placeholder="Your email address"
+                    value={form.email} onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className="f-grid">
+                <div className="f-group">
+                  <label htmlFor="fr-mobile">Product Interest</label>
+                  <input
+                    id="fr-mobile" name="product" type="text"
+                    placeholder="Product of interest"
+                    value={form.product} onChange={handleChange}
+                  />
+                </div>
+                <div className="f-group">
                   <label htmlFor="fr-city">City</label>
                   <input
                     id="fr-city" name="city" type="text"
-                    placeholder="City / District"
+                    placeholder="Your city"
                     value={form.city} onChange={handleChange}
                   />
                 </div>
               </div>
+
               <div className="f-group">
                 <label htmlFor="fr-state">State</label>
                 <select
@@ -115,6 +134,14 @@ const Franchise = () => {
                   <option value="" disabled>Select your state</option>
                   {STATES.map(s => <option key={s} value={s}>{s}</option>)}
                 </select>
+              </div>
+              <div className="f-group">
+                <label htmlFor="fr-name">Message</label>
+                <input
+                  id="fr-name" name="message" type="text"
+                  placeholder="Your message"
+                  value={form.message} onChange={handleChange}
+                />
               </div>
               <button type="submit" className="f-submit">
                 Submit Application &rarr;
