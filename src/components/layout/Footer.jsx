@@ -65,6 +65,15 @@ const Footer = () => (
           </ul>
         </div>
 
+        {/* Knowledge Centre */}
+        <div className="f-col">
+          <h5>Knowledge Centre</h5>
+          <ul>
+            {/* Swapped standard anchor link with React Router Link to hook into /blogs */}
+            <li><Link to="/blogs">Blogs</Link></li>
+          </ul>
+        </div>
+
         {/* Contact column */}
         <div className="f-col">
           <h5>Contact</h5>

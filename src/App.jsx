@@ -8,6 +8,8 @@ import Franchise from '@/pages/Franchise.jsx';
 import WhyUs from '@/pages/WhyUs.jsx';
 import Manufacturing from '@/pages/Manufacturing.jsx';
 import Contact from '@/pages/Contact.jsx';
+// 1. Import the Blogs component
+import Blogs from '@/pages/Blogs.jsx'; 
 
 const App = () => (
   <Router>
@@ -20,6 +22,8 @@ const App = () => (
         <Route path="/why-us"        element={<WhyUs />} />
         <Route path="/manufacturing" element={<Manufacturing />} />
         <Route path="/contact"       element={<Contact />} />
+        {/* 2. Add the route for the blogs page */}
+        <Route path="/blogs"         element={<Blogs />} /> 
       </Routes>
     </MainLayout>
   </Router>
