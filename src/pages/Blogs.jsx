@@ -1,408 +1,477 @@
 import React, { useState, useEffect } from 'react';
 
-// 1. Curated Static Blog Data with verified, non-recycled pharmaceutical imagery
+// 1. Curated Static Blog Data with Restructured Stable Image URLs
 const BLOG_DATA = [
   {
     id: 1,
     title: "Understanding WHO-GMP Certification in Pharma Manufacturing",
     date: "May 15, 2026",
     author: "Dr. RK Sharma",
-    // Clean automation line packing capsules/tablets in a real manufacturing plant
-    image: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&q=80&w=600",
-    excerpt: "What does it mean to be a WHO-GMP certified pharmaceutical manufacturer? Explore the stringent quality standards Zupharma maintains.",
-    content: `WHO-GMP (World Health Organization - Good Manufacturing Practices) certification is the gold standard for pharmaceutical manufacturing. It ensures that products are consistently produced and controlled according to strict international quality standards. 
-    
-    At Zupharma Laboratories, our facility undergoes rigorous testing checking everything from raw material purity, cleanroom environment control, equipment validation, to staff execution. Having this certification ensures that our products meet global requirements for healthcare safety, giving our PCD franchise partners absolute confidence in what they distribute.`,
+    // Swapped to a highly available pharmaceutical infrastructure asset URL
+    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "What does it mean to be a WHO-GMP certified pharmaceutical manufacturer? Explore the stringent validation protocols Zupharm systematically maintains.",
+    contentParagraphs: [
+      "WHO-GMP (World Health Organization - Good Manufacturing Practices) certification represents the definitive international standard for modern pharmaceutical processing, verification, and safety. This framework mandates that medicinal products are dynamically controlled, systematically logged, and consistently manufactured according to the absolute highest baseline parameters for global healthcare safety. It eliminates common systemic errors inherent in any large-scale chemistry lifecycle, effectively neutralizing risks like cross-contamination, unexpected chemical sub-potency, and structural labeling flaws.",
+      "At Zupharm Laboratories, our production matrices undergo continuous validation checks. This includes verifying raw chemical material purity via high-performance liquid chromatography, optimizing cleanroom microscopic air filtration (HEPA infrastructure), mapping thermal profiles of sterilization equipment, and validating staff execution protocols via digitized tracking layers. Every tablet, capsule, and injectable patch we process traces back to an unyielding chain of custody metrics.",
+      "For our dedicated PCD franchise nodes and supply partners, distributed across dynamic markets, this certification serves as an ironclad baseline of product reliability. When dealing with life-saving therapies in cardiac, neurological, or pediatric spaces, absolute clinical predictability is paramount. Our strict adherence to WHO-GMP standards translates into lowered corporate liabilities for regional distributors, enhanced professional trust among hospital clinical networks, and premium clinical outcomes for patients nationwide."
+    ],
     category: "Quality Assurance"
   },
   {
     id: 2,
     title: "The Rising Demand for PCD Pharma Franchise in India",
     date: "June 02, 2026",
-    author: "Zupharma Growth Team",
-    // Professional pharma business distribution layout, clear healthcare context
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=600",
-    excerpt: "Discover why investing in a PCD Pharma Franchise with Zupharma is currently one of the most profitable and low-risk business opportunities.",
-    content: `The pharmaceutical sector in India is expanding exponentially, and the Propaganda Cum Distribution (PCD) model is driving a major chunk of this growth. For entrepreneurs, it offers a low-investment, high-return entry point into the healthcare industry with exclusive monopoly distribution rights. 
-    
-    By partnering with an established manufacturer like Zupharma Laboratories, franchise owners get access to a massive portfolio of ready-to-sell products (including Cardiac, Neuro, or Paediatrics ranges) without worrying about manufacturing overheads. This article covers the legal requirements, market strategies, and simple steps to launch your territory successfully.`,
+    author: "Zupharm Growth Team",
+    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "Discover why investing in a PCD Pharma Franchise with Zupharm stands as a highly profitable and secure business opportunity in today's economy.",
+    contentParagraphs: [
+      "The pharmaceutical landscape in India is expanding exponentially, driven by evolving demographic patterns, expanding insurance access, and heightened medical awareness. Within this structural boom, the Propaganda Cum Distribution (PCD) framework has emerged as a premier driver for regional market expansion. For healthcare entrepreneurs, seasoned sales executives, and corporate investors, it offers a remarkably agile, low-overhead pathway into the domestic pharmaceutical market by minimizing manufacturing-side risk variables.",
+      "By partnering with an established manufacturer like Zupharm Laboratories, franchise owners bypass the multi-crore structural requirements of laboratory construction, active ingredient sourcing networks, and regulatory approval wait times. Franchisees inherit an instantly deployable catalogue spanning 500+ premium formulations. This allows partners to channel all operational focus directly into local marketing operations, professional medical detailing, and customer supply chain fulfillment.",
+      "To ensure long-term regional stability, Zupharm guarantees absolute monopoly distribution rights secured by tight geographical parameters. This prevents adjacent distribution channels from infringing on your designated market. Combined with our high-impact promotional kits—including medical catch-covers, visual aids, dynamic product samples, and immediate digital assistance through our AI platforms—our partners are fully equipped to capture dominant market share from day one."
+    ],
     category: "Business & Franchise"
   },
   {
     id: 3,
     title: "Advances in Neurological and Cardiac Care Formulations",
     date: "April 28, 2026",
-    author: "Zupharma R&D Department",
-    // Premium macro photography of clean pharmaceutical pills and formulation batches
-    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=600",
-    excerpt: "A deep dive into how modern formulation techniques at Zupharma are enhancing the bio-availability and efficacy of chronic medications.",
-    content: `Chronic conditions like cardiovascular diseases and neurological disorders require precise and long-term drug administration. Recent advancements in drug delivery systems, such as sustained-release matrices and nanotechnology-driven formulations, have vastly improved patient compliance. 
-    
-    These innovations minimize side effects by maintaining steady, predictable drug levels in the bloodstream. Our research team breaks down how these advanced formulations are developed in our labs and why they represent the future of modern therapeutic care.`,
+    author: "Zupharm R&D Department",
+    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "A deep dive into how advanced molecular delivery mechanisms at Zupharm are maximizing the bioavailability of chronic critical therapies.",
+    contentParagraphs: [
+      "Managing chronic health conditions like cardiovascular diseases and neurological disorders demands precise, consistent blood plasma drug concentrations. Standard pharmaceutical models often produce sharp spikes and rapid drop-offs in systemic drug availability, frequently leading to breakthrough symptoms or unexpected toxicities. Zupharm’s Research and Development panel is actively countering this challenge by utilizing cutting-edge modified-release matrices and advanced molecular particle size reduction.",
+      "In our cardiac portfolios, our sustained-release antihypertensive formulations ensure uniform, 24-hour therapeutic coverage. By controlling the exact rate of fluid absorption through hydrophilic polymer barriers, the tablet releases active ingredients at a predictable hourly rate. This eliminates hazardous morning blood pressure surges and improves patient compliance by reducing dosing schedules to a simple single daily administration.",
+      "Simultaneously, our neurology pipelines utilize lipid-optimized molecules designed to safely navigate complex physiological barriers. By modifying physical solubility indexes, we drastically increase the rate of therapeutic absorption within central nervous networks. This enables lowered target dosages to achieve identical therapeutic effects, heavily reducing hepatic and renal clearance workloads while minimizing common systemic side effects."
+    ],
     category: "Research & Development"
   },
   {
     id: 4,
-    title: "Quality Control Standards for Paediatric Liquid Formulations",
-    date: "April 10, 2026",
-    author: "Quality Management Team",
-    // Clean laboratory setup showing liquid medicine processing
-    image: "https://images.unsplash.com/photo-1579154204601-01588f35116f?auto=format&fit=crop&q=80&w=600",
-    excerpt: "Ensuring accurate dosing, palatability, and absolute safety profiles for critical infant and child liquid healthcare products.",
-    content: `Developing medications for paediatrics involves unique challenges, primarily regarding dosage accuracy and taste masking. Children require body-weight-specific dosing parameters, meaning liquid stability must remain pristine over the entire shelf-life.
-    
-    At Zupharma Laboratories, we utilize advanced chemical evaluation techniques to guarantee uniform suspension of active ingredients in oral liquids. This prevents toxic sediment configurations and guarantees that every single drop contains the mathematically intended therapeutic amount.`,
-    category: "Quality Assurance"
+    title: "The Future of Oncology Biosimilars and Targeted Biologics",
+    date: "May 29, 2026",
+    author: "Dr. Ananya Reddy",
+    image: "https://images.unsplash.com/photo-1579154204601-01588f351167?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "Democratizing cancer therapeutics through highly complex, molecularly identical bio-engineered formulas designed for targeted cell delivery.",
+    contentParagraphs: [
+      "Unlike traditional chemically synthesized small-molecule medications, biosimilars are cultivated within highly sensitive living cellular systems. As foundational oncology patents expire globally, the development of reliable biologics presents a monumental shift in how clinical networks approach therapeutic oncology interventions.",
+      "At Zupharm, our state-of-the-art bioreactor arrays carefully monitor parameters like cellular oxygenation levels, temperature variants, and specific metabolic outputs. This precise control ensures that each monoclonal antibody matches the master reference drug's structural integrity perfectly.",
+      "For healthcare systems struggling with the crushing costs of traditional cancer treatment regimens, these approved biosimilars offer a cost-effective alternative. They drop treatment costs significantly without making a single compromise on patient survival rates or therapeutic outcomes."
+    ],
+    category: "Oncology & Biologics"
   },
   {
     id: 5,
-    title: "Navigating Marketing Rights for Pan-India Franchisees",
-    date: "March 18, 2026",
-    author: "Legal & Corporate Relations",
-    // Executive desk with analytics and data tools for market mapping
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
-    excerpt: "Understanding monopoly agreements and distribution permissions to protect your regional market investments.",
-    content: `When establishing a franchise footprint, understanding the structural boundaries of your monopoly agreement is vital. Monopoly distribution privileges guarantee that no other individual can distribute the same brand parent assets within your designated postal framework.
-    
-    Zupharma provides clear, transparent legal documents protecting our distribution nodes across Bihar, UP, and Jharkhand. We walk you through standard practices for tracking target metrics and preventing operational overlap from neighboring areas.`,
-    category: "Business & Franchise"
+    title: "AI Integration in Accelerated Drug Discovery and Chemistry",
+    date: "June 06, 2026",
+    author: "Prof. Amit Verma",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "How Zupharm leverages machine learning architectures to compress traditional multi-year compound testing windows down to mere days.",
+    contentParagraphs: [
+      "The conventional timeline required to move a newly discovered therapeutic molecule from laboratory benches to actual pharmacy shelves historically spans over a decade. By integrating high-performance machine learning algorithms into our computational chemistry arrays, we can now run virtual screenings on billions of chemical combinations concurrently.",
+      "Our proprietary software models run predictive simulations testing how target candidate molecules interact with target disease proteins, while calculating potential hepatic toxicity scores long before any physical sample is synthesized.",
+      "This integration of computer science and physical biochemistry creates a faster, highly responsive development pipeline. When regional health networks report sudden changes in bacterial resistance profiles, our teams can quickly pivot."
+    ],
+    category: "Information Technology"
   },
   {
     id: 6,
-    title: "The Future of Anti-infective Therapies and Resistance",
-    date: "February 24, 2026",
-    author: "Clinical Research Board",
-    // Scientific laboratory assistant viewing active cultures/compounds through a microscope
-    image: "https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&q=80&w=600",
-    excerpt: "How innovative manufacturing combinations help produce anti-infectives capable of tackling resilient microbial mutations.",
-    content: `Antimicrobial resistance requires constant therapeutic innovation. Pathogens naturally evolve defensive adaptations against common anti-infectives, requiring updated drug designs with modified chemical configurations.
-    
-    Zupharma is heavily invested in updating active pharmaceutical formulations to optimize standard target therapies. By manufacturing highly synergistic broad-spectrum antibiotics and antivirals under perfect physical isolation spaces, we ensure maximum pure potencies designed to prevent unexpected compound degradation.`,
-    category: "Research & Development"
+    title: "Phyto-Pharmaceuticals: Standardizing Herbal Medicine Pathways",
+    date: "May 08, 2026",
+    author: "Dr. Evelyn Vance",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "Applying rigorous scientific verification and quantitative chemical isolation to bridge traditional holistic therapy with modern Western pharmacology.",
+    contentParagraphs: [
+      "The historical separation between traditional botanical treatments and strict, data-driven Western pharmacology is fading. Phyto-pharmaceuticals represent a rigorous scientific evolution where active botanical molecules are isolated, quantified, and packaged using the exact same strict standards applied to synthetic pharmaceutical compounds.",
+      "Traditional herbal preparations often suffer from natural variations caused by soil quality changes, weather patterns, and differing harvest seasons. Zupharm's botanical science teams eliminate this unpredictability using advanced chemical fingerprinting methods.",
+      "These validated natural formulations offer valuable treatment alternatives, especially for managing chronic conditions like mild metabolic imbalances, functional digestive issues, and long-term joint inflammation."
+    ],
+    category: "Phyto-Pharmaceuticals"
   }
 ];
 
+// Fallback image asset that is guaranteed to always resolve safely
+const GLOBAL_FALLBACK_IMAGE = "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=1200";
+
 const Blogs = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [selectedBlog]);
 
-  // --- VIEW 1: Detailed Single Blog View ---
-  if (selectedBlog) {
-    return (
-      <div style={styles.pageWrapper}>
-        <div style={styles.heroSection}>
-          <div style={styles.heroOverlay} />
-          <div style={styles.heroContainer}>
-            <span style={styles.heroCategoryBadge}>{selectedBlog.category}</span>
-            <h1 style={styles.heroTitleDetail}>{selectedBlog.title}</h1>
-          </div>
-        </div>
+  const heroImage = selectedBlog 
+    ? selectedBlog.image 
+    : "https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=1600&q=80&auto=format&fit=crop";
 
+  return (
+    <div style={styles.pageWrapper}>
+      {/* ── DYNAMIC HERO SECTION ── */}
+      <div style={{ ...styles.pageHeroOverride, backgroundImage: `url(${heroImage})` }}>
+        <div style={styles.pageHeroOverlayOverride} />
+        <div style={styles.pageHeroInnerOverride}>
+          {selectedBlog ? (
+            <>
+              <div style={styles.heroBadge}>
+                <div style={styles.badgeDot} />
+                <span style={styles.badgeTextOverride}>{selectedBlog.category}</span>
+              </div>
+              <h1 style={styles.heroTitleDetail}>{selectedBlog.title}</h1>
+              <p style={styles.heroSubTextOverride}>
+                Article written by {selectedBlog.author} • {selectedBlog.date}
+              </p>
+            </>
+          ) : (
+            <>
+              <div style={styles.heroBadge}>
+                <div style={styles.badgeDot} />
+                <span style={styles.badgeTextOverride}>Knowledge Centre</span>
+              </div>
+              <h1 style={styles.heroTitleMain}>
+                Insights &amp; <em style={{ color: 'var(--teal-lt)', fontStyle: 'italic' }}>Innovation</em> Across Pharma Systems.
+              </h1>
+              <p style={styles.heroSubTextOverride}>
+                From advanced WHO-GMP clinical manufacturing validation pathways to strategic regional territorial franchise guidelines, explore professional updates from our core R&amp;D panel.
+              </p>
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* ── MAIN CONTENT LAYER ── */}
+      {selectedBlog ? (
+        /* ── VIEW A: EXPANDED ARTICLE VIEW ── */
         <div style={styles.contentContainer}>
           <button onClick={() => setSelectedBlog(null)} style={styles.backButton}>
-            &larr; Back to All Articles
+            <i className="fas fa-arrow-left" style={{ marginRight: '8px' }} /> Back to Knowledge Centre
           </button>
           
-          <article style={styles.blogPost}>
-            <div style={styles.detailImageWrapper}>
+          <article style={styles.blogPostFullCard}>
+            {/* FIX: Secure onError handler applied here to instantly neutralize broken links */}
+            <div style={styles.expandedBodyImgWrap}>
               <img 
                 src={selectedBlog.image} 
                 alt={selectedBlog.title} 
-                style={styles.detailImage} 
-                onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600"; }}
+                style={styles.expandedBodyImage} 
+                onError={(e) => { 
+                  e.target.src = GLOBAL_FALLBACK_IMAGE; 
+                }}
               />
             </div>
-            <div style={{ padding: '40px' }}>
-              <div style={styles.meta}>
-                Published by <strong>{selectedBlog.author}</strong> on {selectedBlog.date} | <span>Zupharma Laboratories</span>
+
+            <div style={styles.blogFullBody}>
+              <div style={styles.metaRowDetail}>
+                Published by <strong style={{ color: 'var(--teal)' }}>{selectedBlog.author}</strong> on {selectedBlog.date} | <span>Zupharm Laboratories Pvt. Ltd.</span>
               </div>
-              <hr style={styles.divider} />
-              <div style={styles.content}>
-                {selectedBlog.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index} style={styles.paragraph}>{paragraph}</p>
+              <hr style={styles.dividerLine} />
+              <div style={styles.blogTextContent}>
+                {selectedBlog.contentParagraphs.map((paragraph, index) => (
+                  <p key={index} style={styles.paragraphElement}>{paragraph}</p>
                 ))}
               </div>
             </div>
           </article>
         </div>
-      </div>
-    );
-  }
-
-  // --- VIEW 2: Premium Hero & Grid List of All Blogs ---
-  return (
-    <div style={styles.pageWrapper}>
-      <div style={styles.heroSection}>
-        <div style={styles.heroOverlay} />
-        <div style={styles.heroContainer}>
-          <span style={styles.heroSubtitle}>OUR KNOWLEDGE CENTRE</span>
-          <h1 style={styles.heroTitleMain}>Insights &amp; Innovation Across Pharmaceutical Ecosystems</h1>
-          <p style={styles.heroDescription}>
-            From advanced WHO-GMP clinical manufacturing practices to pan-India distribution strategies, explore professional updates from the Zupharma research labs.
-          </p>
-        </div>
-      </div>
-
-      <div style={styles.gridContainer}>
-        <div style={styles.blogGrid}>
-          {BLOG_DATA.map((blog) => (
-            <div 
-              key={blog.id} 
-              style={styles.card}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-6px)';
-                e.currentTarget.style.boxShadow = '0 12px 30px rgba(0,0,0,0.08)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.02)';
-              }}
-            >
-              <div style={styles.imageWrapper}>
-                <img 
-                  src={blog.image} 
-                  alt={blog.title} 
-                  style={styles.cardImage} 
-                  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600"; }}
-                />
-              </div>
-              <div style={styles.cardBody}>
-                <div style={styles.cardHeader}>
-                  <span style={styles.cardCategory}>{blog.category}</span>
-                  <span style={styles.cardDate}>{blog.date}</span>
+      ) : (
+        /* ── VIEW B: STYLISH 3-COLUMN DISPLAY GRID ── */
+        <div style={styles.gridContainer}>
+          <div style={{
+            ...styles.blogCustomGrid,
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, minmax(0, 1fr))'
+          }}>
+            {BLOG_DATA.map((blog) => (
+              <div 
+                key={blog.id} 
+                style={styles.blogCustomCard}
+                onClick={() => setSelectedBlog(blog)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-6px)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.08)';
+                  e.currentTarget.style.borderColor = 'rgba(13,115,119,0.35)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.01)';
+                  e.currentTarget.style.borderColor = 'var(--border)';
+                }}
+              >
+                <div style={styles.blogCardImgContainer}>
+                  <img 
+                    src={blog.image} 
+                    alt={blog.title} 
+                    style={styles.cardImageElement}
+                    onError={(e) => { e.target.src = GLOBAL_FALLBACK_IMAGE; }}
+                  />
+                  <span style={styles.blogCardTag}>{blog.category}</span>
                 </div>
-                <h2 style={styles.cardTitle}>{blog.title}</h2>
-                <p style={styles.cardExcerpt}>{blog.excerpt}</p>
-                <button 
-                  onClick={() => setSelectedBlog(blog)} 
-                  style={styles.readMoreButton}
-                >
-                  Read Full Article &rarr;
-                </button>
+                
+                <div style={styles.blogCardContentWrap}>
+                  <div style={styles.blogCardMetaRow}>
+                    <span><i className="far fa-user" style={{ color: 'var(--teal)', marginRight: '4px' }} /> {blog.author}</span>
+                    <span>{blog.date}</span>
+                  </div>
+                  <h3 style={styles.blogCardHeadingTitle}>{blog.title}</h3>
+                  <p style={styles.blogCardDescExcerpt}>{blog.excerpt}</p>
+                  <button style={styles.blogCardActionLink}>
+                    Read Full Text <i className="fas fa-chevron-right" style={{ fontSize: '11px', marginLeft: '4px' }} />
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
 
-// 3. Corporate Premium UI Theme System
+// Styles configuration
 const styles = {
   pageWrapper: {
     width: '100%',
-    backgroundColor: '#f8fafc',
-    fontFamily: 'system-ui, -apple-system, sans-serif',
+    backgroundColor: 'var(--bg)',
     minHeight: '100vh',
   },
-  heroSection: {
+  pageHeroOverride: {
     position: 'relative',
-    width: '100%',
-    background: 'linear-gradient(135deg, #0A4F55 0%, #062A34 100%)', 
-    padding: '160px 20px 100px 20px', 
-    boxSizing: 'border-box',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    padding: '110px 0 115px',
     overflow: 'hidden',
-  },
-  heroOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundImage: 'radial-gradient(circle at 80% 20%, rgba(13, 115, 119, 0.15) 0%, transparent 50%)',
-    pointerEvents: 'none',
-  },
-  heroContainer: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    position: 'relative',
-    zIndex: 2,
-  },
-  heroSubtitle: {
-    color: '#0D7377',
-    fontSize: '0.9rem',
-    fontWeight: '700',
-    letterSpacing: '0.15em',
-    display: 'block',
-    marginBottom: '15px',
-  },
-  heroTitleMain: {
-    fontSize: '2.8rem',
-    fontWeight: '700',
-    color: '#ffffff',
-    margin: '0 0 20px 0',
-    maxWidth: '850px',
-    lineHeight: '1.25',
-    letterSpacing: '-0.01em',
-  },
-  heroTitleDetail: {
-    fontSize: '2.4rem',
-    fontWeight: '700',
-    color: '#ffffff',
-    margin: '0',
-    maxWidth: '900px',
-    lineHeight: '1.3',
-  },
-  heroDescription: {
-    fontSize: '1.15rem',
-    color: 'rgba(255, 255, 255, 0.75)',
-    maxWidth: '700px',
-    lineHeight: '1.65',
-    margin: 0,
-  },
-  heroCategoryBadge: {
-    background: 'rgba(224, 242, 241, 0.15)',
-    color: '#e0f2f1',
-    padding: '6px 14px',
-    borderRadius: '6px',
-    fontSize: '0.85rem',
-    fontWeight: '600',
-    display: 'inline-block',
-    marginBottom: '20px',
-    border: '1px solid rgba(255,255,255,0.1)',
-  },
-  gridContainer: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '60px 20px 100px 20px',
-  },
-  contentContainer: {
-    maxWidth: '900px',
-    margin: '0 auto',
-    padding: '40px 20px 100px 20px',
-  },
-  blogGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
-    gap: '35px',
-  },
-  card: {
-    background: '#ffffff',
-    border: '1px solid #eef2f6',
-    borderRadius: '12px',
-    overflow: 'hidden',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
+    color: 'var(--white)',
     display: 'flex',
     flexDirection: 'column',
-    transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease',
+    transition: 'background-image 0.4s ease-in-out',
   },
-  imageWrapper: {
+  pageHeroOverlayOverride: {
+    position: 'absolute',
+    inset: 0,
+    background: 'linear-gradient(135deg, rgba(11, 37, 69, 0.94) 0%, rgba(13, 115, 119, 0.88) 100%)',
+    zIndex: 1,
+  },
+  pageHeroInnerOverride: {
     width: '100%',
-    height: '220px',
-    overflow: 'hidden',
-    backgroundColor: '#f1f5f9',
+    maxWidth: 'var(--container)',
+    margin: '0 auto',
+    padding: '0 40px',
+    position: 'relative',
+    zIndex: 3,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
   },
-  cardImage: {
+  heroBadge: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    background: 'var(--teal-dim)',
+    border: '1px solid rgba(13, 115, 119, 0.25)',
+    color: 'var(--teal)',
+    fontSize: '11px',
+    fontWeight: '700',
+    padding: '6px 14px',
+    borderRadius: '100px',
+    letterSpacing: '0.8px',
+    textTransform: 'uppercase',
+    marginBottom: '20px',
+    width: 'fit-content',
+  },
+  badgeDot: {
+    width: '6px',
+    height: '6px',
+    borderRadius: '50%',
+    backgroundColor: 'var(--teal-lt)',
+  },
+  badgeTextOverride: {
+    color: 'var(--white)',
+    fontSize: '11px',
+    fontWeight: '700',
+    letterSpacing: '1px',
+  },
+  heroTitleMain: {
+    fontFamily: "'DM Serif Display', serif",
+    fontSize: 'clamp(34px, 4vw, 52px)',
+    color: 'var(--white)',
+    margin: '0 0 16px 0',
+    lineHeight: '1.15',
+    letterSpacing: '-0.5px',
+    fontWeight: '400',
+  },
+  heroTitleDetail: {
+    fontFamily: "'DM Serif Display', serif",
+    fontSize: 'clamp(28px, 3.2vw, 42px)',
+    color: 'var(--white)',
+    margin: '0 0 12px 0',
+    lineHeight: '1.2',
+    letterSpacing: '-0.3px',
+    fontWeight: '400',
+  },
+  heroSubTextOverride: {
+    fontSize: '16px',
+    color: 'rgba(255, 255, 255, 0.76)',
+    fontWeight: '300',
+    maxWidth: '700px',
+    lineHeight: '1.75',
+    margin: '0',
+  },
+  gridContainer: {
+    maxWidth: 'var(--container)',
+    margin: '0 auto',
+    padding: '60px 40px var(--section-pad)',
+    boxSizing: 'border-box',
+  },
+  contentContainer: {
+    maxWidth: '920px',
+    margin: '0 auto',
+    padding: '50px 40px var(--section-pad)',
+    boxSizing: 'border-box',
+  },
+  blogCustomGrid: {
+    display: 'grid',
+    gap: '30px',
+    width: '100%',
+  },
+  blogCustomCard: {
+    background: 'var(--white)',
+    border: '1px solid var(--border)',
+    borderRadius: '6px',
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.01)',
+    cursor: 'pointer',
+    transition: 'transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease',
+  },
+  blogCardImgContainer: {
+    position: 'relative',
+    width: '100%',
+    height: '200px',
+    backgroundColor: 'var(--bg)',
+    overflow: 'hidden',
+  },
+  cardImageElement: {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+    display: 'block',
   },
-  cardBody: {
-    padding: '26px',
+  blogCardTag: {
+    position: 'absolute',
+    top: '12px',
+    left: '12px',
+    background: 'rgba(250, 250, 248, 0.96)',
+    backdropFilter: 'blur(10px)',
+    borderLeft: '3px solid var(--teal)',
+    color: 'var(--black)',
+    padding: '4px 10px',
+    fontSize: '10px',
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    borderRadius: '0 4px 4px 0',
+  },
+  blogCardContentWrap: {
+    padding: '24px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
     flexGrow: 1,
   },
-  cardHeader: {
+  blogCardMetaRow: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: '14px',
+    fontSize: '12px',
+    color: 'var(--muted)',
+    marginBottom: '10px',
+    fontWeight: '500',
   },
-  cardCategory: {
-    background: '#e0f2f1', 
-    color: '#0A4F55',
-    padding: '5px 10px',
-    borderRadius: '6px',
-    fontSize: '0.78rem',
-    fontWeight: '600',
+  blogCardHeadingTitle: {
+    fontFamily: "'DM Serif Display', serif",
+    fontSize: '20px',
+    lineHeight: '1.35',
+    color: 'var(--ink)',
+    margin: '0 0 10px 0',
+    fontWeight: '400',
   },
-  cardDate: {
-    color: '#94a3b8',
-    fontSize: '0.82rem',
+  blogCardDescExcerpt: {
+    fontSize: '13.5px',
+    color: 'var(--muted)',
+    lineHeight: '1.65',
+    margin: '0 0 20px 0',
+    fontWeight: '300',
   },
-  cardTitle: {
-    fontSize: '1.25rem',
-    fontWeight: '600',
-    color: '#0f172a',
-    margin: '0 0 12px 0',
-    lineHeight: '1.45',
-    height: '2.9em',
-    overflow: 'hidden',
-    display: '-webkit-box',
-    WebkitLineClamp: 2,
-    WebkitBoxOrient: 'vertical',
-  },
-  cardExcerpt: {
-    color: '#475569',
-    fontSize: '0.95rem',
-    lineHeight: '1.6',
-    marginBottom: '24px',
-    height: '4.8em',
-    overflow: 'hidden',
-    display: '-webkit-box',
-    WebkitLineClamp: 3,
-    WebkitBoxOrient: 'vertical',
-  },
-  readMoreButton: {
+  blogCardActionLink: {
     background: 'none',
     border: 'none',
-    color: '#0D7377', 
-    fontWeight: '700',
-    cursor: 'pointer',
-    padding: 0,
+    color: 'var(--teal)',
+    fontWeight: '600',
+    fontSize: '13px',
+    padding: '0',
     textAlign: 'left',
-    fontSize: '0.95rem',
+    display: 'inline-flex',
+    alignItems: 'center',
+    marginTop: 'auto',
+    width: 'fit-content',
   },
   backButton: {
     background: 'transparent',
-    color: '#475569',
-    border: '1px solid #cbd5e1',
+    color: 'var(--charcoal)',
+    border: '1px solid var(--border)',
     padding: '10px 20px',
-    borderRadius: '6px',
-    cursor: 'pointer',
-    marginBottom: '25px',
+    borderRadius: '4px',
+    fontSize: '13.5px',
     fontWeight: '600',
-    fontSize: '0.95rem',
+    cursor: 'pointer',
+    marginBottom: '30px',
+    display: 'inline-flex',
+    alignItems: 'center',
   },
-  blogPost: {
-    background: '#fff',
-    borderRadius: '16px',
-    boxShadow: '0 4px 25px rgba(0,0,0,0.03)',
-    border: '1px solid #e2e8f0',
+  blogPostFullCard: {
+    background: 'var(--white)',
+    border: '1px solid var(--border)',
+    borderRadius: '6px',
     overflow: 'hidden',
+    boxShadow: '0 4px 25px rgba(0,0,0,0.01)',
   },
-  detailImageWrapper: {
+  expandedBodyImgWrap: {
     width: '100%',
     height: '420px',
-    backgroundColor: '#f1f5f9',
+    overflow: 'hidden',
+    backgroundColor: 'var(--bg)',
+    borderBottom: '1px solid var(--border)',
   },
-  detailImage: {
+  expandedBodyImage: {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
   },
-  meta: {
-    color: '#64748b',
-    fontSize: '0.95rem',
+  blogFullBody: {
+    padding: '44px',
   },
-  divider: {
+  metaRowDetail: {
+    fontSize: '13.5px',
+    color: 'var(--muted)',
+    fontWeight: '500',
+  },
+  dividerLine: {
     border: '0',
-    borderTop: '1px solid #edf2f7',
-    margin: '20px 0 25px 0',
+    borderTop: '1px solid var(--border)',
+    margin: '18px 0 28px 0',
   },
-  content: {
+  blogTextContent: {
     lineHeight: '1.85',
-    fontSize: '1.05rem',
-    color: '#334155',
+    fontSize: '15px',
+    color: 'var(--charcoal)',
   },
-  paragraph: {
+  paragraphElement: {
     marginBottom: '22px',
+    fontWeight: '300',
   }
 };
 
