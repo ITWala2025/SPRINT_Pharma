@@ -30,32 +30,47 @@ transporter.verify()
     .catch(err => console.error('SMTP configuration error', err));
 
 app.post('/api/franchise', async (req, res) => {
-    const { name, mobile, city, state } = req.body;
+    const { name, mobile, email, city, state, product, businessType, message } = req.body;
 
-    if (!name || !mobile || !city || !state) {
-        return res.status(400).json({ error: 'All fields are required.' });
+    if (!name || !mobile || !email || !city || !state) {
+        return res.status(400).json({ error: 'Name, mobile, email, city and state are required.' });
     }
 
-    const message = `
-    New Franchise Application
+    const emailText = `
+New Franchise Application
 
-    Name: ${name}
-    Mobile: ${mobile}
-    City: ${city}
-    State: ${state}
-  `;
+Name: ${name}
+Email: ${email}
+Mobile: ${mobile}
+City: ${city}
+State: ${state}
+Product Interest: ${product || 'N/A'}
+Business Type: ${businessType || 'N/A'}
+Message: ${message || 'N/A'}
+`;
 
     try {
         const info = await transporter.sendMail({
             from: process.env.EMAIL_FROM,
             to: process.env.EMAIL_TO,
             subject: 'New Franchise Application',
-            text: message,
+            text: emailText,
+            html: `<p><strong>New Franchise Application</strong></p>
+<ul>
+  <li><strong>Name:</strong> ${name}</li>
+  <li><strong>Email:</strong> ${email}</li>
+  <li><strong>Mobile:</strong> ${mobile}</li>
+  <li><strong>City:</strong> ${city}</li>
+  <li><strong>State:</strong> ${state}</li>
+  <li><strong>Product Interest:</strong> ${product || 'N/A'}</li>
+  <li><strong>Business Type:</strong> ${businessType || 'N/A'}</li>
+  <li><strong>Message:</strong> ${message || 'N/A'}</li>
+</ul>`,
             envelope: {
                 from: process.env.EMAIL_FROM,
                 to: process.env.EMAIL_TO,
             },
-            replyTo: process.env.SMTP_USER,
+            replyTo: email || process.env.SMTP_USER,
             headers: {
                 'X-Mailer': 'Zupharm Franchise Form',
             },

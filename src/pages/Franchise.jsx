@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const STATES = [
@@ -25,13 +25,21 @@ const USPS = [
 ];
 
 const Franchise = () => {
-  const [form, setForm] = useState({ name: '', mobile: '', city: '', state: '' });
+  const [form, setForm] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+    city: '',
+    product: '',
+    businessType: '',
+    message: '',
+    state: '',
+  });
 
-  const handleChange = e => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  const handleChange = (e) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e) => { // Added 'async' here
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // form submission logic goes here
 
     try {
       const response = await fetch('http://localhost:4000/api/franchise', {
@@ -47,18 +55,30 @@ const Franchise = () => {
       }
 
       alert('Application sent successfully!');
-      setForm({ name: '', mobile: '', city: '', state: '' });
+      setForm({
+        name: '',
+        mobile: '',
+        email: '',
+        city: '',
+        product: '',
+        businessType: '',
+        message: '',
+        state: '',
+      });
     } catch (err) {
       alert('Error sending application: ' + err.message);
     }
-
   };
 
   return (
     <>
-      {/* Page Hero */}
-      <div className="page-hero" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80&auto=format&fit=crop')" }}>
-        {/* Dotted background removed */}
+      <div
+        className="page-hero"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80&auto=format&fit=crop')",
+        }}
+      >
         <div className="page-hero-inner">
           <div className="page-hero-eyebrow">PCD Franchise</div>
           <h1>Build Your Pharma<br />Business With Zupharm</h1>
@@ -75,13 +95,12 @@ const Franchise = () => {
       <section className="franchise" id="franchise">
         <div className="container">
           <div className="franchise-inner">
-
             <div className="franchise-left">
               <span className="label">PCD Franchise</span>
               <h2>Build Your Pharma Business With Zupharm</h2>
               <p>
                 Join 100+ successful partners across India. We provide the product,
-                the support, and the systems, you bring the ambition.
+                the support, and the systems; you bring the ambition.
               </p>
               <div className="franchise-usps">
                 {USPS.map(({ num, title, desc }) => (
@@ -103,45 +122,113 @@ const Franchise = () => {
                 <div className="f-group">
                   <label htmlFor="fr-name">Full Name</label>
                   <input
-                    id="fr-name" name="name" type="text"
+                    id="fr-name"
+                    name="name"
+                    type="text"
                     placeholder="Your full name"
-                    value={form.name} onChange={handleChange}
+                    value={form.name}
+                    onChange={handleChange}
                   />
                 </div>
+
                 <div className="f-grid">
                   <div className="f-group">
                     <label htmlFor="fr-mobile">Mobile</label>
                     <input
-                      id="fr-mobile" name="mobile" type="tel"
+                      id="fr-mobile"
+                      name="mobile"
+                      type="tel"
                       placeholder="+91 XXXXX XXXXX"
-                      value={form.mobile} onChange={handleChange}
+                      value={form.mobile}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="f-group">
+                    <label htmlFor="fr-email">Email</label>
+                    <input
+                      id="fr-email"
+                      name="email"
+                      type="email"
+                      placeholder="Your email address"
+                      value={form.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+
+                <div className="f-grid">
+                  <div className="f-group">
+                    <label htmlFor="fr-product">Product Interest</label>
+                    <input
+                      id="fr-product"
+                      name="product"
+                      type="text"
+                      placeholder="Product of interest"
+                      value={form.product}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="f-group">
                     <label htmlFor="fr-city">City</label>
                     <input
-                      id="fr-city" name="city" type="text"
+                      id="fr-city"
+                      name="city"
+                      type="text"
                       placeholder="City / District"
-                      value={form.city} onChange={handleChange}
+                      value={form.city}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
-                <div className="f-group">
-                  <label htmlFor="fr-state">State</label>
-                  <select
-                    id="fr-state" name="state"
-                    value={form.state} onChange={handleChange}
-                  >
-                    <option value="" disabled>Select your state</option>
-                    {STATES.map(s => <option key={s} value={s}>{s}</option>)}
-                  </select>
+
+                <div className="f-grid">
+                  <div className="f-group">
+                    <label htmlFor="fr-state">State</label>
+                    <select
+                      id="fr-state"
+                      name="state"
+                      value={form.state}
+                      onChange={handleChange}
+                    >
+                      <option value="" disabled>
+                        Select your state
+                      </option>
+                      {STATES.map((s) => (
+                        <option key={s} value={s}>
+                          {s}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="f-group">
+                    <label htmlFor="fr-businessType">Business Type</label>
+                    <input
+                      id="fr-businessType"
+                      name="businessType"
+                      type="text"
+                      placeholder="Distributor, reseller, etc."
+                      value={form.businessType}
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
+
+                <div className="f-group">
+                  <label htmlFor="fr-message">Message</label>
+                  <textarea
+                    id="fr-message"
+                    name="message"
+                    placeholder="Tell us about your experience and expectations"
+                    value={form.message}
+                    onChange={handleChange}
+                  />
+                </div>
+
                 <button type="submit" className="f-submit">
-                  Submit Application &rarr;
+                  Submit Application →
                 </button>
               </form>
             </div>
-
           </div>
         </div>
       </section>
