@@ -10,10 +10,10 @@ const CERTS = [
 ];
 
 const VALUES = [
-  { icon: 'fa-leaf',       title: 'Integrity',      desc: 'We operate with honesty, transparency, and uncompromising ethical standards to build lasting trust.' },
-  { icon: 'fa-lightbulb',  title: 'Respect',     desc: 'We value people, diverse perspective, and foster a culture of dignity and collaboration.' },
+  { icon: 'fa-handshake',       title: 'Integrity',      desc: 'We operate with honesty, transparency, and uncompromising ethical standards to build lasting trust.' },
+  { icon: 'fa-people-group',  title: 'Respect',     desc: 'We value people, diverse perspective, and foster a culture of dignity and collaboration.' },
   { icon: 'fa-shield-alt', title: 'Safety & Quality',  desc: 'We prioritize patient safety and maintain the highest quality and regulatory standards.' },
-   { icon: 'fa-heart',     title: 'Compassion',     desc: "People's health and well-being are at the heart of everything we do, without exception." },
+   { icon: 'fa-lightbulb',     title: 'Innovation',     desc: "Continous improvement and breakthrough research drive us forward every single day." },
   { icon: 'fa-users',      title: 'Collaboration',        desc: 'We work together with partners, patients, and communities to achieve better outcomes.' },
   { icon: 'fa-globe',      title: 'Sustainability', desc: 'We pursue responsible growth while caring for our environment and communities.' },
 ];
