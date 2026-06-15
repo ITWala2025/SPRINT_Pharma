@@ -172,7 +172,7 @@ const Home = () => (
               </p>
             </div>
             <div>
-              <div className="bento-hero-stat">50M+</div>
+              <div className="bento-hero-stat">1M+</div>
               <div className="bento-hero-stat-label">Units produced annually</div>
             </div>
           </div>
