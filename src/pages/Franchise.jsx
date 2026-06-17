@@ -274,6 +274,7 @@ const Franchise = () => {
                     <textarea
                       id="fr-message"
                       name="message"
+                      rows={2}
                       placeholder="Tell us about your experience and expectations"
                       value={form.message}
                       onChange={handleChange}
