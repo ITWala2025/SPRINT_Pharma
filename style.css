@@ -1772,6 +1772,7 @@ a {
 }
 
 .franchise-carousel-header h4 {
+  font-family: 'DM Serif Display', serif;
   margin: 0;
   font-size: 20px;
   color: var(--ink);
@@ -1834,6 +1835,76 @@ a {
 
   .franchise-right {
     gap: 24px;
+  }
+}
+
+.mentorship {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.mentorship-header {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.mentorship-header h2 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.mentorship-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.mentorship-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+}
+
+.mentorship-card h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.mentorship-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mentorship-card li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.mentorship-card li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--teal);
+  font-size: 18px;
+  line-height: 1;
+}
+
+@media (max-width: 980px) {
+  .mentorship-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -4020,6 +4091,50 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .franchise-form-wrap,
+  .franchise-carousel-card,
+  .mentorship-card {
+    padding: 28px;
+  }
+
+  .franchise-usps {
+    gap: 16px;
+  }
+
+  .usp-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  .franchise-right {
+    gap: 24px;
+  }
+
+  .mentorship-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mentorship-cta {
+    margin-top: 28px;
+  }
+
+  .mentorship-cta .btn-teal-solid {
+    min-width: unset;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .franchise-form-wrap {
+    padding: 24px;
+  }
+
+  .franchise-carousel-card {
+    padding: 24px;
+  }
+
   .why-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -4649,10 +4764,10 @@ footer {
   gap: 8px;
   background: var(--teal);
   color: white;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
-  padding: 14px 28px;
-  border-radius: 4px;
+  padding: 14px 32px;
+  border-radius: 999px;
   transition: all 0.2s;
 }
 
@@ -4680,21 +4795,19 @@ footer {
   color: white;
 }
 
+.mentorship-cta {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.mentorship-cta .btn-teal-solid {
+  min-width: 240px;
+}
+
 .franchise-cta-numbers {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
-}
-
-.cta-num-cell {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 36px 32px;
-  transition: background 0.2s;
-}
-
-.cta-num-cell:hover {
-  background: rgba(13, 115, 119, 0.15);
 }
 
 .cta-num-cell:first-child {

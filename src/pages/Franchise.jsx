@@ -288,8 +288,8 @@ const Franchise = () => {
 
               <div className="franchise-carousel-card">
                 <div className="franchise-carousel-header">
-                  <span className="label">Franchise Gallery</span>
-                  <h4>Explore our partnership visuals</h4>
+                  <span className="label">Our Thoughts</span>
+                  <h4>Explore our partnership values</h4>
                 </div>
                 <div className="franchise-carousel-viewport">
                   <div
@@ -316,6 +316,59 @@ const Franchise = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mentorship">
+        <div className="container">
+          <div className="mentorship-header">
+            <span className="label">Zupharm Business Mentorship Program</span>
+            <h2>With Zupharm, you don't just take a franchise, You take a complete business guidance System with 1 : 1 mentorship support.</h2>
+          </div>
+
+          <div className="mentorship-grid">
+            <article className="mentorship-card">
+              <h3>Sales Mentorship</h3>
+              <ul>
+                <li>Setting monthly targets</li>
+                <li>Territory expansion strategies</li>
+                <li>Appointing sub-distributors</li>
+                <li>Scaling from a single district to multiple districts</li>
+                <li>Confidence in approaching doctors</li>
+                <li>Effective medical detailing techniques</li>
+                <li>Converting product samples into orders</li>
+                <li>Building long-term doctor relationships</li>
+                <li>Daily visit strategies</li>
+              </ul>
+            </article>
+
+            <article className="mentorship-card">
+              <h3>Inventory Management Guidance</h3>
+              <ul>
+                <li>Identifying high-demand products to stock</li>
+                <li>Managing the balance between fast-moving and slow-moving stock</li>
+                <li>Mitigating losses from expired products</li>
+                <li>Implementing smart re-order planning</li>
+              </ul>
+            </article>
+
+            <article className="mentorship-card">
+              <h3>Cash Flow Management</h3>
+              <ul>
+                <li>Managing credit cycles effectively</li>
+                <li>Guidelines on when to extend credit and when to decline</li>
+                <li>Strategies to increase the velocity of money rotation</li>
+                <li>Planning for profit re-investment</li>
+              </ul>
+            </article>
+          </div>
+
+          <div className="mentorship-cta">
+            <a href="#franchise" className="btn-teal-solid">
+              <i className="fas fa-handshake"></i>
+              Apply for Franchise
+            </a>
           </div>
         </div>
       </section>
