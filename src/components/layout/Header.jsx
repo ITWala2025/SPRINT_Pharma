@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import zupharmLogo from '/images/zupharm_logo.png';
 
 const NAV_ITEMS = [
   { label: 'About', to: '/about' },
@@ -46,12 +47,8 @@ const Header = () => {
       {/* Layer 2 Brand + Navigation */}
       <div className="header-layer header-brand-strip">
         <div className="brand-strip-inner">
-          <Link to="/" className="nav-logo">
-            <div className="logo-mark">Zu</div>
-            <div className="logo-text">
-              <span className="logo-wordmark">Zu<span>pharm</span></span>
-              <span className="logo-tagline">Laboratories Pvt. Ltd.</span>
-            </div>
+          <Link to="/" className="nav-logo" title="Zupharm Laboratories">
+            <img src={zupharmLogo} alt="Zupharm Laboratories" className="logo-img" />
           </Link>
 
           <nav className="nav-pill" id="navPill">
@@ -100,12 +97,8 @@ const Header = () => {
 
           {/* Panel top bar */}
           <div className="mob-panel-header">
-            <Link to="/" className="mob-logo nav-logo" onClick={() => setMenuOpen(false)}>
-              <div className="logo-mark mob-logo-mark">Zu</div>
-              <div className="logo-text">
-                <span className="logo-wordmark mob-logo-wordmark">Zu<span>pharm</span></span>
-                <span className="logo-tagline mob-logo-tagline">Laboratories Pvt. Ltd.</span>
-              </div>
+            <Link to="/" className="mob-logo nav-logo" onClick={() => setMenuOpen(false)} title="Zupharm Laboratories">
+              <img src={zupharmLogo} alt="Zupharm Laboratories" className="logo-img mob-logo-img" />
             </Link>
             <button
               className="mob-close"

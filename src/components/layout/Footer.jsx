@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import zupharmLogo from '/images/zupharm_logo.png';
 
 const Footer = () => (
   <footer style={{
@@ -14,7 +15,7 @@ const Footer = () => (
         {/* Brand column */}
         <div className="f-brand">
           <div className="f-logo-row">
-            <div className="f-logo-mark">Zu</div>
+            <img src={zupharmLogo} alt="Zupharm Laboratories" className="f-logo-img" />
             <span className="f-logo-name">Zupharm Laboratories</span>
           </div>
           <p>
