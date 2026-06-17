@@ -151,7 +151,7 @@ const Franchise = () => {
         <div className="container">
           <div className="franchise-inner">
             <div className="franchise-left">
-              <span className="label">PCD Franchise</span>
+              <span className="label">Our PCD Franchise Model</span>
               <h2>Build Your Pharma Business With Zupharm</h2>
               <p>
                 Join 100+ successful partners across India. We provide the product,
@@ -170,22 +170,21 @@ const Franchise = () => {
               </div>
             </div>
 
-            <div className="franchise-right">
-              <div className="franchise-form-wrap">
-                <h3>Apply for Franchise</h3>
-                <p>We'll respond within 24 hours with a personalised proposal.</p>
-                <form onSubmit={handleSubmit}>
-                  <div className="f-group">
-                    <label htmlFor="fr-name">Full Name</label>
-                    <input
-                      id="fr-name"
-                      name="name"
-                      type="text"
-                      placeholder="Your full name"
-                      value={form.name}
-                      onChange={handleChange}
-                    />
-                  </div>
+            <div className="franchise-form-wrap">
+              <h3>Apply for Authorized Distributorship</h3>
+              <p>We'll respond within 24 hours with a personalised proposal.</p>
+              <form onSubmit={handleSubmit}>
+                <div className="f-group">
+                  <label htmlFor="fr-name">Full Name</label>
+                  <input
+                    id="fr-name"
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    value={form.name}
+                    onChange={handleChange}
+                  />
+                </div>
 
                   <div className="f-grid">
                     <div className="f-group">

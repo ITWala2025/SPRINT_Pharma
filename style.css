@@ -1586,6 +1586,38 @@ a {
   overflow: hidden;
   margin-bottom: 18px;
   border-radius: 4px;
+  position: relative;
+}
+.prod-badges {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+}
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge.iso {
+  background: rgba(13, 115, 119, 0.9);
+  color: white;
+  border: 1px solid rgba(13, 115, 119, 1);
+}
+.badge.dcgi {
+  background: rgba(20, 189, 172, 0.9);
+  color: white;
+  border: 1px solid rgba(20, 189, 172, 1);
 }
 
 .prod-img img {
@@ -4949,6 +4981,38 @@ footer {
 .page-hero-cta:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.45);
+}
+
+.hero-certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.95);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.cert-badge:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.cert-badge i {
+  font-size: 14px;
 }
 
 /* ────────────────────────────────────────────────────────────

@@ -56,6 +56,11 @@ const Products = () => (
            From cardiac care to ophthalmology, every formulation developed under
            WHO-GMP standards with full regulatory compliance.
            </p>
+        <div className="hero-certifications">
+          <span className="cert-badge"><i className="fas fa-certificate" /> ISO Certified</span>
+          <span className="cert-badge"><i className="fas fa-check-circle" /> DCGI Approved</span>
+          <span className="cert-badge"><i className="fas fa-chart-line" /> 1M+ Units Sold</span>
+        </div>
         <Link to="/franchise" className="page-hero-cta">
           <i className="fas fa-handshake" /> Become a Franchise Partner
         </Link>
@@ -77,6 +82,10 @@ const Products = () => (
           <div className="prod-card" key={name}>
             <div className="prod-img">
               <img src={img} alt={alt} />
+              <div className="prod-badges">
+                <span className="badge iso">ISO</span>
+                <span className="badge dcgi">DCGI</span>
+              </div>
             </div>
             <div className="prod-count">{count} Products</div>
             <div className="prod-name">{name}</div>

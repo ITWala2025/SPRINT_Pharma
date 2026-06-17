@@ -10,12 +10,12 @@ const CERTS = [
 ];
 
 const VALUES = [
-  { icon: 'fa-leaf',       title: 'Integrity',      desc: 'We uphold the highest standards of honesty and transparency in every decision we make.' },
-  { icon: 'fa-lightbulb',  title: 'Innovation',     desc: 'Continuous improvement and breakthrough research drive us forward every single day.' },
-  { icon: 'fa-users',      title: 'Collaboration',  desc: 'We work together with partners, patients, and communities to achieve better outcomes.' },
-   { icon: 'fa-heart',      title: 'Compassion',     desc: "People's health and well-being are at the heart of everything we do, without exception." },
-  { icon: 'fa-shield-alt', title: 'Quality',        desc: 'Rigorous standards ensure the safety, efficacy, and consistency of every product we deliver.' },
-  { icon: 'fa-globe',      title: 'Sustainability', desc: 'We commit to environmentally responsible practices for the planet and future generations.' },
+  { icon: 'fa-handshake',       title: 'Integrity',      desc: 'We operate with honesty, transparency, and uncompromising ethical standards to build lasting trust.' },
+  { icon: 'fa-people-group',  title: 'Respect',     desc: 'We value people, diverse perspective, and foster a culture of dignity and collaboration.' },
+  { icon: 'fa-shield-alt', title: 'Safety & Quality',  desc: 'We prioritize patient safety and maintain the highest quality and regulatory standards.' },
+   { icon: 'fa-lightbulb',     title: 'Innovation',     desc: "Continous improvement and breakthrough research drive us forward every single day." },
+  { icon: 'fa-users',      title: 'Collaboration',        desc: 'We work together with partners, patients, and communities to achieve better outcomes.' },
+  { icon: 'fa-globe',      title: 'Sustainability', desc: 'We pursue responsible growth while caring for our environment and communities.' },
 ];
 
 const About = () => {
@@ -72,9 +72,8 @@ const About = () => {
             <span className="label">Who We Are</span>
             <h2>India's Trusted Name in Pharmaceutical Excellence</h2>
             <p>
-              Zupharm Laboratories Pvt. Ltd. is a WHO-GMP certified pharmaceutical company
-              committed to delivering high-quality, affordable medicines. Our state-of-the-art
-              manufacturing facility operates under the strictest global quality standards.
+              Zupharm Laboratories Pvt. Ltd. is a fast-growing Indian pharmaceutical company commited to delivering high-quality, affordable, & effective medicines across India.
+              Founded with a Vision to build trust through quality, Zupharm focuses on ethical marketing, Strong Doctor relationships & long term business partnership.
             </p>
             <p>
               From research to distribution, every step is guided by scientific rigour,
@@ -142,9 +141,9 @@ const About = () => {
             <div className="vm-eyebrow">Our Vision</div>
             <h2>To Lead the Way in Pharmaceutical Innovation</h2>
             <p>
-              To be the leading catalyst for innovative pharmaceutical solutions that
-               improve health outcomes worldwide, making quality medicines accessible
-              to every corner of India and beyond.
+              To establish Zupharm Labpratories Pvt. Ltd. as a globally respected pharmaceutical
+              organization known for innovation, uncompromising quality standards, and ethical
+              healthcare solutions.
             </p>
           </div>
           <div className="vm-visual">
@@ -162,9 +161,9 @@ const About = () => {
             <div className="vm-eyebrow">Our Mission</div>
             <h2>Delivering Quality Medicines. Building Healthy Lives.</h2>
             <p>
-              Deliver high-quality, affordable medicines through cutting-edge research,
-               sustainable manufacturing, and a commitment to ethical practices, ensuring
-              every patient receives the standard of care they deserve.
+              To manufacture and deliver safe, effective, and affordable pharmaceutical 
+              products while maintaining regulatory excellence, fostering long-term partnerships,
+              and contributing to a healthier society worldwide.
             </p>
           </div>
           <div className="vm-visual">
