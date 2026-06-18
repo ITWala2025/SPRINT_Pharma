@@ -25,6 +25,22 @@ const REASONS = [
     num: '06', title: 'Transparent Partner Model',
     desc: 'Clear margins, honest pricing, and a partner-first culture behind 100+ relationships.',
   },
+  {
+    num: '07', title: 'Young & Visionary Leadership',
+    desc: 'Driven by a fresh, forward-thinking management team bringing innovative perspectives.',
+  },
+  {
+    num: '08', title: 'Fast Growing Company',
+    desc: 'Characterized by rapid expansion and momentum, signaling reliability and market trust.',
+  },
+  {
+    num: '09', title: 'Ethical Business Policy',
+    desc: 'Committed to integrity and high moral standards at the heart of all operations.',
+  },
+  {
+    num: '10', title: 'Transparent Dealing',
+    desc: 'Prioritizing open, honest communication to build long-term trust with partners.',
+  },
 ];
 
 const AI_TOOLS = [
@@ -50,6 +66,20 @@ const AI_TOOLS = [
   },
 ];
 
+const ValueProposition = () => (
+  <div className="why-value-prop">
+    <div className="why-value-prop-inner">
+      <i className="fa-solid fa-handshake why-value-prop-icon" aria-hidden="true"></i>
+      <div className="why-value-prop-content">
+        <p className="why-value-prop-tagline">Most Pharmaceutical Companies only sell stocks but Zupharm provides</p>
+        <p className="why-value-prop-title">KNOWLEDGE + SYSTEM + STRATEGY</p>
+        <p className="why-value-prop-tagline">Because when you grow, Zupharm grows.</p>
+      </div>
+      <i className="fa-solid fa-chart-line why-value-prop-icon" aria-hidden="true"></i>
+    </div>
+  </div>
+);
+
 const WhyUs = () => (
   <>
     {/* Why grid */}
@@ -59,6 +89,7 @@ const WhyUs = () => (
           <span className="label">Why Choose Us</span>
           <h2>The Zupharm Advantage</h2>
         </div>
+        <ValueProposition />
         <div className="why-grid">
           {REASONS.map(({ num, title, desc }) => (
             <div className="why-item" key={num}>
