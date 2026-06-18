@@ -83,8 +83,7 @@ const Products = () => (
             <div className="prod-img">
               <img src={img} alt={alt} />
               <div className="prod-badges">
-                <span className="badge iso">ISO</span>
-                <span className="badge dcgi">DCGI</span>
+                
               </div>
             </div>
             <div className="prod-count">{count} Products</div>

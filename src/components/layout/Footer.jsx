@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import zupharmLogo from '/images/zupharm_logo.png';
+import zupharmLogo from '/images/zupharm-logo.jpg';
 
 const Footer = () => (
   <footer style={{
