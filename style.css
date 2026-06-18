@@ -59,7 +59,7 @@ html {
 
   /* Header heights */
   --announce-h: 40px;
-  --brand-h: 140px;
+  --brand-h: 150px;
   --nav-h: 60px;
   --header-total: calc(var(--announce-h) + var(--brand-h) + var(--nav-h));
 
@@ -340,7 +340,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0;
-  padding: 12px 0;
+  padding: 4px 0;
   border-radius: 0;
   transition: transform 0.3s ease;
   line-height: 1;
@@ -353,18 +353,22 @@ a {
 }
 
 .logo-img {
-  width: 200px;
-  height: 120px;
+  width: 340px;
+  height: auto;
+  max-height: 150px;
   object-fit: contain;
+  object-position: left center;
   border-radius: 0;
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   display: block;
   margin: 0;
+  background: transparent;
 }
 
 .nav-logo:hover .logo-img {
-  transform: none;
-  filter: brightness(0.95);
+  transform: translateY(-1px);
+  filter: brightness(1.05) drop-shadow(0 4px 12px rgba(13, 115, 119, 0.18));
+  opacity: 0.93;
 }
 
 .logo-mark {
@@ -377,7 +381,7 @@ a {
 
 .nav-logo:hover .logo-mark {
   background: var(--teal);
-  color: white;
+  color: #0D7377;
 }
 
 .logo-text {
@@ -636,11 +640,8 @@ a {
   bottom: 0;
   width: 100%;
   max-width: 460px;
-  background: #0B1F35;
-  background-image:
-    radial-gradient(ellipse 60% 50% at 90% 10%, rgba(13, 115, 119, 0.28) 0%, transparent 70%),
-    radial-gradient(circle, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 100% 100%, 28px 28px;
+  background: linear-gradient(135deg, #0D7377 0%, #0A4F55 45%, #062A34 100%);
+  background-blend-mode: overlay;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -696,17 +697,24 @@ a {
 }
 
 .mob-logo-img {
-  width: 80px;
-  height: 48px;
+  width: 160px;
+  height: auto;
+  max-height: 72px;
   object-fit: contain;
   border-radius: 0;
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
   display: block;
   margin: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  mix-blend-mode: multiply;
+  filter: brightness(1.15) contrast(1.08) saturate(1.1);
 }
 
 .mob-logo:hover .mob-logo-img {
-  filter: brightness(0.95);
+  transform: translateY(-2px);
+  filter: brightness(1.25) contrast(1.12) saturate(1.15);
 }
 
 .mob-logo-wordmark {
@@ -3939,39 +3947,45 @@ footer {
 .f-logo-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  /* gap removed — brand name text is hidden; logo stands alone */
+  gap: 0;
 }
 
 .f-logo-img {
-  width: 68px;
-  height: 41px;
+  /* Use a generous size — the logo IS the brand identity in the footer */
+  width: 280px;
+  height: auto;
+  max-height: 130px;
   object-fit: contain;
+  object-position: left center;
   border-radius: 0;
-  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   flex-shrink: 0;
+  background: transparent;
+  /*
+   * The logo is a JPEG with a white background.
+   * mix-blend-mode: multiply makes white pixels transparent against
+   * coloured backgrounds (white × teal = teal), so the logo blends
+   * seamlessly into the teal footer without any white box.
+   */
+  mix-blend-mode: multiply;
+  /* Boost brightness so the dark navy/green logo colours remain vivid on teal */
+  filter: brightness(1.15) contrast(1.08) saturate(1.1);
 }
 
 .f-logo-row:hover .f-logo-img {
-  filter: brightness(1.08);
+  filter: brightness(1.25) contrast(1.12) saturate(1.15);
+  transform: translateY(-2px) scale(1.02);
+  opacity: 0.92;
 }
 
 .f-logo-mark {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--teal);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'DM Serif Display', serif;
-  font-size: 14px;
-  color: var(--teal);
+  display: none;
 }
 
 .f-logo-name {
-  font-family: 'DM Serif Display', serif;
-  font-size: 18px;
-  color: white;
+  /* Logo image already contains the brand name — hide duplicate text */
+  display: none;
 }
 
 .f-socials {
@@ -4135,19 +4149,24 @@ footer {
 
 /* Tablet */
 @media (max-width: 1024px) {
+  :root {
+    --brand-h: 130px;
+  }
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .logo-img {
-    width: 160px;
-    height: 96px;
+    width: 300px;
+    height: auto;
+    max-height: 135px;
     margin: 0;
   }
 
   .f-logo-img {
-    width: 56px;
-    height: 34px;
+    width: 250px;
+    height: auto;
+    max-height: 115px;
   }
 
   .ai-tools {
@@ -4176,6 +4195,7 @@ footer {
 @media (max-width: 768px) {
   :root {
     --section-pad: 36px;
+    --brand-h: 110px;
   }
 
   .container {
@@ -4183,20 +4203,23 @@ footer {
   }
 
   .logo-img {
-    width: 120px;
-    height: 72px;
+    width: 210px;
+    height: auto;
+    max-height: 90px;
     margin: 0;
   }
 
   .mob-logo-img {
-    width: 90px;
-    height: 54px;
+    width: 160px;
+    height: auto;
+    max-height: 72px;
     margin: 0;
   }
 
   .f-logo-img {
-    width: 48px;
-    height: 29px;
+    width: 240px;
+    height: auto;
+    max-height: 110px;
   }
 
   /* Header */
@@ -5621,5 +5644,421 @@ footer {
   .bento-grid,
   .teaser-grid {
     padding: 0 24px;
+  }
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   FOUNDER'S MESSAGE SECTION
+   Location: About page — between Company Intro & Vision/Mission
+   To activate the real photo:
+     1. Replace <div className="founders-photo-placeholder"> with
+        <img src="..." alt="[Founder name], Founder & MD, Zupharm"
+             className="founders-real-photo" />
+     2. Remove the .founders-photo-placeholder rule (or keep for fallback)
+──────────────────────────────────────────────────────────── */
+
+.founders-section {
+  padding: calc(var(--section-pad) * 1.5) 0;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative background ring */
+.founders-section::before {
+  content: '';
+  position: absolute;
+  top: -160px;
+  right: -160px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 115, 119, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.founders-section::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -100px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 115, 119, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Two-column inner layout ── */
+.founders-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* ══════════════════════════════
+   PHOTO COLUMN
+══════════════════════════════ */
+.founders-photo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Outer frame with teal accent border */
+.founders-photo-frame {
+  position: relative;
+  width: 100%;
+}
+
+/* Teal bracket accent — top-left corner */
+.founders-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 56px;
+  height: 56px;
+  border-top: 3px solid var(--teal);
+  border-left: 3px solid var(--teal);
+  border-radius: 4px 0 0 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Teal bracket accent — bottom-right corner */
+.founders-photo-frame::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 56px;
+  height: 56px;
+  border-bottom: 3px solid var(--teal);
+  border-right: 3px solid var(--teal);
+  border-radius: 0 0 4px 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── Placeholder (shown until real photo is added) ── */
+.founders-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, #e8f4f4 0%, #d0eaea 50%, #bfe0e0 100%);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 2px dashed rgba(13, 115, 119, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grid overlay inside placeholder */
+.founders-photo-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(13, 115, 119, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 115, 119, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.founders-photo-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(13, 115, 119, 0.12);
+  border: 2px solid rgba(13, 115, 119, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: rgba(13, 115, 119, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.founders-photo-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(13, 115, 119, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Real photo (swap in when ready) ── */
+.founders-real-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 6px;
+  display: block;
+}
+
+/* ── Accent badge (flask icon + years) ── */
+.founders-badge {
+  position: absolute;
+  bottom: 24px;
+  right: -16px;
+  background: var(--teal);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 28px rgba(13, 115, 119, 0.4);
+  z-index: 3;
+  white-space: nowrap;
+}
+
+.founders-badge i {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ── Signature block below photo ── */
+.founders-signature-block {
+  text-align: center;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.founders-sig-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.founders-sig-company {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════
+   MESSAGE COLUMN
+══════════════════════════════ */
+.founders-message-col {
+  padding-top: 8px;
+  position: relative;
+}
+
+/* Large decorative opening quote */
+.founders-quote-mark {
+  font-family: 'DM Serif Display', serif;
+  font-size: 120px;
+  line-height: 0.7;
+  color: rgba(13, 115, 119, 0.1);
+  margin: 16px 0 -8px -6px;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -4px;
+}
+
+.founders-message-col h2 {
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.15;
+}
+
+.founders-message-body {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 24px;
+  border-left: 3px solid var(--teal-dim);
+}
+
+.founders-message-body p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--charcoal);
+  font-weight: 400;
+}
+
+/* ── Stats row ── */
+.founders-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 44px;
+  padding: 28px 32px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+.founders-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.founders-stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 34px;
+  color: var(--teal);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.founders-stat-num sup {
+  font-size: 18px;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.founders-stat-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+.founders-stat-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — Tablet ≤ 960px
+══════════════════════════════ */
+@media (max-width: 960px) {
+  .founders-inner {
+    grid-template-columns: 280px 1fr;
+    gap: 52px;
+  }
+
+  .founders-quote-mark {
+    font-size: 90px;
+  }
+
+  .founders-badge {
+    right: -8px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — Large Mobile ≤ 768px
+   Switches to single column
+══════════════════════════════ */
+@media (max-width: 768px) {
+  .founders-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 24px;
+  }
+
+  .founders-photo-col {
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .founders-photo-placeholder {
+    aspect-ratio: 4 / 3;
+  }
+
+  .founders-real-photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .founders-badge {
+    right: 12px;
+    bottom: 16px;
+  }
+
+  .founders-photo-frame::before,
+  .founders-photo-frame::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .founders-message-col {
+    padding-top: 0;
+  }
+
+  .founders-quote-mark {
+    font-size: 72px;
+    margin-bottom: -4px;
+  }
+
+  .founders-stats-row {
+    padding: 20px 20px;
+    gap: 0;
+  }
+
+  .founders-stat-num {
+    font-size: 26px;
+  }
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — Small Mobile ≤ 480px
+══════════════════════════════ */
+@media (max-width: 480px) {
+  .founders-section {
+    padding: var(--section-pad) 0;
+  }
+
+  .founders-stats-row {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .founders-stat-divider {
+    width: 48px;
+    height: 1px;
+  }
+
+  .founders-message-body {
+    padding-left: 16px;
+  }
+
+  .founders-message-body p {
+    font-size: 15px;
+  }
+
+  .founders-quote-mark {
+    font-size: 60px;
   }
 }

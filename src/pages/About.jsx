@@ -131,6 +131,80 @@ const About = () => {
       </div>
     </section>
 
+    {/* ── FOUNDER'S MESSAGE ── */}
+    <section className="founders-section" id="founders-message" aria-labelledby="founders-heading">
+      <div className="founders-inner">
+
+        {/* Photo column */}
+        <div className="founders-photo-col">
+          <div className="founders-photo-frame">
+            {/* Replace the div below with an <img> tag once the real photo is available */}
+            <div className="founders-photo-placeholder" aria-label="Founder's photograph placeholder">
+              <div className="founders-photo-avatar">
+                <i className="fas fa-user" aria-hidden="true" />
+              </div>
+              <span className="founders-photo-label">Founder's Photograph</span>
+            </div>
+
+            {/* Decorative accent badge */}
+            <div className="founders-badge">
+              <i className="fas fa-flask" />
+              <span>15+ Years</span>
+            </div>
+          </div>
+
+          {/* Signature block */}
+          <div className="founders-signature-block">
+            <div className="founders-sig-name">Founder &amp; Managing Director</div>
+            <div className="founders-sig-company">Zupharm Laboratories Pvt. Ltd.</div>
+          </div>
+        </div>
+
+        {/* Message column */}
+        <div className="founders-message-col">
+          <span className="label">A Word From Our Founder</span>
+          <h2 id="founders-heading">
+            Built on Trust.<br />Driven by Purpose.
+          </h2>
+
+          <div className="founders-quote-mark" aria-hidden="true">"</div>
+
+          <div className="founders-message-body">
+            <p>
+              {/* Replace this paragraph with the founder's actual message */}
+              [Founder's message will appear here. This section is designed to carry
+              a personal note from the founder — sharing the vision, values, and
+              passion that drive Zupharm Laboratories forward every day.]
+            </p>
+            <p>
+              [Additional paragraphs can be added here. The layout gracefully
+              accommodates two to four paragraphs while preserving readability
+              and visual balance across all screen sizes.]
+            </p>
+          </div>
+
+          {/* Trust stats row */}
+          <div className="founders-stats-row">
+            <div className="founders-stat">
+              <span className="founders-stat-num">500<sup>+</sup></span>
+              <span className="founders-stat-lbl">Formulations</span>
+            </div>
+            <div className="founders-stat-divider" aria-hidden="true" />
+            <div className="founders-stat">
+              <span className="founders-stat-num">20<sup>+</sup></span>
+              <span className="founders-stat-lbl">States Served</span>
+            </div>
+            <div className="founders-stat-divider" aria-hidden="true" />
+            <div className="founders-stat">
+              <span className="founders-stat-num">15<sup>+</sup></span>
+              <span className="founders-stat-lbl">Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     {/* ── VISION & MISSION ── */}
     <section className="about-vm-section">
       <div className="vm-inner">

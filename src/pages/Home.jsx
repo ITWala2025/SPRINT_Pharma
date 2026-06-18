@@ -135,7 +135,7 @@ const Home = () => (
               alt="Pharmaceutical research laboratory"
             />
             <div className="hero-img-caption">
-              <strong>State-of-the-Art Facility</strong>
+              <strong>State of the Art Facility</strong>
                <p>WHO-GMP certified manufacturing plant, built for precision, designed for scale.</p>
             </div>
           </div>
