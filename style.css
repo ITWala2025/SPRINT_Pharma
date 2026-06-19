@@ -2065,11 +2065,49 @@ a {
 
 .why-header {
   margin-bottom: 32px;
+  position: relative;
 }
 
 .why-header h2 {
   max-width: 540px;
   margin-top: 8px;
+}
+
+.why-badges-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.why-badges-container h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.why-badges-images {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.why-badges-container img {
+  width: 55px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.why-badges-container img:hover {
+  transform: scale(1.05);
 }
 
 .why-value-prop {
@@ -4152,6 +4190,7 @@ footer {
   :root {
     --brand-h: 130px;
   }
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4332,6 +4371,26 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .why-badges-container {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 44px);
+    gap: 8px;
+    margin-top: 16px;
+    justify-items: center;
+  }
+
+  .why-badges-container h4 {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    margin: 0 0 4px;
+    justify-self: end;
+  }
+
+  .why-badges-container img {
+    width: 44px;
+  }
+
   .why-value-prop {
     padding: 28px 24px;
     margin-bottom: 32px;
@@ -4392,6 +4451,27 @@ footer {
 
   .why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .why-badges-container {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    gap: 6px;
+    margin-top: 12px;
+    justify-items: center;
+  }
+
+  .why-badges-container h4 {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 6px;
+    font-size: 11px;
+  }
+
+  .why-badges-container img {
+    width: 40px;
   }
 
   .footer-top {

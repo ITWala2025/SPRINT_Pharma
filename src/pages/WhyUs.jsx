@@ -88,6 +88,14 @@ const WhyUs = () => (
         <div className="why-header">
           <span className="label">Why Choose Us</span>
           <h2>The Zupharm Advantage</h2>
+          <div className="why-badges-container">
+            <h4>Our Certifications :-</h4>
+            <div className="why-badges-images">
+              <img src="public/assets/Images/ISOcertified_1.png" alt="ISO certified" />
+              <img src="public/assets/Images/CMPcertified_1.png" alt="CMP certified" />
+              <img src="public/assets/Images/CompetitivePricing_1.png" alt="Competitive pricing" />
+            </div>
+          </div>
         </div>
         <ValueProposition />
         <div className="why-grid">
