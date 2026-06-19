@@ -355,7 +355,7 @@ a {
 .logo-img {
   width: auto;
   height: auto;
-  max-height: 124px;
+  max-height: 110px;
   object-fit: contain;
   object-position: left center;
   border-radius: 0;
@@ -699,7 +699,7 @@ a {
 .mob-logo-img {
   width: auto;
   height: auto;
-  max-height: 86px;
+  max-height: 76px;
   object-fit: contain;
   border-radius: 0;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -3955,7 +3955,7 @@ footer {
   /* Use a generous size — the logo IS the brand identity in the footer */
   width: auto;
   height: auto;
-  max-height: 124px;
+  max-height: 110px;
   object-fit: contain;
   object-position: left center;
   border-radius: 0;
@@ -4159,14 +4159,14 @@ footer {
   .logo-img {
     width: auto;
     height: auto;
-    max-height: 104px;
+    max-height: 92px;
     margin: 0;
   }
 
   .f-logo-img {
     width: auto;
     height: auto;
-    max-height: 104px;
+    max-height: 92px;
   }
 
   .ai-tools {
@@ -4205,21 +4205,21 @@ footer {
   .logo-img {
     width: auto;
     height: auto;
-    max-height: 86px;
+    max-height: 76px;
     margin: 0;
   }
 
   .mob-logo-img {
     width: auto;
     height: auto;
-    max-height: 86px;
+    max-height: 76px;
     margin: 0;
   }
 
   .f-logo-img {
     width: auto;
     height: auto;
-    max-height: 86px;
+    max-height: 76px;
   }
 
   /* Header */
