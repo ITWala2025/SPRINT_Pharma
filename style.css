@@ -2064,12 +2064,60 @@ a {
 }
 
 .why-header {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .why-header h2 {
   max-width: 540px;
   margin-top: 8px;
+}
+
+.why-value-prop {
+  background: rgba(221, 246, 227, 0.75);
+  border: 1px solid rgba(86, 187, 128, 0.35);
+  border-radius: 28px;
+  padding: 32px 36px;
+  margin-bottom: 42px;
+  display: flex;
+  justify-content: center;
+}
+
+.why-value-prop-inner {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.why-value-prop-icon {
+  font-size: 3rem;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.why-value-prop-content {
+  text-align: center;
+  flex: 1 1 320px;
+}
+
+.why-value-prop-title {
+  font-size: clamp(1.9rem, 2.2vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 14px 0;
+}
+
+.why-value-prop-tagline {
+  font-size: 1rem;
+  color: var(--black);
+  opacity: 0.88;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 760px;
 }
 
 .why-grid {
@@ -4282,6 +4330,20 @@ footer {
 
   .why-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .why-value-prop {
+    padding: 28px 24px;
+    margin-bottom: 32px;
+  }
+
+  .why-value-prop-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.08em;
+  }
+
+  .why-value-prop-tagline {
+    font-size: 0.98rem;
   }
 
   .ai-tools {
