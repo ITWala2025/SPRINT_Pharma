@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import zupharmLogo from '/images/zupharm-logo.jpg';
+import zupharmLogo from '/images/logo.jpg';
 
 const NAV_ITEMS = [
   { label: 'About', to: '/about' },
