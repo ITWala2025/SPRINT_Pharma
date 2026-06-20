@@ -61,8 +61,8 @@ const Products = () => (
           <span className="cert-badge"><i className="fas fa-check-circle" /> DCGI Approved</span>
           <span className="cert-badge"><i className="fas fa-chart-line" /> 1M+ Units Sold</span>
         </div>
-        <Link to="/franchise" className="page-hero-cta">
-          <i className="fas fa-handshake" /> Become a Franchise Partner
+        <Link to="/distributorship" className="page-hero-cta">
+          <i className="fas fa-handshake" /> Become a Distributorship Partner
         </Link>
       </div>
     </div>

@@ -5,7 +5,7 @@ import zupharmLogo from '/images/logo.jpg';
 const NAV_ITEMS = [
   { label: 'About', to: '/about' },
   { label: 'Products', to: '/products' },
-  { label: 'Franchise', to: '/franchise' },
+  { label: 'Distributorship', to: '/distributorship' },
   { label: 'Manufacturing', to: '/manufacturing' },
   { label: 'Contact', to: '/contact' },
 ];
@@ -30,9 +30,9 @@ const Header = () => {
         <div className="announce-inner">
           <span className="announce-dot" />
           <p>
-            Now accepting PCD Franchise applications for{' '}
+            Now accepting Propaganda Cum Distributorship applications for{' '}
             <strong>Bihar, UP &amp; Jharkhand</strong>,{' '}
-            <Link to="/franchise">Apply Today &rarr;</Link>
+            <Link to="/distributorship">Apply Today &rarr;</Link>
           </p>
           <button
             className="announce-close"
@@ -65,8 +65,8 @@ const Header = () => {
               ))}
             </ul>
 
-            <NavLink to="/franchise" className="nav-cta">
-              <i className="fas fa-handshake" /> Apply for Franchise
+            <NavLink to="/distributorship" className="nav-cta">
+              <i className="fas fa-handshake" /> Apply for Distributorship
             </NavLink>
 
             <button
@@ -136,15 +136,14 @@ const Header = () => {
           {/* Bottom dock */}
           <div className="mob-panel-foot">
             <Link
-              to="/franchise"
+              to="/distributorship"
               className="mob-cta-btn"
               onClick={() => setMenuOpen(false)}
             >
               <span className="mob-cta-icon"><i className="fas fa-handshake" /></span>
-              <span>Apply for Franchise</span>
+              <span>Apply for Distributorship</span>
               <span className="mob-cta-arrow"><i className="fas fa-arrow-right" /></span>
             </Link>
-
             <div className="mob-trust-strip">
               <span className="mob-trust-item">
                 <i className="fas fa-shield-alt" /> WHO-GMP Certified

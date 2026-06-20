@@ -20,7 +20,7 @@ const Footer = () => (
           </div>
           <p>
             Healing Smarter. Reaching Further. WHO-GMP certified pharmaceutical
-            manufacturer and PCD franchise company with pan-India presence.
+            manufacturer and Propaganda Cum Distributorship company with pan-India presence.
           </p>
           <div className="f-socials">
             <a href="#" className="f-social" aria-label="Facebook">
@@ -45,7 +45,7 @@ const Footer = () => (
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/products">Products</Link></li>
-            <li><Link to="/franchise">PCD Franchise</Link></li>
+            <li><Link to="/distributorship">Distributorship</Link></li>
             <li><Link to="/manufacturing">Manufacturing &amp; Certifications</Link></li>
             <li><Link to="/why-us">Why Zupharm</Link></li>
             <li><Link to="/contact">Contact</Link></li>

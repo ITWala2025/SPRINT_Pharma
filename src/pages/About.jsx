@@ -86,7 +86,7 @@ const About = () => {
               <li><div className="check-dot" />Dedicated R&amp;D with 15+ years of domain expertise</li>
                <li><div className="check-dot" />AI-powered tools, ZuAI, ZuDoc, ZuSupply, ZuAnalytics</li>
             </ul>
-            <Link to="/franchise" className="btn-main">
+            <Link to="/distributorship" className="btn-main">
               <i className="fas fa-handshake" /> Become a Partner
             </Link>
           </div>

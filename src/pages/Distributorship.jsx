@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const STATES = [
@@ -71,7 +71,7 @@ const CAROUSEL_IMAGES = [
   '/assets/Images/Franchise4.png',
 ];
 
-const Franchise = () => {
+const Distributorship = () => {
   const [form, setForm] = useState({
     name: '',
     mobile: '',
@@ -135,7 +135,7 @@ const Franchise = () => {
         }}
       >
         <div className="page-hero-inner">
-          <div className="page-hero-eyebrow">PCD Franchise</div>
+          <div className="page-hero-eyebrow">Propaganda Cum Distributorship</div>
           <h1>Build Your Pharma<br />Business With Zupharm</h1>
           <p>
             Join 100+ successful partners across India with exclusive territory rights,
@@ -147,11 +147,11 @@ const Franchise = () => {
         </div>
       </div>
 
-      <section className="franchise" id="franchise">
+      <section className="franchise" id="distributorship">
         <div className="container">
           <div className="franchise-inner">
             <div className="franchise-left">
-              <span className="label">Our PCD Franchise Model</span>
+              <span className="label">Our Propaganda Cum Distributorship Model</span>
               <h2>Build Your Pharma Business With Zupharm</h2>
               <p>
                 Join 100+ successful partners across India. We provide the product,
@@ -325,7 +325,7 @@ const Franchise = () => {
         <div className="container">
           <div className="mentorship-header">
             <span className="label">Zupharm Business Mentorship Program</span>
-            <h2>With Zupharm, you don't just take a franchise, You take a complete business guidance System with 1 : 1 mentorship support.</h2>
+            <h2>With Zupharm, you don't just take a distributorship, You take a complete business guidance System with 1:1 mentorship support.</h2>
           </div>
 
           <div className="mentorship-grid">
@@ -366,9 +366,9 @@ const Franchise = () => {
           </div>
 
           <div className="mentorship-cta">
-            <a href="#franchise" className="btn-teal-solid">
+            <a href="#distributorship" className="btn-teal-solid">
               <i className="fas fa-handshake"></i>
-              Apply for Franchise
+              Apply for Distributorship
             </a>
           </div>
         </div>
@@ -377,4 +377,4 @@ const Franchise = () => {
   );
 };
 
-export default Franchise;
+export default Distributorship;
