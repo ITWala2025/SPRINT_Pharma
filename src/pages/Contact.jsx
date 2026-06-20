@@ -244,7 +244,7 @@ const Contact = () => {
                 className="btn-teal-solid"
                 style={{ display: 'inline-flex', textDecoration: 'none', borderRadius: 4 }}
               >
-                <i className="fas fa-handshake" /> Apply for Franchise
+                <i className="fas fa-handshake" /> Apply for Distributorship
               </Link>
             </div>
 
