@@ -81,21 +81,18 @@ const Footer = () => (
           <div className="f-contact-item">
             <div className="dot" />
             <span>
-              Pharmaceutical Industrial Zone,<br />
-              Patna, Bihar, 800001
+              Zupharm Laboratories, Pharmaceutical Industrial Zone<br />
+              Cyber Park, Sector 39, Gurugram<br />
+              Haryana 122001, India
             </span>
           </div>
           <div className="f-contact-item">
             <div className="dot" />
-            <span>+91 12345 67890</span>
+            <span>+91 9931855705</span>
           </div>
           <div className="f-contact-item">
             <div className="dot" />
-            <span>info@zupharm.com</span>
-          </div>
-          <div className="f-contact-item">
-            <div className="dot" />
-            <span>www.zupharm.com</span>
+            <span>Shahzad@zupharm.com</span>
           </div>
         </div>
 
