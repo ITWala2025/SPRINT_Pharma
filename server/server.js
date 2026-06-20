@@ -57,9 +57,9 @@ Message: ${message || 'N/A'}
             text: emailText,
             html: `<p><strong>New Franchise Application</strong></p>
 <ul>
-  <li><strong>Name:</strong> ${name}</li>
-  <li><strong>Email:</strong> ${email}</li>
-  <li><strong>Mobile:</strong> ${mobile}</li>
+  <li><strong>User_Name:</strong> ${name}</li>
+  <li><strong>User_Email:</strong> ${email}</li>
+  <li><strong>User_Mobile:</strong> ${mobile}</li>
   <li><strong>City:</strong> ${city}</li>
   <li><strong>State:</strong> ${state}</li>
   <li><strong>Product Interest:</strong> ${product || 'N/A'}</li>

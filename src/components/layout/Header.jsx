@@ -66,7 +66,7 @@ const Header = () => {
             </ul>
 
             <NavLink to="/franchise" className="nav-cta">
-              <i className="fas fa-handshake" /> Apply for Franchise
+              <i className="fas fa-handshake" /> Apply for Distributorship
             </NavLink>
 
             <button

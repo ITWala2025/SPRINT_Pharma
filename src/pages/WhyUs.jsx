@@ -115,7 +115,7 @@ const WhyUs = () => (
       <div className="container">
         <div className="ai-header">
           <span className="label label-light">Technology Suite</span>
-          <h2>Powered by <em>Intelligence</em></h2>
+          <h2>Powered by<em>Intelligence</em></h2>
         </div>
         <div className="ai-tools">
           {AI_TOOLS.map(({ img, badge, title, desc }) => (

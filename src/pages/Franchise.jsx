@@ -91,10 +91,30 @@ const Franchise = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleChange = (e) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  // Replace your existing handleChange with this:
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "mobile") {
+      // Strip everything except numbers
+      const onlyNums = value.replace(/[^0-9]/g, '');
+
+      // Only update state if the length is 10 or less
+      if (onlyNums.length <= 10) {
+        setForm((prev) => ({ ...prev, [name]: onlyNums }));
+      }
+    } else {
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (form.mobile.length !== 10) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
 
     try {
       const response = await fetch('http://localhost:4000/api/franchise', {
@@ -184,6 +204,7 @@ const Franchise = () => {
                       placeholder="Your full name"
                       value={form.name}
                       onChange={handleChange}
+                      required
                     />
                   </div>
 
@@ -197,6 +218,8 @@ const Franchise = () => {
                         placeholder="+91 XXXXX XXXXX"
                         value={form.mobile}
                         onChange={handleChange}
+                        maxLength="10"
+                        required
                       />
                     </div>
                     <div className="f-group">
@@ -222,6 +245,7 @@ const Franchise = () => {
                         placeholder="Product of interest"
                         value={form.product}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="f-group">
@@ -233,6 +257,7 @@ const Franchise = () => {
                         placeholder="City / District"
                         value={form.city}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                   </div>
@@ -245,6 +270,7 @@ const Franchise = () => {
                         name="state"
                         value={form.state}
                         onChange={handleChange}
+                        required
                       >
                         <option value="" disabled>
                           Select your state
@@ -265,6 +291,7 @@ const Franchise = () => {
                         placeholder="Distributor, reseller, etc."
                         value={form.businessType}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                   </div>
@@ -368,7 +395,7 @@ const Franchise = () => {
           <div className="mentorship-cta">
             <a href="#franchise" className="btn-teal-solid">
               <i className="fas fa-handshake"></i>
-              Apply for Franchise
+              Apply for Distributorship
             </a>
           </div>
         </div>

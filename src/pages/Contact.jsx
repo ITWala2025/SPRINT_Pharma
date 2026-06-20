@@ -44,9 +44,9 @@ const WhatsAppHoverButton = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <span className="wa-text" style={{ 
+      <span className="wa-text" style={{
         marginLeft: '45px', // Adjusted to account for the background icon
-        opacity: 0, 
+        opacity: 0,
         transition: 'opacity 0.2s ease-in-out',
         fontSize: '15px',
         fontWeight: '500',
@@ -94,8 +94,8 @@ const Contact = () => {
           <div className="page-hero-eyebrow">Get In Touch</div>
           <h1>Let's Talk.</h1>
           <p>
-             Whether you're exploring a franchise opportunity, need product information,
-             or simply have a question, we respond within 24 hours.
+            Whether you're exploring a franchise opportunity, need product information,
+            or simply have a question, we respond within 24 hours.
           </p>
         </div>
       </div>
@@ -243,7 +243,7 @@ const Contact = () => {
                 className="btn-teal-solid"
                 style={{ display: 'inline-flex', textDecoration: 'none', borderRadius: 4 }}
               >
-                <i className="fas fa-handshake" /> Apply for Franchise
+                <i className="fas fa-handshake" /> Apply for Distributorship
               </a>
             </div>
 

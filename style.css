@@ -1958,6 +1958,7 @@ a {
 }
 
 .mentorship-card h3 {
+  text-align: center;
   margin-top: 0;
   margin-bottom: 18px;
   font-size: 22px;

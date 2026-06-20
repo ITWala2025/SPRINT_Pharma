@@ -101,7 +101,7 @@ const Home = () => (
               <i className="fas fa-th-large" /> Explore Products
             </Link>
             <Link to="/franchise" className="btn-ghost">
-              Apply for Franchise
+              Apply for Distributorship
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
@@ -248,7 +248,7 @@ const Home = () => (
           </p>
           <div className="franchise-cta-actions">
             <Link to="/franchise" className="btn-teal-solid">
-              <i className="fas fa-handshake" /> Apply for Franchise
+              <i className="fas fa-handshake" /> Apply for Distributorship
             </Link>
             <Link to="/why-us" className="btn-ghost-white">
               Why Zupharm <i className="fas fa-arrow-right" />
