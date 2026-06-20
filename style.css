@@ -353,9 +353,9 @@ a {
 }
 
 .logo-img {
-  width: 340px;
+  width: auto;
   height: auto;
-  max-height: 150px;
+  max-height: 110px;
   object-fit: contain;
   object-position: left center;
   border-radius: 0;
@@ -697,9 +697,9 @@ a {
 }
 
 .mob-logo-img {
-  width: 160px;
+  width: auto;
   height: auto;
-  max-height: 72px;
+  max-height: 76px;
   object-fit: contain;
   border-radius: 0;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -3953,9 +3953,9 @@ footer {
 
 .f-logo-img {
   /* Use a generous size — the logo IS the brand identity in the footer */
-  width: 280px;
+  width: auto;
   height: auto;
-  max-height: 130px;
+  max-height: 110px;
   object-fit: contain;
   object-position: left center;
   border-radius: 0;
@@ -4157,16 +4157,16 @@ footer {
   }
 
   .logo-img {
-    width: 300px;
+    width: auto;
     height: auto;
-    max-height: 135px;
+    max-height: 92px;
     margin: 0;
   }
 
   .f-logo-img {
-    width: 250px;
+    width: auto;
     height: auto;
-    max-height: 115px;
+    max-height: 92px;
   }
 
   .ai-tools {
@@ -4203,23 +4203,23 @@ footer {
   }
 
   .logo-img {
-    width: 210px;
+    width: auto;
     height: auto;
-    max-height: 90px;
+    max-height: 76px;
     margin: 0;
   }
 
   .mob-logo-img {
-    width: 160px;
+    width: auto;
     height: auto;
-    max-height: 72px;
+    max-height: 76px;
     margin: 0;
   }
 
   .f-logo-img {
-    width: 240px;
+    width: auto;
     height: auto;
-    max-height: 110px;
+    max-height: 76px;
   }
 
   /* Header */
