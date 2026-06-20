@@ -4,7 +4,7 @@ import MainLayout from '@/components/layout/MainLayout';
 import Home from '@/pages/Home.jsx';
 import About from '@/pages/About.jsx';
 import Products from '@/pages/Products.jsx';
-import Franchise from '@/pages/Franchise.jsx';
+import Distributorship from '@/pages/Distributorship.jsx';
 import WhyUs from '@/pages/WhyUs.jsx';
 import Manufacturing from '@/pages/Manufacturing.jsx';
 import Contact from '@/pages/Contact.jsx';
@@ -18,7 +18,7 @@ const App = () => (
         <Route path="/"              element={<Home />} />
         <Route path="/about"         element={<About />} />
         <Route path="/products"      element={<Products />} />
-        <Route path="/franchise"     element={<Franchise />} />
+        <Route path="/distributorship"     element={<Distributorship />} />
         <Route path="/why-us"        element={<WhyUs />} />
         <Route path="/manufacturing" element={<Manufacturing />} />
         <Route path="/contact"       element={<Contact />} />

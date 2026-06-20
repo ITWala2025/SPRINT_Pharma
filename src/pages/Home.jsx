@@ -45,7 +45,7 @@ const StatsBar = () => {
         </div>
         <div className="stat-cell">
           <div className="stat-num">{partners}+</div>
-          <div className="stat-txt">Franchise Partners</div>
+          <div className="stat-txt">Distributorship Partners</div>
         </div>
         <div className="stat-cell">
           <div className="stat-num who">WHO<span>-GMP</span></div>
@@ -100,7 +100,7 @@ const Home = () => (
             <Link to="/products" className="btn-main">
               <i className="fas fa-th-large" /> Explore Products
             </Link>
-            <Link to="/franchise" className="btn-ghost">
+            <Link to="/distributorship" className="btn-ghost">
               Apply for Distributorship
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -119,7 +119,7 @@ const Home = () => (
               ))}
             </div>
             <p className="proof-text">
-              <strong>100+ franchise partners</strong> trust Zupharm across India
+              <strong>100+ Distributors</strong> trust Zupharm across India
             </p>
           </div>
         </div>
@@ -239,15 +239,15 @@ const Home = () => (
     <section className="home-franchise-cta">
       <div className="franchise-cta-inner">
         <div className="franchise-cta-left">
-          <span className="label label-light">PCD Franchise</span>
+          <span className="label label-light">Propaganda Cum Distributorship</span>
           <h2>Ready to Build Your Pharma Business?</h2>
           <p>
-            Join India's fastest-growing pharmaceutical franchise network.
+            Join India's fastest-growing pharmaceutical Distributors network.
             Exclusive territory rights, complete promotional kits, and a dedicated
             support manager from day one.
           </p>
           <div className="franchise-cta-actions">
-            <Link to="/franchise" className="btn-teal-solid">
+            <Link to="/distributorship" className="btn-teal-solid">
               <i className="fas fa-handshake" /> Apply for Distributorship
             </Link>
             <Link to="/why-us" className="btn-ghost-white">
