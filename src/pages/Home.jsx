@@ -28,7 +28,7 @@ const StatsBar = () => {
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, []);
-  const products = useCounter(500, 1600, visible);
+  const products = useCounter(50, 1600, visible);
   const states   = useCounter(20,  1200, visible);
   const partners = useCounter(100, 1400, visible);
 
@@ -126,7 +126,7 @@ const Home = () => (
 
         <div className="hero-visual">
           <div className="hero-stat-float">
-            <div className="num">500<span>+</span></div>
+            <div className="num">50<span>+</span></div>
             <div className="txt">Certified Products</div>
           </div>
           <div className="hero-img-wrap">
@@ -167,7 +167,7 @@ const Home = () => (
               <h3>Precision Manufacturing at Global Standards</h3>
               <p>
                  Every formulation is developed under ISO 9001:2015 and WHO-GMP protocols,
-                no shortcuts, no compromises. Our 50M+ unit annual capacity runs 24/7 with
+                no shortcuts, no compromises. Our 1M+ unit annual capacity runs 24/7 with
                 zero-defect tolerance.
               </p>
             </div>
