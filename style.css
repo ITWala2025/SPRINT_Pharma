@@ -4748,7 +4748,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(13, 115, 119, 0.4);
+  background: rgba(20, 189, 172, 0.15);
   border: 1px solid rgba(20, 189, 172, 0.4);
   color: var(--teal-lt);
   font-size: 11px;

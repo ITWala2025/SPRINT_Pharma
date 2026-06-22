@@ -59,17 +59,17 @@ const StatsBar = () => {
 const FEATURED_PRODUCTS = [
   {
     img: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=600&q=80&auto=format&fit=crop',
-    count: '65+', name: 'Cardiac Care',
+    count: '5+', name: 'Cardiac Care',
     desc: 'Antihypertensives, statins, anticoagulants, and cardioprotective formulations.',
   },
   {
     img: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80&auto=format&fit=crop',
-    count: '40+', name: 'Respiratory',
+    count: '5+', name: 'Respiratory',
     desc: 'Bronchodilators, corticosteroids, and mucolytic agents for respiratory care.',
   },
   {
     img: 'https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?w=600&q=80&auto=format&fit=crop',
-    count: '58+', name: 'Anti-infectives',
+    count: '5+', name: 'Anti-infectives',
     desc: 'Broad-spectrum antibiotics, antivirals, antifungals, and antimalarials.',
   },
 ];
@@ -210,7 +210,7 @@ const Home = () => (
       <div className="teaser-header">
         <div>
           <span className="label">Our Portfolio</span>
-          <h2>500+ Products Across<br />12 Therapeutic Segments</h2>
+          <h2>50+ Products Across<br />12 Therapeutic Segments</h2>
         </div>
         <Link to="/products">
           Browse full portfolio <i className="fas fa-arrow-right" />
