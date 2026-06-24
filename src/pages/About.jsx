@@ -47,8 +47,8 @@ const About = () => {
         <div className="page-hero-eyebrow">About Zupharm</div>
         <h1>India's Trusted<br />Pharmaceutical Partner.</h1>
         <p>
-          15+ years of manufacturing excellence, 500+ formulations, and a relentless
-          commitment to science, quality, and the health of millions.
+          Empowering pharmaceutical brands through trusted third-party manufacturing, 
+          backed by 15+ years of experience and an extensive portfolio of 50+ formulations.
         </p>
         <div className="page-hero-cta-row">
           <a href="#vision" className="page-hero-cta">
@@ -73,7 +73,7 @@ const About = () => {
             <h2>India's Trusted Name in Pharmaceutical Excellence</h2>
             <p>
               Zupharm Laboratories Pvt. Ltd. is a fast-growing Indian pharmaceutical company commited to delivering high-quality, affordable, & effective medicines across India.
-              Founded with a Vision to build trust through quality, Zupharm focuses on ethical marketing, Strong Doctor relationships & long term business partnership.
+              Founded with a Vision to build trust through quality, Zupharm focuses on ethical marketing, strong Doctor relationships & long term business partnership.
             </p>
             <p>
               From research to distribution, every step is guided by scientific rigour,
@@ -81,9 +81,9 @@ const About = () => {
             </p>
             <ul className="about-checks">
               <li><div className="check-dot" />WHO-GMP, ISO 9001:2015, FSSAI &amp; CDSCO certified</li>
-              <li><div className="check-dot" />500+ formulations across 12 therapeutic segments</li>
+              <li><div className="check-dot" />50+ formulations across 12 therapeutic segments</li>
               <li><div className="check-dot" />Exclusive territory model with pan-India coverage</li>
-              <li><div className="check-dot" />Dedicated R&amp;D with 15+ years of domain expertise</li>
+              <li><div className="check-dot" />R&amp;D partnerships with 15+ years of domain expertise</li>
                <li><div className="check-dot" />AI-powered tools, ZuAI, ZuDoc, ZuSupply, ZuAnalytics</li>
             </ul>
             <Link to="/distributorship" className="btn-main">
@@ -186,7 +186,7 @@ const About = () => {
           {/* Trust stats row */}
           <div className="founders-stats-row">
             <div className="founders-stat">
-              <span className="founders-stat-num">500<sup>+</sup></span>
+              <span className="founders-stat-num">50<sup>+</sup></span>
               <span className="founders-stat-lbl">Formulations</span>
             </div>
             <div className="founders-stat-divider" aria-hidden="true" />

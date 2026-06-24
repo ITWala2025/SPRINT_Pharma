@@ -26,7 +26,7 @@ const Footer = () => (
             <a href="#" className="f-social" aria-label="Facebook">
               <i className="fab fa-facebook-f" />
             </a>
-            <a href="#" className="f-social" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/zupharm-laboratories-private-limited-b65386415/" className="f-social" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in" />
             </a>
             <a href="#" className="f-social" aria-label="Instagram">
@@ -56,13 +56,13 @@ const Footer = () => (
         <div className="f-col">
           <h5>Products</h5>
           <ul>
-            <li><a href="#">Cardiac Care</a></li>
-            <li><a href="#">Neurology</a></li>
-            <li><a href="#">Respiratory</a></li>
-            <li><a href="#">Paediatrics</a></li>
-            <li><a href="#">Anti-infectives</a></li>
-            <li><a href="#">Diabetology</a></li>
-            <li><a href="#">Ophthalmology</a></li>
+            <li><Link to="/products">Cardiac Care</Link></li>
+            <li><Link to="/products">Neurology</Link></li>
+            <li><Link to="/products">Respiratory</Link></li>
+            <li><Link to="/products">Paediatrics</Link></li>
+            <li><Link to="/products">Anti-infectives</Link></li>
+            <li><Link to="/products">Diabetology</Link></li>
+            <li><Link to="/products">Ophthalmology</Link></li>
           </ul>
         </div>
 
@@ -81,7 +81,7 @@ const Footer = () => (
           <div className="f-contact-item">
             <div className="dot" />
             <span>
-              Zupharm Laboratories, Pharmaceutical Industrial Zone<br />
+              Zupharm Laboratories, Pharmaceutical Industrial Zone,<br />
               Cyber Park, Sector 39, Gurugram<br />
               Haryana 122001, India
             </span>
@@ -92,7 +92,7 @@ const Footer = () => (
           </div>
           <div className="f-contact-item">
             <div className="dot" />
-            <span>Shahzad@zupharm.com</span>
+            <span>shahzad@zupharm.com</span>
           </div>
         </div>
 
@@ -101,6 +101,7 @@ const Footer = () => (
       {/* Bottom bar */}
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} Zupharm Laboratories Pvt. Ltd. All Rights Reserved.</p>
+        <p>Built with Precision and Care by <strong>SPRINT & ITWala</strong></p>
         <div className="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
