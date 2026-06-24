@@ -12,7 +12,7 @@ const TABS = [
       'Lyophilization & liquid filling lines',
       'Capacity of 50M+ vials/ampoules annually',
     ],
-    img: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=500&q=80&auto=format&fit=crop',
+    img: '/public/assets/Images/Manufacturing_SterileInjectablesImg.png',
     imgAlt: 'Aseptic syringe manufacturing',
   },
   {
@@ -26,7 +26,7 @@ const TABS = [
       'Dry powder & capsule filling lines',
       'Integrated automated blister packaging',
     ],
-    img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80&auto=format&fit=crop',
+    img: '/public/assets/Images/Manufacturing_MedicineIMG.png',
     imgAlt: 'Pill manufacturing line',
   },
   {
@@ -40,7 +40,7 @@ const TABS = [
       'HPLC & analytical instrumentation suite',
       'Technology transfer & scale-up support',
     ],
-    img: 'public/images/sterile_injectables.png',
+    img: '/public/assets/Images/sterile_injectables.png',
     imgAlt: 'Advanced research laboratory',
   },
 ];
@@ -100,7 +100,7 @@ const Manufacturing = () => {
   return (
     <>
       {/* Hero full width, outside container */}
-        <div className="manufacturing-hero">
+      <div className="manufacturing-hero">
         <div className="hero-overlay" />
         <div className="hero-content flex flex-col items-center text-center">
           <span className="hero-tagline">
@@ -115,144 +115,144 @@ const Manufacturing = () => {
         </div>
       </div>
 
-    <section className="manufacturing" id="manufacturing">
-      <div className="container">
-        <div className="manufacturing-inner">
+      <section className="manufacturing" id="manufacturing">
+        <div className="container">
+          <div className="manufacturing-inner">
 
-          {/* Tabs */}
-          <div className="tabs">
-            <div className="tab-buttons" role="tablist" aria-label="Manufacturing Capabilities">
-              {TABS.map(tab => (
-                <button
-                  key={tab.id}
-                  className={`tab-btn${activeTab === tab.id ? ' active' : ''}`}
-                  role="tab"
-                  aria-selected={activeTab === tab.id}
-                  aria-controls={`tab-${tab.id}`}
-                  onClick={() => setActiveTab(tab.id)}
-                >
-                  <i className={`fas ${tab.icon}`} /> {tab.label}
-                </button>
-              ))}
-            </div>
-            <div className="tab-contents">
-              <div className="tab-content active" id={`tab-${activeTab}`} role="tabpanel">
-                <div className="capability-grid">
-                  <div className="capability-info">
-                    <h3>{currentTab.title}</h3>
-                    <p>{currentTab.body}</p>
-                    <ul className="capability-features">
-                      {currentTab.features.map(f => (
-                        <li key={f}><i className="fas fa-check-circle" /> {f}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="capability-visual">
-                    <img src={currentTab.img} alt={currentTab.imgAlt} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ Accordion */}
-          <div className="section-subheader">
-            <span className="label">Audits &amp; Standards</span>
-            <h3>Frequently Asked Questions</h3>
-          </div>
-          <div className="accordion">
-            {FAQ.map((item, i) => {
-              const isOpen = openFaq === i;
-              return (
-                <div className="accordion-item mb-4" key={i}>
+            {/* Tabs */}
+            <div className="tabs">
+              <div className="tab-buttons" role="tablist" aria-label="Manufacturing Capabilities">
+                {TABS.map(tab => (
                   <button
-                    className="accordion-header"
-                    aria-expanded={isOpen}
-                    aria-controls={`acc-body-${i}`}
-                    onClick={() => setOpenFaq(isOpen ? null : i)}
+                    key={tab.id}
+                    className={`tab-btn${activeTab === tab.id ? ' active' : ''}`}
+                    role="tab"
+                    aria-selected={activeTab === tab.id}
+                    aria-controls={`tab-${tab.id}`}
+                    onClick={() => setActiveTab(tab.id)}
                   >
-                    <span className="question-text">{item.q}</span>
-                    <span className="acc-icon"><i className="fas fa-chevron-down" /></span>
+                    <i className={`fas ${tab.icon}`} /> {tab.label}
                   </button>
-                  {isOpen && (
-                    <div className="accordion-body open" id={`acc-body-${i}`} role="region">
-                      <div className="accordion-content">
-                        <p>{item.a}</p>
-                      </div>
+                ))}
+              </div>
+              <div className="tab-contents">
+                <div className="tab-content active" id={`tab-${activeTab}`} role="tabpanel">
+                  <div className="capability-grid">
+                    <div className="capability-info">
+                      <h3>{currentTab.title}</h3>
+                      <p>{currentTab.body}</p>
+                      <ul className="capability-features">
+                        {currentTab.features.map(f => (
+                          <li key={f}><i className="fas fa-check-circle" /> {f}</li>
+                        ))}
+                      </ul>
                     </div>
-                  )}
+                    <div className="capability-visual">
+                      <img src={currentTab.img} alt={currentTab.imgAlt} />
+                    </div>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            </div>
 
-          {/* Research & Quality Section */}
-          <div className="research-quality">
+            {/* FAQ Accordion */}
             <div className="section-subheader">
-              <span className="label">Research & Quality</span>
-              <h3>Innovation Backed by Quality Assurance</h3>
+              <span className="label">Audits &amp; Standards</span>
+              <h3>Frequently Asked Questions</h3>
             </div>
-
-            <div className="research-grid">
-              {/* Left: Accordion */}
-              <div className="research-accordion-column">
-                <div className="accordion research-accordion">
-                  {RESEARCH_QUALITY.map((item, i) => {
-                    const isOpen = openResearch === i;
-                    return (
-                      <div className="accordion-item research-accordion-item" key={i}>
-                        <button
-                          className="accordion-header research-accordion-header"
-                          aria-expanded={isOpen}
-                          aria-controls={`research-acc-body-${i}`}
-                          onClick={() => setOpenResearch(isOpen ? null : i)}
-                        >
-                          <div className="accordion-header-left">
-                            <div className="accordion-icon">
-                              <i className={`fas ${item.icon}`} />
-                            </div>
-                            <span className="accordion-title">{item.title}</span>
-                          </div>
-                          <span className="acc-icon chevron-icon"><i className="fas fa-chevron-down" /></span>
-                        </button>
-                        {isOpen && (
-                          <div
-                            className="accordion-body research-accordion-body open"
-                            id={`research-acc-body-${i}`}
-                            role="region"
-                          >
-                            <div className="accordion-content">
-                              <p>{item.description}</p>
-                            </div>
-                          </div>
-                        )}
+            <div className="accordion">
+              {FAQ.map((item, i) => {
+                const isOpen = openFaq === i;
+                return (
+                  <div className="accordion-item mb-4" key={i}>
+                    <button
+                      className="accordion-header"
+                      aria-expanded={isOpen}
+                      aria-controls={`acc-body-${i}`}
+                      onClick={() => setOpenFaq(isOpen ? null : i)}
+                    >
+                      <span className="question-text">{item.q}</span>
+                      <span className="acc-icon"><i className="fas fa-chevron-down" /></span>
+                    </button>
+                    {isOpen && (
+                      <div className="accordion-body open" id={`acc-body-${i}`} role="region">
+                        <div className="accordion-content">
+                          <p>{item.a}</p>
+                        </div>
                       </div>
-                    );
-                  })}
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Research & Quality Section */}
+            <div className="research-quality">
+              <div className="section-subheader">
+                <span className="label">Research & Quality</span>
+                <h3>Innovation Backed by Quality Assurance</h3>
+              </div>
+
+              <div className="research-grid">
+                {/* Left: Accordion */}
+                <div className="research-accordion-column">
+                  <div className="accordion research-accordion">
+                    {RESEARCH_QUALITY.map((item, i) => {
+                      const isOpen = openResearch === i;
+                      return (
+                        <div className="accordion-item research-accordion-item" key={i}>
+                          <button
+                            className="accordion-header research-accordion-header"
+                            aria-expanded={isOpen}
+                            aria-controls={`research-acc-body-${i}`}
+                            onClick={() => setOpenResearch(isOpen ? null : i)}
+                          >
+                            <div className="accordion-header-left">
+                              <div className="accordion-icon">
+                                <i className={`fas ${item.icon}`} />
+                              </div>
+                              <span className="accordion-title">{item.title}</span>
+                            </div>
+                            <span className="acc-icon chevron-icon"><i className="fas fa-chevron-down" /></span>
+                          </button>
+                          {isOpen && (
+                            <div
+                              className="accordion-body research-accordion-body open"
+                              id={`research-acc-body-${i}`}
+                              role="region"
+                            >
+                              <div className="accordion-content">
+                                <p>{item.description}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Download Section */}
-          <div className="download-section">
-            <div className="download-card">
-              <div className="download-info">
-                <div className="download-icon-big"><i className="far fa-file-pdf" /></div>
-                <div className="download-text">
-                  <h4>{QUALITY_PDFS[0].title}</h4>
-                  <p>{QUALITY_PDFS[0].description}</p>
+            {/* Download Section */}
+            <div className="download-section">
+              <div className="download-card">
+                <div className="download-info">
+                  <div className="download-icon-big"><i className="far fa-file-pdf" /></div>
+                  <div className="download-text">
+                    <h4>{QUALITY_PDFS[0].title}</h4>
+                    <p>{QUALITY_PDFS[0].description}</p>
+                  </div>
                 </div>
+                <a href={`/assets/pdfs/${QUALITY_PDFS[0].filename}`} download className="download-btn">
+                  <span className="btn-text">Download Brochure</span>
+                </a>
               </div>
-              <a href={`/assets/pdfs/${QUALITY_PDFS[0].filename}`} download className="download-btn">
-                <span className="btn-text">Download Brochure</span>
-              </a>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };

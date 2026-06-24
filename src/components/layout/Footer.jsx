@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import zupharmLogo from '/images/logo.jpg';
+import zupharmLogo from '/public/assets/Images/logo.jpg';
 
 const Footer = () => (
   <footer style={{
@@ -8,7 +8,7 @@ const Footer = () => (
     // subtle depth via a very light overlay to emulate soft shadow
     // using a semi‑transparent layer ensures no impact on inner content
     backgroundBlendMode: 'overlay',
-  } }>
+  }}>
     <div className="container">
       <div className="footer-top">
 

@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 const INQUIRY_TYPES = [
   'General Enquiry',
   'PCD Franchise Application',
-  'Product Information',
-  'Contract Manufacturing',
-  'Careers',
   'Other',
 ];
 
@@ -15,7 +12,7 @@ const INQUIRY_TYPES = [
 const WhatsAppHoverButton = () => {
   return (
     <a
-      href="https://wa.me/911234567890"
+      href="https://wa.me/+919931855705"
       target="_blank"
       rel="noreferrer"
       className="whatsapp-float-btn"
@@ -89,14 +86,14 @@ const Contact = () => {
   return (
     <>
       {/* Page Hero */}
-      <div className="page-hero" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80&auto=format&fit=crop')" }}>
+      <div className="page-hero" style={{ backgroundImage: "url('public/assets/Images/Contact_HeroIMG.png')" }}>
         {/* Dotted background removed */}
         <div className="page-hero-inner">
           <div className="page-hero-eyebrow">Get In Touch</div>
           <h1>Let's Talk.</h1>
           <p>
-             Whether you're exploring a franchise opportunity, need product information,
-             or simply have a question, we respond within 24 hours.
+            Whether you're exploring a franchise opportunity, need product information,
+            or simply have a question, we respond within 24 hours.
           </p>
         </div>
       </div>
@@ -190,21 +187,22 @@ const Contact = () => {
                 <div className="contact-detail-icon"><i className="fas fa-map-marker-alt" /></div>
                 <div className="contact-detail-text">
                   <strong>Address</strong>
-                  <span>Pharmaceutical Industrial Zone,<br />Patna, Bihar, 800001</span>
+                  <span>Zupharm Laboratories, Pharmaceutical Industrial Zone,<br />Cyber Park, Sector 39, Gurugram
+                    Haryana 122001, India</span>
                 </div>
               </div>
               <div className="contact-detail">
                 <div className="contact-detail-icon"><i className="fas fa-phone-alt" /></div>
                 <div className="contact-detail-text">
                   <strong>Phone</strong>
-                  <span>+91 12345 67890</span>
+                  <span>+91 99318 55705</span>
                 </div>
               </div>
               <div className="contact-detail">
                 <div className="contact-detail-icon"><i className="fas fa-envelope" /></div>
                 <div className="contact-detail-text">
                   <strong>Email</strong>
-                  <span>info@zupharm.com</span>
+                  <span>Shahzad@zupharm.com</span>
                 </div>
               </div>
               <div className="contact-detail">
