@@ -43,6 +43,7 @@ const About = () => {
       {/* ── PAGE HERO ── */}
       <div className="page-hero" style={{ backgroundImage: "url('/public/assets/Images/About_HeroBG.png')" }}>
         {/* Dotted background removed */}
+<<<<<<< HEAD
         <div className="page-hero-inner">
           <div className="page-hero-eyebrow">About Zupharm</div>
           <h1>India's Trusted<br />Pharmaceutical Partner.</h1>
@@ -89,6 +90,61 @@ const About = () => {
               <Link to="/distributorship" className="btn-main">
                 <i className="fas fa-handshake" /> Become a Partner
               </Link>
+=======
+      <div className="page-hero-inner">
+        <div className="page-hero-eyebrow">About Zupharm</div>
+        <h1>India's Trusted<br />Pharmaceutical Partner.</h1>
+        <p>
+          Empowering pharmaceutical brands through trusted third-party manufacturing, 
+          backed by 15+ years of experience and an extensive portfolio of 50+ formulations.
+        </p>
+        <div className="page-hero-cta-row">
+          <a href="#vision" className="page-hero-cta">
+            <i className="fas fa-eye" /> Our Vision
+          </a>
+          <a href="#mission" className="page-hero-cta">
+            <i className="fas fa-bullseye" /> Our Mission
+          </a>
+          <Link to="/why-us" className="page-hero-cta">
+            <i className="fas fa-star" /> Why Zupharm?
+          </Link>
+        </div>
+      </div>
+    </div>
+
+    {/* ── COMPANY INTRO ── */}
+    <section className="about" id="about">
+      <div className="container">
+        <div className="about-inner">
+          <div className="about-left">
+            <span className="label">Who We Are</span>
+            <h2>India's Trusted Name in Pharmaceutical Excellence</h2>
+            <p>
+              Zupharm Laboratories Pvt. Ltd. is a fast-growing Indian pharmaceutical company commited to delivering high-quality, affordable, & effective medicines across India.
+              Founded with a Vision to build trust through quality, Zupharm focuses on ethical marketing, strong Doctor relationships & long term business partnership.
+            </p>
+            <p>
+              From research to distribution, every step is guided by scientific rigour,
+              regulatory compliance, and a genuine passion for improving lives.
+            </p>
+            <ul className="about-checks">
+              <li><div className="check-dot" />WHO-GMP, ISO 9001:2015, FSSAI &amp; CDSCO certified</li>
+              <li><div className="check-dot" />50+ formulations across 12 therapeutic segments</li>
+              <li><div className="check-dot" />Exclusive territory model with pan-India coverage</li>
+              <li><div className="check-dot" />R&amp;D partnerships with 15+ years of domain expertise</li>
+               <li><div className="check-dot" />AI-powered tools, ZuAI, ZuDoc, ZuSupply, ZuAnalytics</li>
+            </ul>
+            <Link to="/distributorship" className="btn-main">
+              <i className="fas fa-handshake" /> Become a Partner
+            </Link>
+          </div>
+          <div className="about-right">
+            <div className="about-main-img">
+              <img
+                src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=700&q=80&auto=format&fit=crop"
+                alt="Zupharm manufacturing services"
+              />
+>>>>>>> 0a4e08cde448ce4f5bcdae6ae6a379d0b08d99f6
             </div>
             <div className="about-right">
               <div className="about-main-img">
@@ -269,8 +325,158 @@ const About = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
     </>
+=======
+      </div>
+    </section>
+
+    {/* ── FOUNDER'S MESSAGE ── */}
+    <section className="founders-section" id="founders-message" aria-labelledby="founders-heading">
+      <div className="founders-inner">
+
+        {/* Photo column */}
+        <div className="founders-photo-col">
+          <div className="founders-photo-frame">
+            {/* Replace the div below with an <img> tag once the real photo is available */}
+            <div className="founders-photo-placeholder" aria-label="Founder's photograph placeholder">
+              <div className="founders-photo-avatar">
+                <i className="fas fa-user" aria-hidden="true" />
+              </div>
+              <span className="founders-photo-label">From the Founder's desk</span>
+            </div>
+
+            {/* Decorative accent badge */}
+            <div className="founders-badge">
+              <i className="fas fa-flask" />
+              <span>15+ Years</span>
+            </div>
+          </div>
+
+          {/* Signature block */}
+          <div className="founders-signature-block">
+            <div className="founders-sig-name">Founder &amp; Managing Director</div>
+            <div className="founders-sig-company">Zupharm Laboratories Pvt. Ltd.</div>
+          </div>
+        </div>
+
+        {/* Message column */}
+        <div className="founders-message-col">
+          <span className="label">A Word From Our Founder</span>
+          <h2 id="founders-heading">
+            Built on Trust.<br />Driven by Purpose.
+          </h2>
+
+          <div className="founders-quote-mark" aria-hidden="true">"</div>
+
+          <div className="founders-message-body">
+            <p>
+              {/* Replace this paragraph with the founder's actual message */}
+              
+              At Zupharm Laboratories, we are driven by a vision to deliver high-quality pharmaceutical solutions through innovation, reliability, and strong business partnerships. 
+              As a young and dynamic organization, we combine industry expertise with a commitment to excellence to meet the evolving needs of the healthcare sector.
+              
+            </p>
+            <p>
+              We take pride in offering trusted third-party manufacturing services and distributor-friendly business models that create long-term value for our partners. 
+              Our focus on quality, transparency, and customer satisfaction has helped us build lasting relationships across the pharmaceutical industry.
+
+              Today, Zupharm Laboratories has established a growing presence across multiple states, supported by a diverse portfolio of formulations and a dedicated team. 
+              As we continue to expand, our commitment remains the same—to deliver quality, foster trust, and grow together with our partners.
+
+            </p>
+          </div>
+
+          {/* Trust stats row */}
+          <div className="founders-stats-row">
+            <div className="founders-stat">
+              <span className="founders-stat-num">50<sup>+</sup></span>
+              <span className="founders-stat-lbl">Formulations</span>
+            </div>
+            <div className="founders-stat-divider" aria-hidden="true" />
+            <div className="founders-stat">
+              <span className="founders-stat-num">20<sup>+</sup></span>
+              <span className="founders-stat-lbl">States Served</span>
+            </div>
+            <div className="founders-stat-divider" aria-hidden="true" />
+            <div className="founders-stat">
+              <span className="founders-stat-num">15<sup>+</sup></span>
+              <span className="founders-stat-lbl">Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ── VISION & MISSION ── */}
+    <section className="about-vm-section">
+      <div className="vm-inner">
+
+        {/* Vision */}
+        <div className="vm-block" id="vision">
+          <div className="vm-block-text">
+            <div className="vm-eyebrow">Our Vision</div>
+            <h2>To Lead the Way in Pharmaceutical Innovation</h2>
+            <p>
+              To establish Zupharm Labpratories Pvt. Ltd. as a globally respected pharmaceutical
+              organization known for innovation, uncompromising quality standards, and ethical
+              healthcare solutions.
+            </p>
+          </div>
+          <div className="vm-visual">
+            <img
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=80&auto=format&fit=crop"
+               alt="Zupharm vision, pharmaceutical innovation"
+            />
+            <div className="vm-visual-overlay" />
+          </div>
+        </div>
+
+        {/* Mission */}
+        <div className="vm-block vm-block--reverse" id="mission">
+          <div className="vm-block-text">
+            <div className="vm-eyebrow">Our Mission</div>
+            <h2>Delivering Quality Medicines. Building Healthy Lives.</h2>
+            <p>
+              To manufacture and deliver safe, effective, and affordable pharmaceutical 
+              products while maintaining regulatory excellence, fostering long-term partnerships,
+              and contributing to a healthier society worldwide.
+            </p>
+          </div>
+          <div className="vm-visual">
+            <img
+              src="public/images/sterile_injectables.png"
+               alt="Zupharm vision, pharmaceutical innovation"
+            />
+            <div className="vm-visual-overlay" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ── CORE VALUES ── */}
+    <section className="values-section">
+      <div className="values-section-inner">
+        <div className="values-section-header">
+          <span className="label">What We Stand For</span>
+          <h2>Our Core Values</h2>
+        </div>
+        <div className="values-grid-zu">
+          {VALUES.map(({ icon, title, desc }) => (
+            <div className="value-card-zu" key={title}>
+              <div className="value-icon"><i className={`fas ${icon}`} /></div>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </>
+>>>>>>> 0a4e08cde448ce4f5bcdae6ae6a379d0b08d99f6
   );
 };
 

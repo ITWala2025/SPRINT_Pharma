@@ -4,42 +4,42 @@ import { Link } from 'react-router-dom';
 const PRODUCTS = [
   {
     img: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=400&q=70&auto=format&fit=crop',
-    alt: 'Cardiac Care', count: '65+', name: 'Cardiac Care',
+    alt: 'Cardiac Care', count: '5+', name: 'Cardiac Care',
     desc: 'Antihypertensives, statins, anticoagulants, and cardioprotective formulations.',
   },
   {
     img: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=70&auto=format&fit=crop',
-    alt: 'Neurology', count: '48+', name: 'Neurology',
+    alt: 'Neurology', count: '8+', name: 'Neurology',
     desc: 'Antiepileptics, neuropathic pain relief, and CNS support formulations.',
   },
   {
     img: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&q=70&auto=format&fit=crop',
-    alt: 'Respiratory', count: '40+', name: 'Respiratory',
+    alt: 'Respiratory', count: '5+', name: 'Respiratory',
     desc: 'Bronchodilators, corticosteroids, and mucolytic agents for respiratory care.',
   },
   {
     img: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=400&q=70&auto=format&fit=crop',
-    alt: 'Paediatrics', count: '52+', name: 'Paediatrics',
+    alt: 'Paediatrics', count: '5+', name: 'Paediatrics',
     desc: 'Safe, age-appropriate formulations for infants, children, and adolescents.',
   },
   {
     img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=70&auto=format&fit=crop',
-    alt: 'Diabetology', count: '44+', name: 'Diabetology',
+    alt: 'Diabetology', count: '4+', name: 'Diabetology',
     desc: 'Oral hypoglycemics, insulin sensitisers, and diabetes management solutions.',
   },
   {
     img: 'https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?w=400&q=70&auto=format&fit=crop',
-    alt: 'Anti-infectives', count: '58+', name: 'Anti-infectives',
+    alt: 'Anti-infectives', count: '8+', name: 'Anti-infectives',
     desc: 'Broad-spectrum antibiotics, antivirals, antifungals, and antimalarials.',
   },
   {
     img: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=400&q=70&auto=format&fit=crop',
-    alt: 'Orthopaedics', count: '38+', name: 'Orthopaedics',
+    alt: 'Orthopaedics', count: '3+', name: 'Orthopaedics',
     desc: 'NSAIDs, muscle relaxants, bone health supplements, and joint care formulations.',
   },
   {
     img: 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=400&q=70&auto=format&fit=crop',
-    alt: 'Ophthalmology', count: '32+', name: 'Ophthalmology',
+    alt: 'Ophthalmology', count: '3+', name: 'Ophthalmology',
     desc: 'Eye drops, lubricants, anti-glaucoma agents, and ocular anti-infectives.',
   },
 ];
@@ -51,7 +51,7 @@ const Products = () => (
         {/* Dotted background pattern removed */}
       <div className="page-hero-inner">
         <div className="page-hero-eyebrow">Our Portfolio</div>
-        <h1>500+ Products Across<br />12 Therapeutic Segments</h1>
+        <h1>50+ Products Across<br />12 Therapeutic Segments</h1>
            <p>
            From cardiac care to ophthalmology, every formulation developed under
            WHO-GMP standards with full regulatory compliance.
