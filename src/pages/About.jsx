@@ -94,7 +94,7 @@ const About = () => {
             <div className="about-main-img">
               <img
                 src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=700&q=80&auto=format&fit=crop"
-                alt="Zupharm manufacturing facility"
+                alt="Zupharm manufacturing services"
               />
             </div>
             <div className="about-accent">
@@ -143,7 +143,7 @@ const About = () => {
               <div className="founders-photo-avatar">
                 <i className="fas fa-user" aria-hidden="true" />
               </div>
-              <span className="founders-photo-label">Founder's Photograph</span>
+              <span className="founders-photo-label">From the Founder's desk</span>
             </div>
 
             {/* Decorative accent badge */}
@@ -172,14 +172,18 @@ const About = () => {
           <div className="founders-message-body">
             <p>
               {/* Replace this paragraph with the founder's actual message */}
-              [Founder's message will appear here. This section is designed to carry
-              a personal note from the founder — sharing the vision, values, and
-              passion that drive Zupharm Laboratories forward every day.]
+              
+              At Zupharm Laboratories, we are driven by a vision to deliver high-quality pharmaceutical solutions through innovation, reliability, and strong business partnerships. 
+              As a young and dynamic organization, we combine industry expertise with a commitment to excellence to meet the evolving needs of the healthcare sector.
+              
             </p>
             <p>
-              [Additional paragraphs can be added here. The layout gracefully
-              accommodates two to four paragraphs while preserving readability
-              and visual balance across all screen sizes.]
+              We take pride in offering trusted third-party manufacturing services and distributor-friendly business models that create long-term value for our partners. 
+              Our focus on quality, transparency, and customer satisfaction has helped us build lasting relationships across the pharmaceutical industry.
+
+              Today, Zupharm Laboratories has established a growing presence across multiple states, supported by a diverse portfolio of formulations and a dedicated team. 
+              As we continue to expand, our commitment remains the same—to deliver quality, foster trust, and grow together with our partners.
+
             </p>
           </div>
 
