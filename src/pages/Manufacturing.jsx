@@ -6,7 +6,7 @@ const TABS = [
     icon: 'fa-syringe',
     label: 'Sterile Injectables',
     title: 'Sterile Injectables Production',
-    body: 'Our advanced aseptic processing line features zero-human-touch operations, utilizing barrier technologies and isolation systems to maintain absolute sterility.',
+    body: 'Our manufacturing partners\' advanced aseptic processing lines feature zero-human-touch operations, utilizing barrier technologies and isolation systems to maintain absolute sterility.',
     features: [
       'ISO Class 5 / Grade A cleanrooms',
       'Lyophilization & liquid filling lines',
@@ -47,16 +47,20 @@ const TABS = [
 
 const FAQ = [
   {
-    q: 'What regulatory certifications does your manufacturing facility hold?',
-    a: 'Our primary facility is WHO-GMP certified, ISO 9001:2015 accredited, FSSAI approved, and operates under strict CDSCO regulations. We follow Schedule M & M+ guidelines for all pharmaceutical manufacturing operations.',
+    q: 'What regulatory certifications do your manufacturing partners hold?',
+    a: 'Our primary manufacturing partners are WHO-GMP certified, ISO 9001:2015 accredited, FSSAI approved, and operate under strict CDSCO regulations. They follow Schedule M & M+ guidelines for all pharmaceutical manufacturing operations.',
   },
   {
     q: 'Do you offer contract / third-party manufacturing services?',
-    a: 'Yes, we provide end-to-end contract manufacturing services. This includes formulation customization, regulatory dossier support, raw material sourcing, packaging design, and batch release certification.',
+    a: 'Yes, we provide end-to-end contract manufacturing services. Manufacturing is carried out by certified third-party manufacturing partners, while Zupharm handles packaging, branding, quality checks, and distribution.',
   },
   {
     q: 'What is the typical lead time for a production batch?',
     a: 'Typical lead times range between 30 to 45 days after formulation approval and artwork finalization. Urgent production slots can sometimes be accommodated depending on the capacity schedule.',
+  },
+  {
+    q: 'What is the minimum quantity required for manufacturing?',
+    a: 'The minimum order quantity (MOQ) depends on the product category and packaging requirements. Please contact our team with your product details, and we will provide the applicable MOQ and manufacturing guidelines. For example, some products may require a minimum of 5,000 units, while others might be 10,000 units.',
   },
 ];
 
@@ -70,7 +74,7 @@ const RESEARCH_QUALITY = [
   {
     id: 'qa',
     title: 'Quality Assurance & Validation',
-    description: 'Comprehensive QA protocols ensure every batch meets international standards. Our validation includes process validation, analytical method validation, stability testing, and environmental monitoring. We maintain ISO 9001:2015 certification with zero-defect manufacturing principles.',
+    description: 'Comprehensive QA protocols ensure every batch meets international standards. Our validation includes process validation, analytical method validation, stability testing, and environmental monitoring. While manufacturing is carried out by certified third-party manufacturing partners, Zupharm handles packaging, branding, quality checks, and distribution with zero-defect principles.',
     icon: 'fa-certificate',
   },
   {
@@ -84,8 +88,8 @@ const RESEARCH_QUALITY = [
 const QUALITY_PDFS = [
   {
     id: 'manufacturing-brochure',
-    title: 'Manufacturing Capability Brochure',
-    description: 'Get detailed plant specifications, machinery details, sterile line capacities, and full compliance information (PDF, 4.2 MB).',
+    title: 'Manufacturing Partner Capability Brochure',
+    description: 'Get detailed partner plant specifications, machinery details, sterile line capacities, and full compliance information (PDF, 4.2 MB).',
     filename: 'brochure.pdf',
   },
 ];
@@ -108,9 +112,7 @@ const Manufacturing = () => {
           </span>
           <h2>State of the Art Manufacturing</h2>
           <p>
-            Operating at the intersection of technological innovation and regulatory
-            excellence. Our WHO-GMP certified facilities are engineered for maximum
-            safety, precision, and scalability.
+            Our products are manufactured by trusted third-party manufacturing partners who follow strict quality standards. Zupharm focuses on quality assurance, packaging, branding, and delivering safe, reliable healthcare products to customers.
           </p>
         </div>
       </div>
