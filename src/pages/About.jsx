@@ -97,25 +97,18 @@ const About = () => {
                   alt="Zupharm manufacturing services"
                 />
               </div>
-              <div className="about-right">
-                <div className="about-main-img">
-                  <img
-                    src="/public/assets/Images/About_HeroBG.png"
-                    alt="Zupharm manufacturing facility"
-                  />
-                </div>
-                <div className="about-accent">
-                  <div className="big">15+</div>
-                  <div className="small">Years of<br />Excellence</div>
-                </div>
+              <div className="about-accent">
+                <div className="big">15+</div>
+                <div className="small">Years of<br />Excellence</div>
               </div>
             </div>
+          </div>
 
-            {/* Certifications carousel */}
-            <div className="section-subheader" style={{ marginTop: 0 }}>
-              <span className="label">Accreditation</span>
-              <h3>Verified Partner Certifications</h3>
-            </div>
+          {/* Certifications carousel */}
+          <div className="section-subheader" style={{ marginTop: '60px' }}>
+            <span className="label">Accreditation</span>
+            <h3>Verified Partner Certifications</h3>
+          </div>
             <div className="cert-carousel">
               <div className="carousel-track">
                 {[...CERTS, ...CERTS].map((c, i) => (
@@ -135,7 +128,6 @@ const About = () => {
                 ))}
               </div>
             </div>
-          </div>
         </div>
       </section>
 
