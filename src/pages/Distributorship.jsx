@@ -151,7 +151,7 @@ const Distributorship = () => {
         className="page-hero"
         style={{
           backgroundImage:
-            "url('/public/assets/Images/Distributorship_HeroBG.png')",
+            "url('/assets/Images/Distributorship_HeroBG.png')",
         }}
       >
         <div className="page-hero-inner">

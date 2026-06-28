@@ -86,7 +86,7 @@ const Contact = () => {
   return (
     <>
       {/* Page Hero */}
-      <div className="page-hero" style={{ backgroundImage: "url('public/assets/Images/Contact_HeroIMG.png')" }}>
+      <div className="page-hero" style={{ backgroundImage: "url('/assets/Images/Contact_HeroIMG.png')" }}>
         {/* Dotted background removed */}
         <div className="page-hero-inner">
           <div className="page-hero-eyebrow">Get In Touch</div>

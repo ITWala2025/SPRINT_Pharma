@@ -12,7 +12,7 @@ const TABS = [
       'Lyophilization & liquid filling lines',
       'Capacity of 50M+ vials/ampoules annually',
     ],
-    img: '/public/assets/Images/Manufacturing_SterileInjectablesImg.png',
+    img: '/assets/Images/Manufacturing_SterileInjectablesImg.png',
     imgAlt: 'Aseptic syringe manufacturing',
   },
   {
@@ -26,7 +26,7 @@ const TABS = [
       'Dry powder & capsule filling lines',
       'Integrated automated blister packaging',
     ],
-    img: '/public/assets/Images/Manufacturing_MedicineIMG.png',
+    img: '/assets/Images/Manufacturing_MedicineIMG.png',
     imgAlt: 'Pill manufacturing line',
   },
   {
@@ -40,7 +40,7 @@ const TABS = [
       'HPLC & analytical instrumentation suite',
       'Technology transfer & scale-up support',
     ],
-    img: '/public/assets/Images/sterile_injectables.png',
+    img: '/assets/Images/sterile_injectables.png',
     imgAlt: 'Advanced research laboratory',
   },
 ];
