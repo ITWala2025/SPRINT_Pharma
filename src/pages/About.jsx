@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { Link } from 'react-router-dom';
 
 const CERTS = [
@@ -20,6 +21,18 @@ const VALUES = [
 
 const About = () => {
   const [selectedCert, setSelectedCert] = useState(null);
+
+  // Annual growth data (editable): projected growth for 2026-2030
+  const growthData = [
+    { year: '2026', projectedGrowth: 12.2 },
+    { year: '2027', projectedGrowth: 17.0 },
+    { year: '2028', projectedGrowth: 20.0 },
+    { year: '2029', projectedGrowth: 23.3 },
+    { year: '2030', projectedGrowth: 26.2 },
+  ];
+
+  const latestProjectedGrowth = growthData[growthData.length - 1]?.projectedGrowth ?? 0;
+  const growthLabel = `Projected growth: +${latestProjectedGrowth.toFixed(1)}%`;
 
   return (
     <>
@@ -253,6 +266,45 @@ const About = () => {
       </section>
 
       {/* ── CORE VALUES ── */}
+      {/* ── ANNUAL REVENUE GROWTH ── */}
+      <section className="annual-growth-section" aria-labelledby="annual-growth-heading">
+        <div className="container">
+          <div className="section-subheader" style={{ marginTop: '20px' }}>
+            <span className="label">Performance</span>
+            <h3 id="annual-growth-heading">Annual Revenue Growth</h3>
+            <p className="section-subte">Consistent growth year over year</p>
+          </div>
+
+          <div className="annual-growth-panel" style={{ marginTop: '16px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+              <div style={{ color: '#374151', fontWeight: 600 }}>Growth Trend (%)</div>
+              <div style={{ background: '#ecfdf5', color: '#065f46', padding: '6px 10px', borderRadius: 20, fontWeight: 700 }}>{growthLabel}</div>
+            </div>
+
+            <div style={{ width: '100%', height: 320 }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={growthData} margin={{ top: 10, right: 20, left: -20, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="year" />
+                  <YAxis label={{ value: 'Growth (%)', angle: -90, position: 'insideLeft' }} />
+                  <Tooltip formatter={(value) => `${value}%`} />
+                  <Legend />
+                  <Line
+                    type="monotone"
+                    dataKey="projectedGrowth"
+                    name="Projected Growth"
+                    stroke="#94a3b8"
+                    strokeWidth={3}
+                    strokeDasharray="5 5"
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="values-section">
         <div className="values-section-inner">
           <div className="values-section-header">
