@@ -41,7 +41,7 @@ const About = () => {
       )}
 
       {/* ── PAGE HERO ── */}
-      <div className="page-hero" style={{ backgroundImage: "url('/public/assets/Images/About_HeroBG.png')" }}>
+      <div className="page-hero" style={{ backgroundImage: "url('/assets/Images/About_HeroBG.png')" }}>
         {/* Dotted background removed */}
         <div className="page-hero-inner">
           <div className="page-hero-eyebrow">About Zupharm</div>
@@ -222,7 +222,7 @@ const About = () => {
             </div>
             <div className="vm-visual">
               <img
-                src="/public/assets/Images/About_VMimg.png"
+                src="/assets/Images/About_VMimg.png"
                 alt="Zupharm vision, pharmaceutical innovation"
               />
               <div className="vm-visual-overlay" />
@@ -242,7 +242,7 @@ const About = () => {
             </div>
             <div className="vm-visual">
               <img
-                src="/public/assets/Images/sterile_injectables.png"
+                src="/assets/Images/sterile_injectables.png"
                 alt="Zupharm vision, pharmaceutical innovation"
               />
               <div className="vm-visual-overlay" />
