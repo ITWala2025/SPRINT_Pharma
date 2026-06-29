@@ -19,6 +19,16 @@ const VALUES = [
   { icon: 'fa-globe', title: 'Sustainability', desc: 'We pursue responsible growth while caring for our environment and communities.' },
 ];
 
+const CONDUCT_ITEMS = [
+  { title: 'Patient First', desc: 'Every decision prioritizes patient safety above all else.' },
+  { title: 'Ethical Marketing', desc: 'We promote products truthfully and build doctor relationships on trust, not incentives.' },
+  { title: 'Regulatory Compliance', desc: 'We strictly adhere to WHO-GMP, CDSCO, ISO 9001:2015, and FSSAI guidelines.' },
+  { title: 'Quality Without Compromise', desc: 'Every formulation undergoes rigorous testing before reaching patients.' },
+  { title: 'Fair & Transparent Partnerships', desc: 'We honour commitments with clear agreements and timely support.' },
+  { title: 'Confidentiality', desc: 'We protect proprietary formulations, business data, and partner information.' },
+  { title: 'Workplace Respect', desc: 'We foster an inclusive, harassment-free workplace where every employee is valued.' },
+];
+
 const About = () => {
   const [selectedCert, setSelectedCert] = useState(null);
 
@@ -266,6 +276,45 @@ const About = () => {
       </section>
 
       {/* ── CORE VALUES ── */}
+      <section className="values-section">
+        <div className="values-section-inner">
+          <div className="values-section-header">
+            <span className="label">What We Stand For</span>
+            <h2>Our Core Values</h2>
+          </div>
+          <div className="values-grid-zu">
+            {VALUES.map(({ icon, title, desc }) => (
+              <div className="value-card-zu" key={title}>
+                <div className="value-icon"><i className={`fas ${icon}`} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="conduct-section" aria-labelledby="conduct-heading">
+        <div className="conduct-section-inner">
+          <div className="values-section-header conduct-header">
+            <span className="label">How We Operate</span>
+            <h2 id="conduct-heading">Our Code of Conduct</h2>
+            <p className="section-subte">Our Commitment to Integrity</p>
+          </div>
+          <ol className="conduct-list">
+            {CONDUCT_ITEMS.map(({ title, desc }, index) => (
+              <li className="conduct-card" key={title}>
+                <div className="conduct-number" aria-hidden="true">{index + 1}</div>
+                <div className="conduct-content">
+                  <h3><span className="conduct-title">{title}</span></h3>
+                  <p>{desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* ── ANNUAL REVENUE GROWTH ── */}
       <section className="annual-growth-section" aria-labelledby="annual-growth-heading">
         <div className="container">
@@ -304,24 +353,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="values-section">
-        <div className="values-section-inner">
-          <div className="values-section-header">
-            <span className="label">What We Stand For</span>
-            <h2>Our Core Values</h2>
-          </div>
-          <div className="values-grid-zu">
-            {VALUES.map(({ icon, title, desc }) => (
-              <div className="value-card-zu" key={title}>
-                <div className="value-icon"><i className={`fas ${icon}`} /></div>
-                <h3>{title}</h3>
-                <p>{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </section>
     </>
   );

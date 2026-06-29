@@ -5690,6 +5690,74 @@ footer {
   line-height: 1.75;
 }
 
+/* Code of Conduct section */
+.conduct-section {
+  padding: 0 0 var(--section-pad);
+  background: linear-gradient(180deg, var(--white) 0%, #f5fbfb 100%);
+}
+
+.conduct-section-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.conduct-header {
+  margin-bottom: 40px;
+}
+
+.conduct-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.conduct-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 22px;
+  box-shadow: 0 8px 24px rgba(13, 115, 119, 0.05);
+}
+
+.conduct-number {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--teal);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 10px 24px rgba(13, 115, 119, 0.2);
+}
+
+.conduct-content h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.conduct-title {
+  font-weight: 700;
+}
+
+.conduct-content p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 @media (max-width: 900px) {
   .vm-block {
     grid-template-columns: 1fr;
@@ -5703,6 +5771,10 @@ footer {
   .values-grid-zu {
     grid-template-columns: 1fr 1fr;
   }
+
+  .conduct-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5711,7 +5783,8 @@ footer {
   }
 
   .vm-inner,
-  .values-section-inner {
+  .values-section-inner,
+  .conduct-section-inner {
     padding: 0 24px;
   }
 
