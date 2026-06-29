@@ -23,13 +23,13 @@ const Footer = () => (
             manufacturer and Propaganda Cum Distributorship company with pan-India presence.
           </p>
           <div className="f-socials">
-            <a href="#" className="f-social" aria-label="Facebook">
+            <a href="https://www.facebook.com/people/Zupharm-Laboratories-Private-Limited/61590075518802/?mibextid=wwXIfr&rdid=btHgMNFYRQcO63XD&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1NFzM43UV2%2F%3Fmibextid%3DwwXIfr" className="f-social" aria-label="Facebook">
               <i className="fab fa-facebook-f" />
             </a>
             <a href="https://www.linkedin.com/in/zupharm-laboratories-private-limited-b65386415/" className="f-social" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in" />
             </a>
-            <a href="#" className="f-social" aria-label="Instagram">
+            <a href="https://www.instagram.com/zupharmlaboratories?igsh=cjVrczZnbTJ1eDk5&utm_source=qr" className="f-social" aria-label="Instagram">
               <i className="fab fa-instagram" />
             </a>
             <a href="#" className="f-social" aria-label="YouTube">

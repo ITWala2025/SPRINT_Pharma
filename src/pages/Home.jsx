@@ -164,7 +164,7 @@ const Home = () => (
                 WHO-GMP Certified
               </div>
               <div className="bento-num">01</div>
-              <h3>Precision Manufacturing at Global Standards</h3>
+              <h3>Your Trusted Partner in Pharmaceutical Manufacturing</h3>
               <p>
                  Every formulation is developed under ISO 9001:2015 and WHO-GMP protocols,
                 no shortcuts, no compromises. Our 1M+ unit annual capacity runs 24/7 with
@@ -189,7 +189,7 @@ const Home = () => (
         {/* Card 3 */}
         <div className="bento-card bento-card--wide">
           <div className="bento-icon"><i className="fas fa-microscope" /></div>
-          <h3>In-House R&amp;D</h3>
+          <h3>Research & Product Development Support</h3>
           <p>15+ years of domain expertise. ICH stability testing, HPLC analytical suites, and dedicated technology transfer support.</p>
           <div className="bento-link">Our lab <i className="fas fa-arrow-right" /></div>
         </div>
