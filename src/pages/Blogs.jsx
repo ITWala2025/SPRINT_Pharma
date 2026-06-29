@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 // 1. Curated Static Blog Data realigned to strict functional/SEO requirements
 const BLOG_DATA = [
@@ -6,20 +7,23 @@ const BLOG_DATA = [
     id: 1,
     title: "Step-by-Step Guide to Launching an Authorized PCD Pharma Distributorship",
     date: "June 18, 2026",
+    dateISO: "2026-06-18",
     author: "Zupharm Laboratories Team",
     image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1200",
     excerpt: "Demystifying how to launch an elite authorized distribution node with zero heavy infrastructure requirements through Zupharm's smart asset-light model.",
     contentParagraphs: [
       "Zupharm Laboratories operates as a strategic B2B pharmaceutical enterprise that drives market innovation through an efficient, asset-light operational model. Instead of maintaining expensive factory machinery, Zupharm focuses its core expertise on formula research and molecular development, outsourcing the physical fabrication of its products to elite, certified third-party manufacturing plants. By eliminating heavy machinery management from both our corporate structure and our franchise network, we issue high-yield Authorized Distributorships that allow independent business partners to scale up rapidly without ever worrying about heavy industrial overheads.",
       "Navigating the administrative steps to establish a regional medical supply node can sometimes feel overwhelming, but Zupharm provides full end-to-end assistance to help you secure your distributorship seamlessly. Our specialized B2B corporate division walks partners through every critical step of the documentation and launch process—including matching wholesale Drug License compliance parameters and processing active Goods and Services Tax (GST) registrations. This full corporate backing ensures that your newly minted distribution channel launches with zero administrative delay.",
-      "Partnering with Zupharm Laboratories for your authorized distributorship provides an unmatched structural advantage. Because Zupharm handles the core formula research and manages all third-party contract manufacturing compliance validation, our authorized partners get immediate access to a ready-to-market portfolio of over 500 premium formulations. Backed by strict territorial monopoly rights, customized detailing charts, and real-time digital inventory assistance, your enterprise is fully optimized to capture dominant regional market share from day one."
+      "Partnering with Zupharm Laboratories for your authorized distributorship provides an unmatched structural advantage. Because Zupharm handles the core formula research and manages all third-party contract manufacturing compliance validation, our authorized partners get immediate access to a ready-to-market portfolio of over 50+ premium formulations. Backed by strict territorial monopoly rights, customized detailing charts, and real-time digital inventory assistance, your enterprise is fully optimized to capture dominant regional market share from day one."
     ],
-    category: "Distributorship"
+    category: "Distributorship",
+    slug: "step-by-step-guide-to-launching-authorized-pcd-pharma-distributorship"
   },
   {
     id: 2,
     title: "Calculating Return on Investment (ROI) for B2B Pharmaceutical Distribution",
     date: "June 22, 2026",
+    dateISO: "2026-06-22",
     author: "Zupharm Laboratories Team",
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
     excerpt: "An engineering blueprint for tracking net margins, balancing inventory carrying costs, and identifying product category break-even markers.",
@@ -28,12 +32,14 @@ const BLOG_DATA = [
       "To map an authentic Return on Investment (ROI), a distributor must account for all operational variables: temperature-controlled storage utilities, transit breakages, expiration-date buffer reserves, and field promotional costs. High-precision chronic therapy formulations researched by Zupharm consistently yield stronger net margins compared to standard generic options. Balancing your product mix between fast-moving daily health formulas and specialized therapies creates a stable cash flow.",
       "Optimizing your product line turnover rate is the most efficient way to scale up overall return percentages. By utilizing Zupharm's integrated digital supply pipelines and immediate dispatch frameworks for its third-party manufactured stocks, holding durations can be compressed from months down to mere days. This agile logistical rhythm dramatically minimizes warehouse holding fees and ensures capital can be rapidly reinvested into expanding your territorial reach."
     ],
-    category: "Market Strategy"
+    category: "Market Strategy",
+    slug: "calculating-roi-b2b-pharmaceutical-distribution"
   },
   {
     id: 3,
     title: "Understanding WHO-GMP and Latest CDSCO Compliance Directives",
     date: "June 12, 2026",
+    dateISO: "2026-06-12",
     author: "Zupharm Laboratories Team",
     image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=1200",
     excerpt: "Navigating the upgraded national manufacturing quality control protocols, statutory tracking amendments, and audit validation matrices.",
@@ -42,12 +48,14 @@ const BLOG_DATA = [
       "Recent compliance tracking mandates require moving away from manual logging to adopting centralized, tamper-evident digital tracking systems. This ensures that every individual patch, tablet batch, or sterile injection track can be traced directly back to its precise raw material synthesis date. Zupharm carefully audits its chosen third-party manufacturing partners to ensure they maintain strict cleanroom air balances, continuous validation checks, and regular water purity sweeps.",
       "For Zupharm's B2B franchise network, operating as an authorized distributor within a third-party certified WHO-GMP ecosystem provides major marketplace advantages. Because Zupharm researches the compounds and handles 100% of the factory-side quality audit liabilities, distributors enjoy institutional trust with major hospital networks without needing any heavy machinery of their own. Staying ahead of CDSCO regulatory changes ensures long-term operational safety."
     ],
-    category: "Regulatory"
+    category: "Regulatory",
+    slug: "understanding-who-gmp-cdsco-compliance-directives"
   },
   {
     id: 4,
     title: "The Impact of Phyto-Pharmaceutical Standards on Modern Global Healthcare",
     date: "May 29, 2026",
+    dateISO: "2026-05-29",
     author: "Zupharm Laboratories Team",
     image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200",
     excerpt: "How applying precise scientific validation protocols is successfully bridging the historical gap between herbal medicine and western pharmacology.",
@@ -56,12 +64,14 @@ const BLOG_DATA = [
       "A primary challenge with traditional herbal therapies has always been the natural variation in potency caused by environmental shifts. Zupharm Laboratories' formula research panel solves this problem by establishing exact chemical fingerprints and high-performance liquid chromatography blueprints. These exact molecular recipes are then handed off to state-of-the-art third-party facilities to guarantee that every single production batch delivers a perfectly consistent therapeutic compound balance.",
       "These highly validated, clean-label options offer valuable secondary treatment pathways, particularly for managing chronic lifestyle conditions. For our authorized distributors, adding Zupharm's researched phyto-pharmaceutical franchise catalog provides a high-margin product vertical. By presenting clear, data-backed evidence of safety, these third-party manufactured lines are successfully earning widespread acceptance across clinical networks."
     ],
-    category: "Health"
+    category: "Health",
+    slug: "impact-phyto-pharmaceutical-standards-modern-global-healthcare"
   },
   {
     id: 5,
     title: "Maximizing Molecular Bioavailability in Modified-Release Solid Dosages",
     date: "May 15, 2026",
+    dateISO: "2026-05-15",
     author: "Zupharm Laboratories Team",
     image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=1200",
     excerpt: "An entry-level look at the physical chemistry behind sustained-release hydrophilic matrix barriers and targeted therapeutic absorption.",
@@ -70,12 +80,14 @@ const BLOG_DATA = [
       "By embedding active pharmaceutical ingredients within custom-designed hydrophilic polymer matrices engineered during our research phase, the rate of fluid absorption can be precisely controlled. As the tablet passes through the digestive tract, it hydrates steadily to create a microscopic protective gel layer. This layer slowly and predictably releases the active medication hour by hour, eliminating the need for multiple daily doses and ensuring steady, 24-hour therapeutic coverage.",
       "For independent B2B entrepreneurs who hold a Zupharm authorized distributorship, these high-bioavailability products represent an incredibly secure, recurrent revenue stream. Because Zupharm operates as a purely research-driven, asset-light vehicle, franchise owners get access to complex molecular releases without constructing factory lines or investing in heavy manufacturing machinery, passing all product efficacy advantages directly to the localized medical network."
     ],
-    category: "Products"
+    category: "Products",
+    slug: "maximizing-molecular-bioavailability-modified-release-solid-dosages"
   },
   {
     id: 6,
     title: "Leveraging Machine Learning and AI in Predictive Compound Screening",
     date: "June 02, 2026",
+    dateISO: "2026-06-02",
     author: "Zupharm Laboratories Team",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
     excerpt: "How advanced algorithmic modeling compresses traditional molecular discovery timelines down from years to mere hours.",
@@ -84,12 +96,64 @@ const BLOG_DATA = [
       "These specialized AI systems simulate exact physical interactions between candidate drug molecules and target disease proteins, mapping binding strengths and calculating toxicity scores long before any formulas are passed to our third-party contract manufacturing partners for physical blending. This predictive screening step saves immense amounts of capital and streamlines the front-end science.",
       "This powerful combination of data science and molecular biochemistry highlights how Zupharm operates a highly advanced B2B ecosystem. By keeping our corporate structure asset-light and focusing strictly on formula design rather than machinery maintenance, we are able to issue franchise rights to our authorized distributors for breakthrough molecules much faster than standard industry formats. Distributors gain a massive market edge with absolutely no manufacturing footprint of their own."
     ],
-    category: "AI Pharma"
+    category: "AI Pharma",
+    slug: "leveraging-machine-learning-ai-predictive-compound-screening"
   }
 ];
 
 // Fallback image asset that is guaranteed to always resolve safely
 const GLOBAL_FALLBACK_IMAGE = "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=1200";
+
+// Site base URL for canonical and OG tags
+const SITE_URL = "https://zupharm.com";
+
+// Generate JSON-LD structured data for the blog listing page
+const generateBlogListingStructuredData = () => ({
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Zupharm Laboratories Knowledge Centre",
+  "description": "Explore insights on WHO-GMP compliance, PCD pharma distributorship, AI in pharma, phyto-pharmaceutical standards, and B2B pharmaceutical distribution strategies from Zupharm Laboratories.",
+  "url": `${SITE_URL}/blogs`,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zupharm Laboratories Pvt. Ltd.",
+    "url": SITE_URL
+  },
+  "blogPost": BLOG_DATA.map(blog => ({
+    "@type": "BlogPosting",
+    "headline": blog.title,
+    "description": blog.excerpt,
+    "datePublished": blog.dateISO,
+    "author": {
+      "@type": "Organization",
+      "name": blog.author
+    },
+    "image": blog.image,
+    "url": `${SITE_URL}/blogs/${blog.slug}`
+  }))
+});
+
+// Generate JSON-LD structured data for a single blog post
+const generateBlogPostStructuredData = (blog) => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": blog.title,
+  "description": blog.excerpt,
+  "datePublished": blog.dateISO,
+  "author": {
+    "@type": "Organization",
+    "name": blog.author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zupharm Laboratories Pvt. Ltd.",
+    "url": SITE_URL
+  },
+  "image": blog.image,
+  "url": `${SITE_URL}/blogs/${blog.slug}`,
+  "articleBody": blog.contentParagraphs.join(" "),
+  "articleSection": blog.category
+});
 
 const Blogs = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
@@ -110,123 +174,194 @@ const Blogs = () => {
     ? selectedBlog.image 
     : "https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=1600&q=80&auto=format&fit=crop";
 
+  // Build meta description based on current view
+  const metaDescription = selectedBlog
+    ? `${selectedBlog.excerpt} — Read the full article by ${selectedBlog.author} at Zupharm Laboratories Knowledge Centre.`
+    : "Explore Zupharm Laboratories' Knowledge Centre for expert insights on WHO-GMP compliance, PCD pharma distributorship, AI in pharmaceutical research, phyto-pharmaceutical standards, and B2B pharma distribution strategies.";
+
+  const pageTitle = selectedBlog
+    ? `${selectedBlog.title} | Zupharm Laboratories Knowledge Centre`
+    : "Knowledge Centre — Insights & Innovation | Zupharm Laboratories";
+
+  const canonicalUrl = selectedBlog
+    ? `${SITE_URL}/blogs/${selectedBlog.slug}`
+    : `${SITE_URL}/blogs`;
+
+  const ogImage = selectedBlog ? selectedBlog.image : heroImage;
+
   return (
-    <div style={styles.pageWrapper}>
-      {/* ── DYNAMIC HERO SECTION ── */}
-      <div style={{ ...styles.pageHeroOverride, backgroundImage: `url(${heroImage})` }}>
-        <div style={styles.pageHeroOverlayOverride} />
-        <div style={styles.pageHeroInnerOverride}>
-          {selectedBlog ? (
-            <>
-              <div style={styles.heroBadge}>
-                <div style={styles.badgeDot} />
-                <span style={styles.badgeTextOverride}>{selectedBlog.category}</span>
-              </div>
-              <h1 style={styles.heroTitleDetail}>{selectedBlog.title}</h1>
-              <p style={styles.heroSubTextOverride}>
-                Article written by {selectedBlog.author} • {selectedBlog.date}
-              </p>
-            </>
-          ) : (
-            <>
-              <div style={styles.heroBadge}>
-                <div style={styles.badgeDot} />
-                <span style={styles.badgeTextOverride}>Knowledge Centre</span>
-              </div>
-              <h1 style={styles.heroTitleMain}>
-                Insights &amp; <em style={{ color: 'var(--teal-lt)', fontStyle: 'italic' }}>Innovation</em> Across Pharma Systems.
-              </h1>
-              <p style={styles.heroSubTextOverride}>
-                From advanced WHO-GMP testing frameworks to asset-light third-party authorization modules, explore strategic medical portfolio blueprints directly engineered by our core panel.
-              </p>
-            </>
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content={selectedBlog ? "article" : "website"} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="Zupharm Laboratories" />
+        {selectedBlog && (
+          <>
+            <meta property="article:published_time" content={selectedBlog.dateISO} />
+            <meta property="article:section" content={selectedBlog.category} />
+            <meta property="article:author" content={selectedBlog.author} />
+          </>
+        )}
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={ogImage} />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(
+            selectedBlog
+              ? generateBlogPostStructuredData(selectedBlog)
+              : generateBlogListingStructuredData()
           )}
-        </div>
-      </div>
+        </script>
+      </Helmet>
 
-      {/* ── MAIN CONTENT LAYER ── */}
-      {selectedBlog ? (
-        /* ── VIEW A: EXPANDED ARTICLE VIEW ── */
-        <div style={styles.contentContainer}>
-          <button onClick={() => setSelectedBlog(null)} style={styles.backButton}>
-            <i className="fas fa-arrow-left" style={{ marginRight: '8px' }} /> Back to Knowledge Centre
-          </button>
-          
-          <article style={styles.blogPostFullCard}>
-            <div style={styles.expandedBodyImgWrap}>
-              <img 
-                src={selectedBlog.image} 
-                alt={selectedBlog.title} 
-                style={styles.expandedBodyImage} 
-                onError={(e) => { 
-                  e.target.src = GLOBAL_FALLBACK_IMAGE; 
-                }}
-              />
-            </div>
-
-            <div style={styles.blogFullBody}>
-              <div style={styles.metaRowDetail}>
-                Published by <strong style={{ color: 'var(--teal)' }}>{selectedBlog.author}</strong> on {selectedBlog.date} | <span>Zupharm Laboratories Pvt. Ltd.</span>
-              </div>
-              <hr style={styles.dividerLine} />
-              <div style={styles.blogTextContent}>
-                {selectedBlog.contentParagraphs.map((paragraph, index) => (
-                  <p key={index} style={styles.paragraphElement}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
-          </article>
-        </div>
-      ) : (
-        /* ── VIEW B: STYLISH 3-COLUMN DISPLAY GRID ── */
-        <div style={styles.gridContainer}>
-          <div style={{
-            ...styles.blogCustomGrid,
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, minmax(0, 1fr))'
-          }}>
-            {BLOG_DATA.map((blog) => (
-              <div 
-                key={blog.id} 
-                style={styles.blogCustomCard}
-                onClick={() => setSelectedBlog(blog)}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.08)';
-                  e.currentTarget.style.borderColor = 'rgba(13,115,119,0.35)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.01)';
-                  e.currentTarget.style.borderColor = 'var(--border)';
-                }}
-              >
-                <div style={styles.blogCardImgContainer}>
-                  <img 
-                    src={blog.image} 
-                    alt={blog.title} 
-                    style={styles.cardImageElement}
-                    onError={(e) => { e.target.src = GLOBAL_FALLBACK_IMAGE; }}
-                  />
-                  <span style={styles.blogCardTag}>{blog.category}</span>
+      <div style={styles.pageWrapper}>
+        {/* ── DYNAMIC HERO SECTION ── */}
+        <section style={{ ...styles.pageHeroOverride, backgroundImage: `url(${heroImage})` }}>
+          <div style={styles.pageHeroOverlayOverride} />
+          <div style={styles.pageHeroInnerOverride}>
+            {selectedBlog ? (
+              <>
+                <div style={styles.heroBadge} role="presentation">
+                  <div style={styles.badgeDot} aria-hidden="true" />
+                  <span style={styles.badgeTextOverride}>{selectedBlog.category}</span>
                 </div>
-                
-                <div style={styles.blogCardContentWrap}>
-                  <div style={styles.blogCardMetaRow}>
-                    <span><i className="far fa-user" style={{ color: 'var(--teal)', marginRight: '4px' }} /> {blog.author}</span>
-                    <span>{blog.date}</span>
-                  </div>
-                  <h3 style={styles.blogCardHeadingTitle}>{blog.title}</h3>
-                  <p style={styles.blogCardDescExcerpt}>{blog.excerpt}</p>
-                  <button style={styles.blogCardActionLink}>
-                    Read Full Text <i className="fas fa-chevron-right" style={{ fontSize: '11px', marginLeft: '4px' }} />
-                  </button>
+                <h1 style={styles.heroTitleDetail}>{selectedBlog.title}</h1>
+                <p style={styles.heroSubTextOverride}>
+                  Article written by <strong>{selectedBlog.author}</strong> •{' '}
+                  <time dateTime={selectedBlog.dateISO}>{selectedBlog.date}</time>
+                </p>
+              </>
+            ) : (
+              <>
+                <div style={styles.heroBadge} role="presentation">
+                  <div style={styles.badgeDot} aria-hidden="true" />
+                  <span style={styles.badgeTextOverride}>Knowledge Centre</span>
                 </div>
-              </div>
-            ))}
+                <h1 style={styles.heroTitleMain}>
+                  Insights & <em style={{ color: 'var(--teal-lt)', fontStyle: 'italic' }}>Innovation</em> Across Pharma Systems.
+                </h1>
+                <p style={styles.heroSubTextOverride}>
+                  From advanced WHO-GMP testing frameworks to asset-light third-party authorization modules, explore strategic medical portfolio blueprints directly engineered by our core panel.
+                </p>
+              </>
+            )}
           </div>
-        </div>
-      )}
-    </div>
+        </section>
+
+        {/* ── MAIN CONTENT LAYER ── */}
+        {selectedBlog ? (
+          /* ── VIEW A: EXPANDED ARTICLE VIEW ── */
+          <div style={styles.contentContainer}>
+            <button 
+              onClick={() => setSelectedBlog(null)} 
+              style={styles.backButton}
+              aria-label="Back to all knowledge centre articles"
+            >
+              <i className="fas fa-arrow-left" style={{ marginRight: '8px' }} aria-hidden="true" /> Back to Knowledge Centre
+            </button>
+            
+            <article style={styles.blogPostFullCard} itemScope itemType="https://schema.org/BlogPosting">
+              <div style={styles.expandedBodyImgWrap}>
+                <img 
+                  src={selectedBlog.image} 
+                  alt={`${selectedBlog.title} — Featured image for Zupharm Laboratories blog article`} 
+                  style={styles.expandedBodyImage} 
+                  loading="lazy"
+                  onError={(e) => { 
+                    e.target.src = GLOBAL_FALLBACK_IMAGE; 
+                  }}
+                />
+              </div>
+
+              <div style={styles.blogFullBody}>
+                <div style={styles.metaRowDetail}>
+                  Published by <strong style={{ color: 'var(--teal)' }} itemProp="author">{selectedBlog.author}</strong>{' '}
+                  on <time dateTime={selectedBlog.dateISO} itemProp="datePublished">{selectedBlog.date}</time>{' '}
+                  | <span itemProp="publisher">Zupharm Laboratories Pvt. Ltd.</span>
+                </div>
+                <hr style={styles.dividerLine} />
+                <div style={styles.blogTextContent} itemProp="articleBody">
+                  {selectedBlog.contentParagraphs.map((paragraph, index) => (
+                    <p key={index} style={styles.paragraphElement}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </article>
+          </div>
+        ) : (
+          /* ── VIEW B: STYLISH 3-COLUMN DISPLAY GRID ── */
+          <section style={styles.gridContainer} aria-label="Knowledge centre articles">
+            <div style={{
+              ...styles.blogCustomGrid,
+              gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, minmax(0, 1fr))'
+            }}>
+              {BLOG_DATA.map((blog) => (
+                <article 
+                  key={blog.id} 
+                  style={styles.blogCustomCard}
+                  onClick={() => setSelectedBlog(blog)}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-6px)';
+                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.08)';
+                    e.currentTarget.style.borderColor = 'rgba(13,115,119,0.35)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.01)';
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                  }}
+                  itemScope
+                  itemType="https://schema.org/BlogPosting"
+                >
+                  <div style={styles.blogCardImgContainer}>
+                    <img 
+                      src={blog.image} 
+                      alt={`${blog.title} — Zupharm Laboratories blog article thumbnail`} 
+                      style={styles.cardImageElement}
+                      loading="lazy"
+                      onError={(e) => { e.target.src = GLOBAL_FALLBACK_IMAGE; }}
+                    />
+                    <span style={styles.blogCardTag} aria-label={`Category: ${blog.category}`}>{blog.category}</span>
+                  </div>
+                  
+                  <div style={styles.blogCardContentWrap}>
+                    <div style={styles.blogCardMetaRow}>
+                      <span>
+                        <i className="far fa-user" style={{ color: 'var(--teal)', marginRight: '4px' }} aria-hidden="true" />{' '}
+                        <span itemProp="author">{blog.author}</span>
+                      </span>
+                      <time dateTime={blog.dateISO} itemProp="datePublished">{blog.date}</time>
+                    </div>
+                    <h3 style={styles.blogCardHeadingTitle} itemProp="headline">{blog.title}</h3>
+                    <p style={styles.blogCardDescExcerpt} itemProp="description">{blog.excerpt}</p>
+                    <button 
+                      style={styles.blogCardActionLink}
+                      aria-label={`Read full article: ${blog.title}`}
+                    >
+                      Read Full Text <i className="fas fa-chevron-right" style={{ fontSize: '11px', marginLeft: '4px' }} aria-hidden="true" />
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </>
   );
 };
 
