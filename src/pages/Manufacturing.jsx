@@ -6,13 +6,13 @@ const TABS = [
     icon: 'fa-syringe',
     label: 'Sterile Injectables',
     title: 'Sterile Injectables Production',
-    body: 'Our advanced aseptic processing line features zero-human-touch operations, utilizing barrier technologies and isolation systems to maintain absolute sterility.',
+    body: 'Our manufacturing partners\' advanced aseptic processing lines feature zero-human-touch operations, utilizing barrier technologies and isolation systems to maintain absolute sterility.',
     features: [
       'ISO Class 5 / Grade A cleanrooms',
       'Lyophilization & liquid filling lines',
       'Capacity of 50M+ vials/ampoules annually',
     ],
-    img: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=500&q=80&auto=format&fit=crop',
+    img: '/assets/Images/Manufacturing_SterileInjectablesImg.png',
     imgAlt: 'Aseptic syringe manufacturing',
   },
   {
@@ -26,7 +26,7 @@ const TABS = [
       'Dry powder & capsule filling lines',
       'Integrated automated blister packaging',
     ],
-    img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80&auto=format&fit=crop',
+    img: '/assets/Images/Manufacturing_MedicineIMG.png',
     imgAlt: 'Pill manufacturing line',
   },
   {
@@ -40,23 +40,27 @@ const TABS = [
       'HPLC & analytical instrumentation suite',
       'Technology transfer & scale-up support',
     ],
-    img: 'public/images/sterile_injectables.png',
+    img: '/assets/Images/sterile_injectables.png',
     imgAlt: 'Advanced research laboratory',
   },
 ];
 
 const FAQ = [
   {
-    q: 'What regulatory certifications does your manufacturing facility hold?',
-    a: 'Our primary facility is WHO-GMP certified, ISO 9001:2015 accredited, FSSAI approved, and operates under strict CDSCO regulations. We follow Schedule M & M+ guidelines for all pharmaceutical manufacturing operations.',
+    q: 'What regulatory certifications do your manufacturing partners hold?',
+    a: 'Our primary manufacturing partners are WHO-GMP certified, ISO 9001:2015 accredited, FSSAI approved, and operate under strict CDSCO regulations. They follow Schedule M & M+ guidelines for all pharmaceutical manufacturing operations.',
   },
   {
     q: 'Do you offer contract / third-party manufacturing services?',
-    a: 'Yes, we provide end-to-end contract manufacturing services. This includes formulation customization, regulatory dossier support, raw material sourcing, packaging design, and batch release certification.',
+    a: 'Yes, we provide end-to-end contract manufacturing services. Manufacturing is carried out by certified third-party manufacturing partners, while Zupharm handles packaging, branding, quality checks, and distribution.',
   },
   {
     q: 'What is the typical lead time for a production batch?',
     a: 'Typical lead times range between 30 to 45 days after formulation approval and artwork finalization. Urgent production slots can sometimes be accommodated depending on the capacity schedule.',
+  },
+  {
+    q: 'What is the minimum quantity required for manufacturing?',
+    a: 'The minimum order quantity (MOQ) depends on the product category and packaging requirements. Please contact our team with your product details, and we will provide the applicable MOQ and manufacturing guidelines. For example, some products may require a minimum of 5,000 units, while others might be 10,000 units.',
   },
 ];
 
@@ -70,7 +74,7 @@ const RESEARCH_QUALITY = [
   {
     id: 'qa',
     title: 'Quality Assurance & Validation',
-    description: 'Comprehensive QA protocols ensure every batch meets international standards. Our validation includes process validation, analytical method validation, stability testing, and environmental monitoring. We maintain ISO 9001:2015 certification with zero-defect manufacturing principles.',
+    description: 'Comprehensive QA protocols ensure every batch meets international standards. Our validation includes process validation, analytical method validation, stability testing, and environmental monitoring. While manufacturing is carried out by certified third-party manufacturing partners, Zupharm handles packaging, branding, quality checks, and distribution with zero-defect principles.',
     icon: 'fa-certificate',
   },
   {
@@ -84,8 +88,8 @@ const RESEARCH_QUALITY = [
 const QUALITY_PDFS = [
   {
     id: 'manufacturing-brochure',
-    title: 'Manufacturing Capability Brochure',
-    description: 'Get detailed plant specifications, machinery details, sterile line capacities, and full compliance information (PDF, 4.2 MB).',
+    title: 'Manufacturing Partner Capability Brochure',
+    description: 'Get detailed partner plant specifications, machinery details, sterile line capacities, and full compliance information (PDF, 4.2 MB).',
     filename: 'brochure.pdf',
   },
 ];
@@ -100,7 +104,7 @@ const Manufacturing = () => {
   return (
     <>
       {/* Hero full width, outside container */}
-        <div className="manufacturing-hero">
+      <div className="manufacturing-hero">
         <div className="hero-overlay" />
         <div className="hero-content flex flex-col items-center text-center">
           <span className="hero-tagline">
@@ -108,151 +112,149 @@ const Manufacturing = () => {
           </span>
           <h2>State of the Art Manufacturing</h2>
           <p>
-            Operating at the intersection of technological innovation and regulatory
-            excellence. Our WHO-GMP certified facilities are engineered for maximum
-            safety, precision, and scalability.
+            Our products are manufactured by trusted third-party manufacturing partners who follow strict quality standards. Zupharm focuses on quality assurance, packaging, branding, and delivering safe, reliable healthcare products to customers.
           </p>
         </div>
       </div>
 
-    <section className="manufacturing" id="manufacturing">
-      <div className="container">
-        <div className="manufacturing-inner">
+      <section className="manufacturing" id="manufacturing">
+        <div className="container">
+          <div className="manufacturing-inner">
 
-          {/* Tabs */}
-          <div className="tabs">
-            <div className="tab-buttons" role="tablist" aria-label="Manufacturing Capabilities">
-              {TABS.map(tab => (
-                <button
-                  key={tab.id}
-                  className={`tab-btn${activeTab === tab.id ? ' active' : ''}`}
-                  role="tab"
-                  aria-selected={activeTab === tab.id}
-                  aria-controls={`tab-${tab.id}`}
-                  onClick={() => setActiveTab(tab.id)}
-                >
-                  <i className={`fas ${tab.icon}`} /> {tab.label}
-                </button>
-              ))}
-            </div>
-            <div className="tab-contents">
-              <div className="tab-content active" id={`tab-${activeTab}`} role="tabpanel">
-                <div className="capability-grid">
-                  <div className="capability-info">
-                    <h3>{currentTab.title}</h3>
-                    <p>{currentTab.body}</p>
-                    <ul className="capability-features">
-                      {currentTab.features.map(f => (
-                        <li key={f}><i className="fas fa-check-circle" /> {f}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="capability-visual">
-                    <img src={currentTab.img} alt={currentTab.imgAlt} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ Accordion */}
-          <div className="section-subheader">
-            <span className="label">Audits &amp; Standards</span>
-            <h3>Frequently Asked Questions</h3>
-          </div>
-          <div className="accordion">
-            {FAQ.map((item, i) => {
-              const isOpen = openFaq === i;
-              return (
-                <div className="accordion-item mb-4" key={i}>
+            {/* Tabs */}
+            <div className="tabs">
+              <div className="tab-buttons" role="tablist" aria-label="Manufacturing Capabilities">
+                {TABS.map(tab => (
                   <button
-                    className="accordion-header"
-                    aria-expanded={isOpen}
-                    aria-controls={`acc-body-${i}`}
-                    onClick={() => setOpenFaq(isOpen ? null : i)}
+                    key={tab.id}
+                    className={`tab-btn${activeTab === tab.id ? ' active' : ''}`}
+                    role="tab"
+                    aria-selected={activeTab === tab.id}
+                    aria-controls={`tab-${tab.id}`}
+                    onClick={() => setActiveTab(tab.id)}
                   >
-                    <span className="question-text">{item.q}</span>
-                    <span className="acc-icon"><i className="fas fa-chevron-down" /></span>
+                    <i className={`fas ${tab.icon}`} /> {tab.label}
                   </button>
-                  {isOpen && (
-                    <div className="accordion-body open" id={`acc-body-${i}`} role="region">
-                      <div className="accordion-content">
-                        <p>{item.a}</p>
-                      </div>
+                ))}
+              </div>
+              <div className="tab-contents">
+                <div className="tab-content active" id={`tab-${activeTab}`} role="tabpanel">
+                  <div className="capability-grid">
+                    <div className="capability-info">
+                      <h3>{currentTab.title}</h3>
+                      <p>{currentTab.body}</p>
+                      <ul className="capability-features">
+                        {currentTab.features.map(f => (
+                          <li key={f}><i className="fas fa-check-circle" /> {f}</li>
+                        ))}
+                      </ul>
                     </div>
-                  )}
+                    <div className="capability-visual">
+                      <img src={currentTab.img} alt={currentTab.imgAlt} />
+                    </div>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            </div>
 
-          {/* Research & Quality Section */}
-          <div className="research-quality">
+            {/* FAQ Accordion */}
             <div className="section-subheader">
-              <span className="label">Research & Quality</span>
-              <h3>Innovation Backed by Quality Assurance</h3>
+              <span className="label">Audits &amp; Standards</span>
+              <h3>Frequently Asked Questions</h3>
             </div>
-
-            <div className="research-grid">
-              {/* Left: Accordion */}
-              <div className="research-accordion-column">
-                <div className="accordion research-accordion">
-                  {RESEARCH_QUALITY.map((item, i) => {
-                    const isOpen = openResearch === i;
-                    return (
-                      <div className="accordion-item research-accordion-item" key={i}>
-                        <button
-                          className="accordion-header research-accordion-header"
-                          aria-expanded={isOpen}
-                          aria-controls={`research-acc-body-${i}`}
-                          onClick={() => setOpenResearch(isOpen ? null : i)}
-                        >
-                          <div className="accordion-header-left">
-                            <div className="accordion-icon">
-                              <i className={`fas ${item.icon}`} />
-                            </div>
-                            <span className="accordion-title">{item.title}</span>
-                          </div>
-                          <span className="acc-icon chevron-icon"><i className="fas fa-chevron-down" /></span>
-                        </button>
-                        {isOpen && (
-                          <div
-                            className="accordion-body research-accordion-body open"
-                            id={`research-acc-body-${i}`}
-                            role="region"
-                          >
-                            <div className="accordion-content">
-                              <p>{item.description}</p>
-                            </div>
-                          </div>
-                        )}
+            <div className="accordion">
+              {FAQ.map((item, i) => {
+                const isOpen = openFaq === i;
+                return (
+                  <div className="accordion-item mb-4" key={i}>
+                    <button
+                      className="accordion-header"
+                      aria-expanded={isOpen}
+                      aria-controls={`acc-body-${i}`}
+                      onClick={() => setOpenFaq(isOpen ? null : i)}
+                    >
+                      <span className="question-text">{item.q}</span>
+                      <span className="acc-icon"><i className="fas fa-chevron-down" /></span>
+                    </button>
+                    {isOpen && (
+                      <div className="accordion-body open" id={`acc-body-${i}`} role="region">
+                        <div className="accordion-content">
+                          <p>{item.a}</p>
+                        </div>
                       </div>
-                    );
-                  })}
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Research & Quality Section */}
+            <div className="research-quality">
+              <div className="section-subheader">
+                <span className="label">Research & Quality</span>
+                <h3>Innovation Backed by Quality Assurance</h3>
+              </div>
+
+              <div className="research-grid">
+                {/* Left: Accordion */}
+                <div className="research-accordion-column">
+                  <div className="accordion research-accordion">
+                    {RESEARCH_QUALITY.map((item, i) => {
+                      const isOpen = openResearch === i;
+                      return (
+                        <div className="accordion-item research-accordion-item" key={i}>
+                          <button
+                            className="accordion-header research-accordion-header"
+                            aria-expanded={isOpen}
+                            aria-controls={`research-acc-body-${i}`}
+                            onClick={() => setOpenResearch(isOpen ? null : i)}
+                          >
+                            <div className="accordion-header-left">
+                              <div className="accordion-icon">
+                                <i className={`fas ${item.icon}`} />
+                              </div>
+                              <span className="accordion-title">{item.title}</span>
+                            </div>
+                            <span className="acc-icon chevron-icon"><i className="fas fa-chevron-down" /></span>
+                          </button>
+                          {isOpen && (
+                            <div
+                              className="accordion-body research-accordion-body open"
+                              id={`research-acc-body-${i}`}
+                              role="region"
+                            >
+                              <div className="accordion-content">
+                                <p>{item.description}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Download Section */}
-          <div className="download-section">
-            <div className="download-card">
-              <div className="download-info">
-                <div className="download-icon-big"><i className="far fa-file-pdf" /></div>
-                <div className="download-text">
-                  <h4>{QUALITY_PDFS[0].title}</h4>
-                  <p>{QUALITY_PDFS[0].description}</p>
+            {/* Download Section */}
+            <div className="download-section">
+              <div className="download-card">
+                <div className="download-info">
+                  <div className="download-icon-big"><i className="far fa-file-pdf" /></div>
+                  <div className="download-text">
+                    <h4>{QUALITY_PDFS[0].title}</h4>
+                    <p>{QUALITY_PDFS[0].description}</p>
+                  </div>
                 </div>
+                <a href={`/assets/pdfs/${QUALITY_PDFS[0].filename}`} download className="download-btn">
+                  <span className="btn-text">Download Brochure</span>
+                </a>
               </div>
-              <a href={`/assets/pdfs/${QUALITY_PDFS[0].filename}`} download className="download-btn">
-                <span className="btn-text">Download Brochure</span>
-              </a>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };

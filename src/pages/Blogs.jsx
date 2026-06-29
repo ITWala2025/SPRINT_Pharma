@@ -1,91 +1,90 @@
 import React, { useState, useEffect } from 'react';
 
-// 1. Curated Static Blog Data with Restructured Stable Image URLs
+// 1. Curated Static Blog Data realigned to strict functional/SEO requirements
 const BLOG_DATA = [
   {
     id: 1,
-    title: "Understanding WHO-GMP Certification in Pharma Manufacturing",
-    date: "May 15, 2026",
-    author: "Dr. RK Sharma",
-    // Swapped to a highly available pharmaceutical infrastructure asset URL
-    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=1200",
-    excerpt: "What does it mean to be a WHO-GMP certified pharmaceutical manufacturer? Explore the stringent validation protocols Zupharm systematically maintains.",
+    title: "Step-by-Step Guide to Launching an Authorized PCD Pharma Distributorship",
+    date: "June 18, 2026",
+    author: "Zupharm Laboratories Team",
+    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "Demystifying how to launch an elite authorized distribution node with zero heavy infrastructure requirements through Zupharm's smart asset-light model.",
     contentParagraphs: [
-      "WHO-GMP (World Health Organization - Good Manufacturing Practices) certification represents the definitive international standard for modern pharmaceutical processing, verification, and safety. This framework mandates that medicinal products are dynamically controlled, systematically logged, and consistently manufactured according to the absolute highest baseline parameters for global healthcare safety. It eliminates common systemic errors inherent in any large-scale chemistry lifecycle, effectively neutralizing risks like cross-contamination, unexpected chemical sub-potency, and structural labeling flaws.",
-      "At Zupharm Laboratories, our production matrices undergo continuous validation checks. This includes verifying raw chemical material purity via high-performance liquid chromatography, optimizing cleanroom microscopic air filtration (HEPA infrastructure), mapping thermal profiles of sterilization equipment, and validating staff execution protocols via digitized tracking layers. Every tablet, capsule, and injectable patch we process traces back to an unyielding chain of custody metrics.",
-      "For our dedicated PCD franchise nodes and supply partners, distributed across dynamic markets, this certification serves as an ironclad baseline of product reliability. When dealing with life-saving therapies in cardiac, neurological, or pediatric spaces, absolute clinical predictability is paramount. Our strict adherence to WHO-GMP standards translates into lowered corporate liabilities for regional distributors, enhanced professional trust among hospital clinical networks, and premium clinical outcomes for patients nationwide."
+      "Zupharm Laboratories operates as a strategic B2B pharmaceutical enterprise that drives market innovation through an efficient, asset-light operational model. Instead of maintaining expensive factory machinery, Zupharm focuses its core expertise on formula research and molecular development, outsourcing the physical fabrication of its products to elite, certified third-party manufacturing plants. By eliminating heavy machinery management from both our corporate structure and our franchise network, we issue high-yield Authorized Distributorships that allow independent business partners to scale up rapidly without ever worrying about heavy industrial overheads.",
+      "Navigating the administrative steps to establish a regional medical supply node can sometimes feel overwhelming, but Zupharm provides full end-to-end assistance to help you secure your distributorship seamlessly. Our specialized B2B corporate division walks partners through every critical step of the documentation and launch process—including matching wholesale Drug License compliance parameters and processing active Goods and Services Tax (GST) registrations. This full corporate backing ensures that your newly minted distribution channel launches with zero administrative delay.",
+      "Partnering with Zupharm Laboratories for your authorized distributorship provides an unmatched structural advantage. Because Zupharm handles the core formula research and manages all third-party contract manufacturing compliance validation, our authorized partners get immediate access to a ready-to-market portfolio of over 500 premium formulations. Backed by strict territorial monopoly rights, customized detailing charts, and real-time digital inventory assistance, your enterprise is fully optimized to capture dominant regional market share from day one."
     ],
-    category: "Quality Assurance"
+    category: "Distributorship"
   },
   {
     id: 2,
-    title: "The Rising Demand for PCD Pharma Franchise in India",
-    date: "June 02, 2026",
-    author: "Zupharm Growth Team",
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1200",
-    excerpt: "Discover why investing in a PCD Pharma Franchise with Zupharm stands as a highly profitable and secure business opportunity in today's economy.",
+    title: "Calculating Return on Investment (ROI) for B2B Pharmaceutical Distribution",
+    date: "June 22, 2026",
+    author: "Zupharm Laboratories Team",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "An engineering blueprint for tracking net margins, balancing inventory carrying costs, and identifying product category break-even markers.",
     contentParagraphs: [
-      "The pharmaceutical landscape in India is expanding exponentially, driven by evolving demographic patterns, expanding insurance access, and heightened medical awareness. Within this structural boom, the Propaganda Cum Distribution (PCD) framework has emerged as a premier driver for regional market expansion. For healthcare entrepreneurs, seasoned sales executives, and corporate investors, it offers a remarkably agile, low-overhead pathway into the domestic pharmaceutical market by minimizing manufacturing-side risk variables.",
-      "By partnering with an established manufacturer like Zupharm Laboratories, franchise owners bypass the multi-crore structural requirements of laboratory construction, active ingredient sourcing networks, and regulatory approval wait times. Franchisees inherit an instantly deployable catalogue spanning 500+ premium formulations. This allows partners to channel all operational focus directly into local marketing operations, professional medical detailing, and customer supply chain fulfillment.",
-      "To ensure long-term regional stability, Zupharm guarantees absolute monopoly distribution rights secured by tight geographical parameters. This prevents adjacent distribution channels from infringing on your designated market. Combined with our high-impact promotional kits—including medical catch-covers, visual aids, dynamic product samples, and immediate digital assistance through our AI platforms—our partners are fully equipped to capture dominant market share from day one."
+      "Evaluating the commercial viability of a B2B pharmaceutical channel requires moving past simple top-line gross numbers to analyze net yield models. Through the Zupharm Laboratories contract manufacturing model, franchise owners operating under our authorized distributorship framework bypass the heavy infrastructure costs that traditionally kill early-stage profitability. Since Zupharm researches the formulas and uses specialized third-party factories for production, distributors inherit incredibly clean product cost margins.",
+      "To map an authentic Return on Investment (ROI), a distributor must account for all operational variables: temperature-controlled storage utilities, transit breakages, expiration-date buffer reserves, and field promotional costs. High-precision chronic therapy formulations researched by Zupharm consistently yield stronger net margins compared to standard generic options. Balancing your product mix between fast-moving daily health formulas and specialized therapies creates a stable cash flow.",
+      "Optimizing your product line turnover rate is the most efficient way to scale up overall return percentages. By utilizing Zupharm's integrated digital supply pipelines and immediate dispatch frameworks for its third-party manufactured stocks, holding durations can be compressed from months down to mere days. This agile logistical rhythm dramatically minimizes warehouse holding fees and ensures capital can be rapidly reinvested into expanding your territorial reach."
     ],
-    category: "Business & Franchise"
+    category: "Market Strategy"
   },
   {
     id: 3,
-    title: "Advances in Neurological and Cardiac Care Formulations",
-    date: "April 28, 2026",
-    author: "Zupharm R&D Department",
-    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=1200",
-    excerpt: "A deep dive into how advanced molecular delivery mechanisms at Zupharm are maximizing the bioavailability of chronic critical therapies.",
+    title: "Understanding WHO-GMP and Latest CDSCO Compliance Directives",
+    date: "June 12, 2026",
+    author: "Zupharm Laboratories Team",
+    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "Navigating the upgraded national manufacturing quality control protocols, statutory tracking amendments, and audit validation matrices.",
     contentParagraphs: [
-      "Managing chronic health conditions like cardiovascular diseases and neurological disorders demands precise, consistent blood plasma drug concentrations. Standard pharmaceutical models often produce sharp spikes and rapid drop-offs in systemic drug availability, frequently leading to breakthrough symptoms or unexpected toxicities. Zupharm’s Research and Development panel is actively countering this challenge by utilizing cutting-edge modified-release matrices and advanced molecular particle size reduction.",
-      "In our cardiac portfolios, our sustained-release antihypertensive formulations ensure uniform, 24-hour therapeutic coverage. By controlling the exact rate of fluid absorption through hydrophilic polymer barriers, the tablet releases active ingredients at a predictable hourly rate. This eliminates hazardous morning blood pressure surges and improves patient compliance by reducing dosing schedules to a simple single daily administration.",
-      "Simultaneously, our neurology pipelines utilize lipid-optimized molecules designed to safely navigate complex physiological barriers. By modifying physical solubility indexes, we drastically increase the rate of therapeutic absorption within central nervous networks. This enables lowered target dosages to achieve identical therapeutic effects, heavily reducing hepatic and renal clearance workloads while minimizing common systemic side effects."
+      "Adhering to international quality standards is an absolute foundational requirement for modern pharmaceutical operations. The World Health Organization's Good Manufacturing Practices (WHO-GMP) alongside the Central Drugs Standard Control Organization (CDSCO) continuously upgrade their enforcement frameworks. Even within a third-party manufacturing setup, Zupharm guarantees total transparency across the chemical formulation lifecycle, raw active pharmaceutical ingredient (API) tracking, and finished product packaging lines.",
+      "Recent compliance tracking mandates require moving away from manual logging to adopting centralized, tamper-evident digital tracking systems. This ensures that every individual patch, tablet batch, or sterile injection track can be traced directly back to its precise raw material synthesis date. Zupharm carefully audits its chosen third-party manufacturing partners to ensure they maintain strict cleanroom air balances, continuous validation checks, and regular water purity sweeps.",
+      "For Zupharm's B2B franchise network, operating as an authorized distributor within a third-party certified WHO-GMP ecosystem provides major marketplace advantages. Because Zupharm researches the compounds and handles 100% of the factory-side quality audit liabilities, distributors enjoy institutional trust with major hospital networks without needing any heavy machinery of their own. Staying ahead of CDSCO regulatory changes ensures long-term operational safety."
     ],
-    category: "Research & Development"
+    category: "Regulatory"
   },
   {
     id: 4,
-    title: "The Future of Oncology Biosimilars and Targeted Biologics",
+    title: "The Impact of Phyto-Pharmaceutical Standards on Modern Global Healthcare",
     date: "May 29, 2026",
-    author: "Dr. Ananya Reddy",
-    image: "https://images.unsplash.com/photo-1579154204601-01588f351167?auto=format&fit=crop&q=80&w=1200",
-    excerpt: "Democratizing cancer therapeutics through highly complex, molecularly identical bio-engineered formulas designed for targeted cell delivery.",
+    author: "Zupharm Laboratories Team",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "How applying precise scientific validation protocols is successfully bridging the historical gap between herbal medicine and western pharmacology.",
     contentParagraphs: [
-      "Unlike traditional chemically synthesized small-molecule medications, biosimilars are cultivated within highly sensitive living cellular systems. As foundational oncology patents expire globally, the development of reliable biologics presents a monumental shift in how clinical networks approach therapeutic oncology interventions.",
-      "At Zupharm, our state-of-the-art bioreactor arrays carefully monitor parameters like cellular oxygenation levels, temperature variants, and specific metabolic outputs. This precise control ensures that each monoclonal antibody matches the master reference drug's structural integrity perfectly.",
-      "For healthcare systems struggling with the crushing costs of traditional cancer treatment regimens, these approved biosimilars offer a cost-effective alternative. They drop treatment costs significantly without making a single compromise on patient survival rates or therapeutic outcomes."
+      "The historical dividing line between traditional botanical formulas and data-driven Western medical science is shifting, thanks to the rise of standardized phyto-pharmaceutical pathways. Phyto-pharmaceuticals represent a major step forward, where active natural plant compounds are isolated, scientifically quantified, and processed under the exact same strict guidelines used for synthetic small-molecule developments.",
+      "A primary challenge with traditional herbal therapies has always been the natural variation in potency caused by environmental shifts. Zupharm Laboratories' formula research panel solves this problem by establishing exact chemical fingerprints and high-performance liquid chromatography blueprints. These exact molecular recipes are then handed off to state-of-the-art third-party facilities to guarantee that every single production batch delivers a perfectly consistent therapeutic compound balance.",
+      "These highly validated, clean-label options offer valuable secondary treatment pathways, particularly for managing chronic lifestyle conditions. For our authorized distributors, adding Zupharm's researched phyto-pharmaceutical franchise catalog provides a high-margin product vertical. By presenting clear, data-backed evidence of safety, these third-party manufactured lines are successfully earning widespread acceptance across clinical networks."
     ],
-    category: "Oncology & Biologics"
+    category: "Health"
   },
   {
     id: 5,
-    title: "AI Integration in Accelerated Drug Discovery and Chemistry",
-    date: "June 06, 2026",
-    author: "Prof. Amit Verma",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
-    excerpt: "How Zupharm leverages machine learning architectures to compress traditional multi-year compound testing windows down to mere days.",
+    title: "Maximizing Molecular Bioavailability in Modified-Release Solid Dosages",
+    date: "May 15, 2026",
+    author: "Zupharm Laboratories Team",
+    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "An entry-level look at the physical chemistry behind sustained-release hydrophilic matrix barriers and targeted therapeutic absorption.",
     contentParagraphs: [
-      "The conventional timeline required to move a newly discovered therapeutic molecule from laboratory benches to actual pharmacy shelves historically spans over a decade. By integrating high-performance machine learning algorithms into our computational chemistry arrays, we can now run virtual screenings on billions of chemical combinations concurrently.",
-      "Our proprietary software models run predictive simulations testing how target candidate molecules interact with target disease proteins, while calculating potential hepatic toxicity scores long before any physical sample is synthesized.",
-      "This integration of computer science and physical biochemistry creates a faster, highly responsive development pipeline. When regional health networks report sudden changes in bacterial resistance profiles, our teams can quickly pivot."
+      "Effectively managing long-term chronic medical conditions requires maintaining consistent, uniform blood plasma drug levels over extended periods. Traditional immediate-release tablets often cause sharp peaks and rapid drop-offs in systemic drug levels, which can lead to breakthrough symptoms. Zupharm's research and development division counters this by developing cutting-edge modified-release templates that are expertly executed by our third-party production partners.",
+      "By embedding active pharmaceutical ingredients within custom-designed hydrophilic polymer matrices engineered during our research phase, the rate of fluid absorption can be precisely controlled. As the tablet passes through the digestive tract, it hydrates steadily to create a microscopic protective gel layer. This layer slowly and predictably releases the active medication hour by hour, eliminating the need for multiple daily doses and ensuring steady, 24-hour therapeutic coverage.",
+      "For independent B2B entrepreneurs who hold a Zupharm authorized distributorship, these high-bioavailability products represent an incredibly secure, recurrent revenue stream. Because Zupharm operates as a purely research-driven, asset-light vehicle, franchise owners get access to complex molecular releases without constructing factory lines or investing in heavy manufacturing machinery, passing all product efficacy advantages directly to the localized medical network."
     ],
-    category: "Information Technology"
+    category: "Products"
   },
   {
     id: 6,
-    title: "Phyto-Pharmaceuticals: Standardizing Herbal Medicine Pathways",
-    date: "May 08, 2026",
-    author: "Dr. Evelyn Vance",
-    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200",
-    excerpt: "Applying rigorous scientific verification and quantitative chemical isolation to bridge traditional holistic therapy with modern Western pharmacology.",
+    title: "Leveraging Machine Learning and AI in Predictive Compound Screening",
+    date: "June 02, 2026",
+    author: "Zupharm Laboratories Team",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    excerpt: "How advanced algorithmic modeling compresses traditional molecular discovery timelines down from years to mere hours.",
     contentParagraphs: [
-      "The historical separation between traditional botanical treatments and strict, data-driven Western pharmacology is fading. Phyto-pharmaceuticals represent a rigorous scientific evolution where active botanical molecules are isolated, quantified, and packaged using the exact same strict standards applied to synthetic pharmaceutical compounds.",
-      "Traditional herbal preparations often suffer from natural variations caused by soil quality changes, weather patterns, and differing harvest seasons. Zupharm's botanical science teams eliminate this unpredictability using advanced chemical fingerprinting methods.",
-      "These validated natural formulations offer valuable treatment alternatives, especially for managing chronic conditions like mild metabolic imbalances, functional digestive issues, and long-term joint inflammation."
+      "The traditional process for discovering a brand-new therapeutic compound has historically been an incredibly lengthy journey, often taking upwards of a decade of lab work. By incorporating advanced machine learning models directly into modern computational chemistry pipelines, Zupharm Laboratories can now perform virtual screenings on billions of molecular combinations concurrently to engineer powerful new formulas.",
+      "These specialized AI systems simulate exact physical interactions between candidate drug molecules and target disease proteins, mapping binding strengths and calculating toxicity scores long before any formulas are passed to our third-party contract manufacturing partners for physical blending. This predictive screening step saves immense amounts of capital and streamlines the front-end science.",
+      "This powerful combination of data science and molecular biochemistry highlights how Zupharm operates a highly advanced B2B ecosystem. By keeping our corporate structure asset-light and focusing strictly on formula design rather than machinery maintenance, we are able to issue franchise rights to our authorized distributors for breakthrough molecules much faster than standard industry formats. Distributors gain a massive market edge with absolutely no manufacturing footprint of their own."
     ],
-    category: "Phyto-Pharmaceuticals"
+    category: "AI Pharma"
   }
 ];
 
@@ -138,7 +137,7 @@ const Blogs = () => {
                 Insights &amp; <em style={{ color: 'var(--teal-lt)', fontStyle: 'italic' }}>Innovation</em> Across Pharma Systems.
               </h1>
               <p style={styles.heroSubTextOverride}>
-                From advanced WHO-GMP clinical manufacturing validation pathways to strategic regional territorial franchise guidelines, explore professional updates from our core R&amp;D panel.
+                From advanced WHO-GMP testing frameworks to asset-light third-party authorization modules, explore strategic medical portfolio blueprints directly engineered by our core panel.
               </p>
             </>
           )}
@@ -154,7 +153,6 @@ const Blogs = () => {
           </button>
           
           <article style={styles.blogPostFullCard}>
-            {/* FIX: Secure onError handler applied here to instantly neutralize broken links */}
             <div style={styles.expandedBodyImgWrap}>
               <img 
                 src={selectedBlog.image} 

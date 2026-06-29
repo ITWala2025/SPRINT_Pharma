@@ -151,7 +151,7 @@ const Distributorship = () => {
         className="page-hero"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80&auto=format&fit=crop')",
+            "url('/assets/Images/Distributorship_HeroBG.png')",
         }}
       >
         <div className="page-hero-inner">
