@@ -4691,7 +4691,7 @@ footer {
 .bento-card--hero {
   grid-column: span 7;
   grid-row: span 2;
-  background: var(--ink);
+  background: var(--teal);
   color: white;
 }
 

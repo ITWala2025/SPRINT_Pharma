@@ -32,7 +32,7 @@ const Footer = () => (
             <a href="https://www.instagram.com/zupharmlaboratories?igsh=cjVrczZnbTJ1eDk5&utm_source=qr" className="f-social" aria-label="Instagram">
               <i className="fab fa-instagram" />
             </a>
-            <a href="#" className="f-social" aria-label="YouTube">
+            <a href="https://youtube.com/@zupharmlaboratoriespvtltd?si=aMGPVnCf-mMUhcid" className="f-social" aria-label="YouTube">
               <i className="fab fa-youtube" />
             </a>
           </div>
@@ -79,12 +79,22 @@ const Footer = () => (
         <div className="f-col">
           <h5>Contact</h5>
           <div className="f-contact-item">
-            <div className="dot" />
-            <span>
-              Zupharm Laboratories, Pharmaceutical Industrial Zone,<br />
-              Cyber Park, Sector 39, Gurugram<br />
-              Haryana 122001, India
-            </span>
+          <div className="dot" />
+          <span>
+            <strong>Head Office:</strong><br />
+            79, DSIDC, Okhla Industrial Area,<br />
+            Phase 1, New Delhi - 110020
+          </span>
+          </div>
+
+          <div className="f-contact-item">
+          <div className="dot" />
+          <span>
+            <strong>Corporate Office:</strong><br />
+            Unitech Cyber Park, Tower D, 9th Floor,<br />
+            Innov8, Sec - 39, Gurugram,<br />
+            Haryana - 122001
+          </span>
           </div>
           <div className="f-contact-item">
             <div className="dot" />

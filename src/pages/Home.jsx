@@ -125,10 +125,7 @@ const Home = () => (
         </div>
 
         <div className="hero-visual">
-          <div className="hero-stat-float">
-            <div className="num">50<span>+</span></div>
-            <div className="txt">Certified Products</div>
-          </div>
+          
           <div className="hero-img-wrap">
             <img
               src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&q=85&auto=format&fit=crop"
@@ -160,15 +157,14 @@ const Home = () => (
           <div className="bento-content">
             <div>
               <div className="bento-hero-badge">
-                <span className="announce-dot" style={{ background: 'var(--teal-lt)' }} />
+                <span className="announce-dot" style={{ background: 'var(--teal)' }} />
                 WHO-GMP Certified
               </div>
-              <div className="bento-num">01</div>
               <h3>Your Trusted Partner in Pharmaceutical Manufacturing</h3>
-              <p>
+              <p><strong>
                  Every formulation is developed under ISO 9001:2015 and WHO-GMP protocols,
                 no shortcuts, no compromises. Our 1M+ unit annual capacity runs 24/7 with
-                zero-defect tolerance.
+                zero-defect tolerance.</strong>
               </p>
             </div>
             <div>
