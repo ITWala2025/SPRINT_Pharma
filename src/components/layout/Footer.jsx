@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import zupharmLogo from '/public/assets/Images/logo.jpg';
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 const Footer = () => (
   <footer style={{
     background: 'linear-gradient(135deg, #0D7377 0%, #0A4F55 45%, #062A34 100%)',
@@ -42,13 +46,13 @@ const Footer = () => (
         <div className="f-col">
           <h5>Navigation</h5>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/distributorship">Distributorship</Link></li>
-            <li><Link to="/manufacturing">Manufacturing &amp; Certifications</Link></li>
-            <li><Link to="/why-us">Why Zupharm</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
+            <li><Link to="/about" onClick={scrollToTop}>About Us</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Products</Link></li>
+            <li><Link to="/distributorship" onClick={scrollToTop}>Distributorship</Link></li>
+            <li><Link to="/manufacturing" onClick={scrollToTop}>Manufacturing & Certifications</Link></li>
+            <li><Link to="/why-us" onClick={scrollToTop}>Why Zupharm</Link></li>
+            <li><Link to="/contact" onClick={scrollToTop}>Contact</Link></li>
           </ul>
         </div>
 
@@ -56,13 +60,13 @@ const Footer = () => (
         <div className="f-col">
           <h5>Products</h5>
           <ul>
-            <li><Link to="/products">Cardiac Care</Link></li>
-            <li><Link to="/products">Neurology</Link></li>
-            <li><Link to="/products">Respiratory</Link></li>
-            <li><Link to="/products">Paediatrics</Link></li>
-            <li><Link to="/products">Anti-infectives</Link></li>
-            <li><Link to="/products">Diabetology</Link></li>
-            <li><Link to="/products">Ophthalmology</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Cardiac Care</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Neurology</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Respiratory</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Paediatrics</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Anti-infectives</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Diabetology</Link></li>
+            <li><Link to="/products" onClick={scrollToTop}>Ophthalmology</Link></li>
           </ul>
         </div>
 
@@ -71,7 +75,7 @@ const Footer = () => (
           <h5>Knowledge Centre</h5>
           <ul>
             {/* Swapped standard anchor link with React Router Link to hook into /blogs */}
-            <li><Link to="/blogs">Blogs</Link></li>
+            <li><Link to="/blogs" onClick={scrollToTop}>Blogs</Link></li>
           </ul>
         </div>
 
@@ -102,7 +106,7 @@ const Footer = () => (
           </div>
           <div className="f-contact-item">
             <div className="dot" />
-            <span>shahzad@zupharm.com</span>
+            <a href="mailto:shahzad@zupharm.com" style={{ color: 'inherit', textDecoration: 'none' }}><span>shahzad@zupharm.com</span></a>
           </div>
         </div>
 
