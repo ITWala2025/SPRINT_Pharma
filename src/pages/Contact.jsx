@@ -12,9 +12,9 @@ const INQUIRY_TYPES = [
 const WhatsAppHoverButton = () => {
   return (
     <a
-      href="https://wa.me/+919931855705"
+      href="https://wa.me/919931855705?text=Hello%20Zupharm%20Team,%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services."
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className="whatsapp-float-btn"
       style={{
         position: 'fixed',

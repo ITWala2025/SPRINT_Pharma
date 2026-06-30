@@ -9,7 +9,7 @@ const BLOG_DATA = [
     date: "June 18, 2026",
     dateISO: "2026-06-18",
     author: "Zupharm Laboratories Team",
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/Images/Distributorship.png",
     excerpt: "Demystifying how to launch an elite authorized distribution node with zero heavy infrastructure requirements through Zupharm's smart asset-light model.",
     contentParagraphs: [
       "Zupharm Laboratories operates as a strategic B2B pharmaceutical enterprise that drives market innovation through an efficient, asset-light operational model. Instead of maintaining expensive factory machinery, Zupharm focuses its core expertise on formula research and molecular development, outsourcing the physical fabrication of its products to elite, certified third-party manufacturing plants. By eliminating heavy machinery management from both our corporate structure and our franchise network, we issue high-yield Authorized Distributorships that allow independent business partners to scale up rapidly without ever worrying about heavy industrial overheads.",
@@ -25,7 +25,7 @@ const BLOG_DATA = [
     date: "June 22, 2026",
     dateISO: "2026-06-22",
     author: "Zupharm Laboratories Team",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/Images/MarketStrategy.png",
     excerpt: "An engineering blueprint for tracking net margins, balancing inventory carrying costs, and identifying product category break-even markers.",
     contentParagraphs: [
       "Evaluating the commercial viability of a B2B pharmaceutical channel requires moving past simple top-line gross numbers to analyze net yield models. Through the Zupharm Laboratories contract manufacturing model, franchise owners operating under our authorized distributorship framework bypass the heavy infrastructure costs that traditionally kill early-stage profitability. Since Zupharm researches the formulas and uses specialized third-party factories for production, distributors inherit incredibly clean product cost margins.",
@@ -41,7 +41,7 @@ const BLOG_DATA = [
     date: "June 12, 2026",
     dateISO: "2026-06-12",
     author: "Zupharm Laboratories Team",
-    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/Images/Regulatory.png",
     excerpt: "Navigating the upgraded national manufacturing quality control protocols, statutory tracking amendments, and audit validation matrices.",
     contentParagraphs: [
       "Adhering to international quality standards is an absolute foundational requirement for modern pharmaceutical operations. The World Health Organization's Good Manufacturing Practices (WHO-GMP) alongside the Central Drugs Standard Control Organization (CDSCO) continuously upgrade their enforcement frameworks. Even within a third-party manufacturing setup, Zupharm guarantees total transparency across the chemical formulation lifecycle, raw active pharmaceutical ingredient (API) tracking, and finished product packaging lines.",
@@ -57,7 +57,7 @@ const BLOG_DATA = [
     date: "May 29, 2026",
     dateISO: "2026-05-29",
     author: "Zupharm Laboratories Team",
-    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/Images/Health.png",
     excerpt: "How applying precise scientific validation protocols is successfully bridging the historical gap between herbal medicine and western pharmacology.",
     contentParagraphs: [
       "The historical dividing line between traditional botanical formulas and data-driven Western medical science is shifting, thanks to the rise of standardized phyto-pharmaceutical pathways. Phyto-pharmaceuticals represent a major step forward, where active natural plant compounds are isolated, scientifically quantified, and processed under the exact same strict guidelines used for synthetic small-molecule developments.",
@@ -73,7 +73,7 @@ const BLOG_DATA = [
     date: "May 15, 2026",
     dateISO: "2026-05-15",
     author: "Zupharm Laboratories Team",
-    image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/Images/Products.png",
     excerpt: "An entry-level look at the physical chemistry behind sustained-release hydrophilic matrix barriers and targeted therapeutic absorption.",
     contentParagraphs: [
       "Effectively managing long-term chronic medical conditions requires maintaining consistent, uniform blood plasma drug levels over extended periods. Traditional immediate-release tablets often cause sharp peaks and rapid drop-offs in systemic drug levels, which can lead to breakthrough symptoms. Zupharm's research and development division counters this by developing cutting-edge modified-release templates that are expertly executed by our third-party production partners.",
@@ -89,7 +89,7 @@ const BLOG_DATA = [
     date: "June 02, 2026",
     dateISO: "2026-06-02",
     author: "Zupharm Laboratories Team",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/Images/AIPharma.png",
     excerpt: "How advanced algorithmic modeling compresses traditional molecular discovery timelines down from years to mere hours.",
     contentParagraphs: [
       "The traditional process for discovering a brand-new therapeutic compound has historically been an incredibly lengthy journey, often taking upwards of a decade of lab work. By incorporating advanced machine learning models directly into modern computational chemistry pipelines, Zupharm Laboratories can now perform virtual screenings on billions of molecular combinations concurrently to engineer powerful new formulas.",
@@ -102,7 +102,7 @@ const BLOG_DATA = [
 ];
 
 // Fallback image asset that is guaranteed to always resolve safely
-const GLOBAL_FALLBACK_IMAGE = "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=1200";
+const GLOBAL_FALLBACK_IMAGE = "/assets/Images/Distributorship.png";
 
 // Site base URL for canonical and OG tags
 const SITE_URL = "https://zupharm.com";
@@ -172,7 +172,7 @@ const Blogs = () => {
 
   const heroImage = selectedBlog 
     ? selectedBlog.image 
-    : "https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=1600&q=80&auto=format&fit=crop";
+    : "/assets/Images/Distributorship.png";
 
   // Build meta description based on current view
   const metaDescription = selectedBlog

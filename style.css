@@ -5758,6 +5758,11 @@ footer {
   line-height: 1.75;
 }
 
+.annual-growth-section {
+  padding: 0 0 calc(var(--section-pad) + 40px);
+  background: var(--white);
+}
+
 @media (max-width: 900px) {
   .vm-block {
     grid-template-columns: 1fr;
