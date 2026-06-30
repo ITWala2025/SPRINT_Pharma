@@ -112,7 +112,8 @@ const Manufacturing = () => {
           </span>
           <h2>State of the Art Manufacturing</h2>
           <p>
-            Our products are manufactured by trusted third-party manufacturing partners who follow strict quality standards. Zupharm focuses on quality assurance, packaging, branding, and delivering safe, reliable healthcare products to customers.
+            We collaborate with leading GMP-certified manufacturers to produce high-quality pharmaceutical products. Zupharm oversees quality assurance, packaging, branding, and distribution, ensuring every product meets strict industry standards before reaching our customers.
+
           </p>
         </div>
       </div>
