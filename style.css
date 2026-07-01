@@ -236,15 +236,19 @@ a {
 /* Announcement bar */
 .header-announce {
   background: var(--teal);
-  height: var(--announce-h);
+  min-height: var(--announce-h);
+  height: auto;
+  padding: 8px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
-  transition: height 0.3s ease, opacity 0.3s ease;
+  transition: height 0.3s ease, opacity 0.3s ease, min-height 0.3s ease, padding 0.3s ease;
 }
 
 .header-announce.hidden {
   height: 0;
+  min-height: 0;
+  padding: 0;
   opacity: 0;
   pointer-events: none;
 }
@@ -4294,7 +4298,12 @@ footer {
   }
 
   .hero-visual {
-    display: none;
+    display: block;
+    margin-top: 32px;
+  }
+
+  .hero-img-wrap img {
+    height: 300px;
   }
 
   .hero::after {
@@ -4309,6 +4318,23 @@ footer {
   .stat-cell {
     border-right: none;
     border-bottom: 1px solid var(--border);
+    padding: 24px 12px;
+  }
+
+  .stat-cell:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+
+  .stat-num {
+    font-size: 32px;
+  }
+
+  .cta-num-cell {
+    padding: 16px 12px;
+  }
+
+  .cta-num {
+    font-size: 32px;
   }
 
   /* Sections */
@@ -4393,13 +4419,22 @@ footer {
   }
 
   .why-value-prop {
-    padding: 28px 24px;
+    padding: 28px 16px;
     margin-bottom: 32px;
   }
 
+  .why-value-prop-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .why-value-prop-icon {
+    display: none;
+  }
+
   .why-value-prop-title {
-    font-size: 1.8rem;
-    letter-spacing: 0.08em;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
   }
 
   .why-value-prop-tagline {
