@@ -320,7 +320,7 @@ const About = () => {
         <div className="container">
           <div className="section-subheader" style={{ marginTop: '20px' }}>
             <span className="label">Performance</span>
-            <h3 id="annual-growth-heading">Annual Revenue Growth</h3>
+            <h3 id="annual-growth-heading">Projected Revenue Growth</h3>
             <p className="section-subte">Consistent growth year over year</p>
           </div>
 
