@@ -115,7 +115,17 @@ const Footer = () => (
       {/* Bottom bar */}
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} Zupharm Laboratories Pvt. Ltd. All Rights Reserved.</p>
-        <p>Built with Precision and Care by <strong>SPRINT</strong></p>
+        <p>
+          Built with Precision and Care by{" "}
+          <a
+          href="https://sprint.naturalelements.co.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-credit-link"
+          >
+          <strong>SPRINT</strong>
+          </a>
+        </p>
         <div className="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>

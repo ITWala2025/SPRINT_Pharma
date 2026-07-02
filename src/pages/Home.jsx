@@ -83,7 +83,7 @@ const Home = () => (
         <div className="hero-text">
           <div className="hero-eyebrow">
             <div className="hero-eyebrow-line" />
-            <span className="hero-eyebrow-text">WHO-GMP Certified Manufacturer</span>
+            <span className="hero-eyebrow-text">15+ Years of Excellence in the Pharmaceutical Industry</span>
           </div>
 
           <h1 className="hero-title-xl">
@@ -124,19 +124,6 @@ const Home = () => (
           </div>
         </div>
 
-        <div className="hero-visual">
-          
-          <div className="hero-img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&q=85&auto=format&fit=crop"
-              alt="Pharmaceutical research laboratory"
-            />
-            <div className="hero-img-caption">
-              <strong>State of the Art Facility</strong>
-               <p>WHO-GMP certified manufacturing plant, built for precision, designed for scale.</p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* ── STATS BAR (inside hero) ── */}
@@ -187,7 +174,7 @@ const Home = () => (
           <div className="bento-icon"><i className="fas fa-microscope" /></div>
           <h3>Research & Product Development Support</h3>
           <p>15+ years of domain expertise. ICH stability testing, HPLC analytical suites, and dedicated technology transfer support.</p>
-          <div className="bento-link">Our lab <i className="fas fa-arrow-right" /></div>
+          <div className="bento-link">Quality Assurance<i className="fas fa-arrow-right" /></div>
         </div>
 
         {/* Card 4 */}

@@ -166,13 +166,13 @@ const About = () => {
                 <div className="founders-photo-avatar">
                   <i className="fas fa-user" aria-hidden="true" />
                 </div>
-                <span className="founders-photo-label">Founder's Photograph</span>
+                <span className="founders-photo-label">From the Founder's desk</span>
               </div>
 
               {/* Decorative accent badge */}
               <div className="founders-badge">
                 <i className="fas fa-flask" />
-                <span>15+ Years</span>
+                <span>Pharma Industry Leader </span>
               </div>
             </div>
 
@@ -195,21 +195,19 @@ const About = () => {
             <div className="founders-message-body">
               <p>
                 {/* Replace this paragraph with the founder's actual message */}
-                [Founder's message will appear here. This section is designed to carry
-                a personal note from the founder — sharing the vision, values, and
-                passion that drive Zupharm Laboratories forward every day.]
+                At Zupharm Laboratories, we are driven by a vision to deliver high-quality pharmaceutical solutions through innovation, reliability, and strong business partnerships. 
+                As a young and dynamic organization, we combine industry expertise with a commitment to excellence to meet the evolving needs of the healthcare sector.
               </p>
               <p>
-                [Additional paragraphs can be added here. The layout gracefully
-                accommodates two to four paragraphs while preserving readability
-                and visual balance across all screen sizes.]
+                We take pride in delivering trusted third-party manufacturing solutions and distributor-friendly business models built on quality, transparency, and long-term partnerships. 
+                With a growing presence across multiple states and a diverse portfolio of formulations, Zupharm Laboratories remains committed to delivering excellence, fostering trust, and growing alongside its partners.
               </p>
             </div>
 
             {/* Trust stats row */}
             <div className="founders-stats-row">
               <div className="founders-stat">
-                <span className="founders-stat-num">500<sup>+</sup></span>
+                <span className="founders-stat-num">50<sup>+</sup></span>
                 <span className="founders-stat-lbl">Formulations</span>
               </div>
               <div className="founders-stat-divider" aria-hidden="true" />
