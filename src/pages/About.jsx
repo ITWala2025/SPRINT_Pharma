@@ -68,7 +68,7 @@ const About = () => {
         {/* Dotted background removed */}
         <div className="page-hero-inner">
           <div className="page-hero-eyebrow">About Zupharm</div>
-          <h1>India's Trusted<br />Pharmaceutical Partner.</h1>
+          <h1>India's Trusted<br />Pharmaceutical Partner</h1>
           <p>
             Empowering pharmaceutical brands through trusted third-party manufacturing,
             backed by 15+ years of experience and an extensive portfolio of 50+ formulations.
