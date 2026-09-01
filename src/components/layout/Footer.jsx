@@ -106,7 +106,7 @@ const Footer = () => (
           </div>
           <div className="f-contact-item">
             <div className="dot" />
-            <a href="mailto:shahzad@zupharm.com" style={{ color: 'inherit', textDecoration: 'none' }}><span>shahzad@zupharm.com</span></a>
+            <a href="mailto:contact@zupharm.com" style={{ color: 'inherit', textDecoration: 'none' }}><span>contact@zupharm.com</span></a>
           </div>
         </div>
 

@@ -202,7 +202,7 @@ const Contact = () => {
                 <div className="contact-detail-icon"><i className="fas fa-envelope" /></div>
                 <div className="contact-detail-text">
                   <strong>Email</strong>
-                  <span>Shahzad@zupharm.com</span>
+                  <span>contact@zupharm.com</span>
                 </div>
               </div>
               <div className="contact-detail">
